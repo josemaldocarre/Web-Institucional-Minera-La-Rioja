@@ -2,10 +2,5 @@
   "hero": {
     "titleKey": "home.hero.title",
     "subtitleKey": "home.hero.subtitle"
-  },
-  "planSection": {
-    "headingKey": "home.plan.heading",
-    "subheadingKey": "home.plan.subheading",
-    "bodyKey": "home.plan.body"
   }
 }

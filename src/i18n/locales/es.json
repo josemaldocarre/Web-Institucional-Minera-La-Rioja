@@ -10,6 +10,7 @@
     "footerAriaLabel": "Pie de página institucional"
   },
   "nav": {
+    "inicio": "Inicio",
     "quienesSomos": "Quiénes Somos",
     "tramites": "Trámites",
     "normativas": "Normativas",
@@ -43,10 +44,21 @@
       "title": "presente y futuro minero",
       "subtitle": "Plataforma institucional para la gestión, transparencia y desarrollo de la actividad minera en la provincia."
     },
-    "plan": {
-      "heading": "Plan Quinquenal",
-      "subheading": "Líneas de trabajo",
-      "body": "Texto descriptivo de ejemplo para esta sección. Se sustituirá por contenido oficial cuando esté disponible."
+    "featureDocuments": {
+      "title": "Documentos públicos",
+      "subtitle": "Accedé a la documentación oficial vinculada a la actividad minera en la provincia.",
+      "plan": {
+        "title": "Plan Quinquenal 2026-2030",
+        "description": "Documento estratégico que define los lineamientos del desarrollo minero en la provincia.",
+        "cta": "Descargar",
+        "badge": "PDF"
+      },
+      "catastro": {
+        "title": "Catastro Minero",
+        "description": "Información geográfica sobre concesiones, límites y disponibilidad minera.",
+        "cta": "Descargar",
+        "badge": "DWG"
+      }
     }
   },
   "seo": {

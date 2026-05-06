@@ -5,15 +5,8 @@ export interface HomeHeroBlock {
   readonly subtitleKey: string
 }
 
-export interface HomePlanSection {
-  readonly headingKey: string
-  readonly subheadingKey: string
-  readonly bodyKey: string
-}
-
 export interface HomePageData {
   readonly hero: HomeHeroBlock
-  readonly planSection: HomePlanSection
 }
 
 export async function fetchHomePageData(): Promise<HomePageData> {

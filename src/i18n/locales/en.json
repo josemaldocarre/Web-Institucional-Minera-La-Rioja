@@ -10,6 +10,7 @@
     "footerAriaLabel": "Institutional footer"
   },
   "nav": {
+    "inicio": "Home",
     "quienesSomos": "About us",
     "tramites": "Procedures",
     "normativas": "Regulations",
@@ -43,10 +44,21 @@
       "title": "present and future of mining",
       "subtitle": "Institutional platform for the management, transparency, and development of mining activity in the province."
     },
-    "plan": {
-      "heading": "Five-year plan",
-      "subheading": "Workstreams",
-      "body": "Sample descriptive text for this section. It will be replaced with official content when available."
+    "featureDocuments": {
+      "title": "Public documents",
+      "subtitle": "Access official documentation related to mining activity in the province.",
+      "plan": {
+        "title": "Five-year plan 2026–2030",
+        "description": "Strategic document outlining the guidelines for mining development in the province.",
+        "cta": "Download",
+        "badge": "PDF"
+      },
+      "catastro": {
+        "title": "Mining cadastre",
+        "description": "Geographic information on concessions, boundaries, and mining availability.",
+        "cta": "Download",
+        "badge": "DWG"
+      }
     }
   },
   "seo": {

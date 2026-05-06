@@ -4,6 +4,7 @@ export interface MainNavItem {
 }
 
 export const MAIN_NAV_ITEMS: readonly MainNavItem[] = [
+  { path: 'inicio', labelKey: 'nav.inicio' },
 /*   { path: 'quienes-somos', labelKey: 'nav.quienesSomos' },
   { path: 'tramites', labelKey: 'nav.tramites' },
   { path: 'normativas', labelKey: 'nav.normativas' },
