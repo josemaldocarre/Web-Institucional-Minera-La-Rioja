@@ -1,9 +1,8 @@
 import homeMock from '../data/home.mock.json'
 
 export interface HomeHeroBlock {
-  readonly leadKey: string
-  readonly imageSrc: string
-  readonly imageAltKey: string
+  readonly titleKey: string
+  readonly subtitleKey: string
 }
 
 export interface HomePlanSection {
@@ -13,7 +12,6 @@ export interface HomePlanSection {
 }
 
 export interface HomePageData {
-  readonly titleKey: string
   readonly hero: HomeHeroBlock
   readonly planSection: HomePlanSection
 }

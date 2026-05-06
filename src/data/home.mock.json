@@ -1,9 +1,7 @@
 {
-  "titleKey": "home.title",
   "hero": {
-    "leadKey": "home.hero.lead",
-    "imageSrc": "/favicon.ico",
-    "imageAltKey": "home.hero.imageAlt"
+    "titleKey": "home.hero.title",
+    "subtitleKey": "home.hero.subtitle"
   },
   "planSection": {
     "headingKey": "home.plan.heading",

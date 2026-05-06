@@ -39,10 +39,9 @@
     "copyright": "© 2026 Mining Secretariat - Government of La Rioja. All rights reserved."
   },
   "home": {
-    "title": "Mining in La Rioja",
     "hero": {
-      "lead": "Institutional platform with information on mining, procedures, and transparency for the public.",
-      "imageAlt": "Institutional visual placeholder - replace with final hero image."
+      "title": "present and future of mining",
+      "subtitle": "Institutional platform for the management, transparency, and development of mining activity in the province."
     },
     "plan": {
       "heading": "Five-year plan",

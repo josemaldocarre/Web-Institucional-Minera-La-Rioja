@@ -39,10 +39,9 @@
     "copyright": "© 2026 Secretaría de Minería - Gobierno de La Rioja. Todos los derechos reservados."
   },
   "home": {
-    "title": "Minería en La Rioja",
     "hero": {
-      "lead": "Plataforma institucional con información sobre minería, trámites y transparencia para la ciudadanía.",
-      "imageAlt": "Marcador visual institucional - reemplazar por imagen definitiva del hero."
+      "title": "presente y futuro minero",
+      "subtitle": "Plataforma institucional para la gestión, transparencia y desarrollo de la actividad minera en la provincia."
     },
     "plan": {
       "heading": "Plan Quinquenal",
