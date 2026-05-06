@@ -1,12 +1,14 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
+import { Header } from '../components/layout/Header'
 import { Footer } from './Footer'
-import { Header } from './Header'
 import styles from './MainLayout.module.scss'
 
 export function MainLayout() {
+  const location = useLocation()
+
   return (
     <div className={styles.root}>
-      <Header />
+      <Header key={location.pathname} />
       <main id="main-content" className={styles.main} tabIndex={-1}>
         <Outlet />
       </main>

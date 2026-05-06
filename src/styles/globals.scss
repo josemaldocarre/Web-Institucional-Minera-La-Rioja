@@ -51,6 +51,10 @@
   --line-height-snug: #{v.$line-height-snug};
   --line-height-normal: #{v.$line-height-normal};
   --line-height-relaxed: #{v.$line-height-relaxed};
+
+  // Header
+  --color-header-border: #{v.$header-border};
+  --shadow-header: #{v.$header-shadow};
 }
 
 // - Reset (mínimo y predecible) -

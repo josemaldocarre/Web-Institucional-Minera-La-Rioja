@@ -50,3 +50,8 @@ $line-height-relaxed: 1.6;
 
 // - Text primary -
 $text-primary: $color-dark-gray;
+
+// - Header chrome -
+$header-border: color-mix(in srgb, $color-dark-gray 12%, transparent);
+$header-shadow: 0 1px 3px color-mix(in srgb, $color-dark-gray 10%, transparent);
+$breakpoint-header-desktop: 60rem;

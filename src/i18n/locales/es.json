@@ -2,12 +2,26 @@
   "layout": {
     "skipToContent": "Saltar al contenido principal",
     "navAriaLabel": "Navegación principal",
-    "navHome": "Inicio",
+    "logoAlt": "Gobierno de La Rioja - identidad institucional",
+    "langSwitcherAria": "Seleccionar idioma",
+    "langMobileHint": "IDIOMA: {{lang}}",
+    "menuOpen": "Abrir menú de navegación",
+    "menuClose": "Cerrar menú de navegación",
     "footerAriaLabel": "Pie de página institucional",
-    "footerPlaceholder": "Sitio institucional de minería — La Rioja. Transparencia e información para la ciudadanía.",
+    "footerPlaceholder": "Sitio institucional de minería - La Rioja. Transparencia e información para la ciudadanía.",
     "footerNavAriaLabel": "Enlaces útiles del pie de página",
     "footerBackToContent": "Ir al contenido principal",
     "scrollToTop": "Volver arriba"
+  },
+  "nav": {
+    "quienesSomos": "Quiénes Somos",
+    "tramites": "Trámites",
+    "normativas": "Normativas",
+    "transparencia": "Transparencia",
+    "planQuinquenal": "Plan Quinquenal",
+    "proveedores": "Proveedores",
+    "tallerArtesanias": "Taller de Artesanías",
+    "contacto": "Contacto"
   },
   "home": {
     "title": "Minería en La Rioja",

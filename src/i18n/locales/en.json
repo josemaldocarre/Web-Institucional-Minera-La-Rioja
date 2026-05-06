@@ -2,12 +2,26 @@
   "layout": {
     "skipToContent": "Skip to main content",
     "navAriaLabel": "Main navigation",
-    "navHome": "Home",
+    "logoAlt": "Government of La Rioja - institutional identity",
+    "langSwitcherAria": "Choose language",
+    "langMobileHint": "LANGUAGE: {{lang}}",
+    "menuOpen": "Open navigation menu",
+    "menuClose": "Close navigation menu",
     "footerAriaLabel": "Institutional footer",
-    "footerPlaceholder": "Institutional mining site — La Rioja. Transparency and public information.",
+    "footerPlaceholder": "Institutional mining site - La Rioja. Transparency and public information.",
     "footerNavAriaLabel": "Footer utility links",
     "footerBackToContent": "Go to main content",
     "scrollToTop": "Back to top"
+  },
+  "nav": {
+    "quienesSomos": "About us",
+    "tramites": "Procedures",
+    "normativas": "Regulations",
+    "transparencia": "Transparency",
+    "planQuinquenal": "Five-year plan",
+    "proveedores": "Suppliers",
+    "tallerArtesanias": "Crafts workshop",
+    "contacto": "Contact"
   },
   "home": {
     "title": "Mining in La Rioja",
