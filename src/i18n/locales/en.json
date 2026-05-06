@@ -1,10 +1,29 @@
 {
   "layout": {
-    "headerPlaceholder": "Header",
-    "footerPlaceholder": "Footer"
+    "skipToContent": "Skip to main content",
+    "navAriaLabel": "Main navigation",
+    "navHome": "Home",
+    "footerAriaLabel": "Institutional footer",
+    "footerPlaceholder": "Institutional mining site — La Rioja. Transparency and public information.",
+    "footerNavAriaLabel": "Footer utility links",
+    "footerBackToContent": "Go to main content",
+    "scrollToTop": "Back to top"
   },
   "home": {
-    "title": "Home"
+    "title": "Mining in La Rioja",
+    "hero": {
+      "lead": "Institutional platform with information on mining, procedures, and transparency for the public.",
+      "imageAlt": "Institutional visual placeholder - replace with final hero image."
+    },
+    "plan": {
+      "heading": "Five-year plan",
+      "subheading": "Workstreams",
+      "body": "Sample descriptive text for this section. It will be replaced with official content when available."
+    }
+  },
+  "seo": {
+    "documentTitleHome": "Minería La Rioja - Web Institucional",
+    "metaDescriptionHome": "Institutional mining website for La Rioja: transparency, procedures, open data, and public information."
   },
   "common": {
     "loading": "Loading…"

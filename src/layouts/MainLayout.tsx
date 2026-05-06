@@ -7,7 +7,7 @@ export function MainLayout() {
   return (
     <div className={styles.root}>
       <Header />
-      <main className={styles.main}>
+      <main id="main-content" className={styles.main} tabIndex={-1}>
         <Outlet />
       </main>
       <Footer />

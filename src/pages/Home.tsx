@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HomeModule } from '../modules/home'
+import { useSyncPageMeta } from '../seo/useSyncPageMeta'
 import { fetchHomePageData, type HomePageData } from '../services/homeService'
 import styles from './Home.module.scss'
 
@@ -8,13 +9,23 @@ export function Home() {
   const { t } = useTranslation()
   const [data, setData] = useState<HomePageData | null>(null)
 
+  useSyncPageMeta({
+    title: t('seo.documentTitleHome'),
+    description: t('seo.metaDescriptionHome'),
+  })
+
   useEffect(() => {
     void fetchHomePageData().then(setData)
   }, [])
 
   if (data === null) {
     return (
-      <div className={styles.loading} role="status">
+      <div
+        className={styles.loading}
+        role="status"
+        aria-live="polite"
+        aria-busy="true"
+      >
         {t('common.loading')}
       </div>
     )

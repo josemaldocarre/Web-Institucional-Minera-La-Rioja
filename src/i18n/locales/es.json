@@ -1,10 +1,29 @@
 {
   "layout": {
-    "headerPlaceholder": "Encabezado",
-    "footerPlaceholder": "Pie de página"
+    "skipToContent": "Saltar al contenido principal",
+    "navAriaLabel": "Navegación principal",
+    "navHome": "Inicio",
+    "footerAriaLabel": "Pie de página institucional",
+    "footerPlaceholder": "Sitio institucional de minería — La Rioja. Transparencia e información para la ciudadanía.",
+    "footerNavAriaLabel": "Enlaces útiles del pie de página",
+    "footerBackToContent": "Ir al contenido principal",
+    "scrollToTop": "Volver arriba"
   },
   "home": {
-    "title": "Inicio"
+    "title": "Minería en La Rioja",
+    "hero": {
+      "lead": "Plataforma institucional con información sobre minería, trámites y transparencia para la ciudadanía.",
+      "imageAlt": "Marcador visual institucional - reemplazar por imagen definitiva del hero."
+    },
+    "plan": {
+      "heading": "Plan Quinquenal",
+      "subheading": "Líneas de trabajo",
+      "body": "Texto descriptivo de ejemplo para esta sección. Se sustituirá por contenido oficial cuando esté disponible."
+    }
+  },
+  "seo": {
+    "documentTitleHome": "Minería La Rioja - Web Institucional",
+    "metaDescriptionHome": "Sitio institucional de minería en La Rioja: transparencia, trámites, datos abiertos e información para la ciudadanía."
   },
   "common": {
     "loading": "Cargando…"

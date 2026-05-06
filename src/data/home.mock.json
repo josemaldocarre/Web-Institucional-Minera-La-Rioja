@@ -1,3 +1,13 @@
 {
-  "titleKey": "home.title"
+  "titleKey": "home.title",
+  "hero": {
+    "leadKey": "home.hero.lead",
+    "imageSrc": "/favicon.ico",
+    "imageAltKey": "home.hero.imageAlt"
+  },
+  "planSection": {
+    "headingKey": "home.plan.heading",
+    "subheadingKey": "home.plan.subheading",
+    "bodyKey": "home.plan.body"
+  }
 }
