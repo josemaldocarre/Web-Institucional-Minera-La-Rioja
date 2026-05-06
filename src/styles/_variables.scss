@@ -1,6 +1,52 @@
-// Design tokens 
-$surface-muted: #f4f4f5;
-$text-muted: #52525b;
-$text-primary: #18181b;
-$space-md: 1rem;
-$space-lg: 1.25rem;
+// - Brand palette -
+$color-dark-gray: #3c3c3a;
+$color-orange: #f76108;
+$color-light-green: #7bb11a;
+$color-dark-green: #5d8001;
+$color-yellow: #faae2d;
+
+// - Support colors -
+$color-white: #ffffff;
+$surface-muted: #f4f4f2;
+$text-muted: color-mix(in srgb, $color-dark-gray 68%, transparent);
+
+// - Spacing scale -
+$space-0: 0;
+$space-1: 0.25rem; // 4px
+$space-2: 0.5rem; // 8px
+$space-3: 0.75rem; // 12px
+$space-4: 1rem; // 16px
+$space-5: 1.25rem; // 20px
+$space-6: 1.5rem; // 24px
+$space-8: 2rem; // 32px
+$space-10: 2.5rem; // 40px
+$space-12: 3rem; // 48px
+
+// - Aliases -
+$space-md: $space-4;
+$space-lg: $space-5;
+
+// - Typography -
+$font-family-display: 'Red Hat Display', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.0625rem; // 17px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+
+$line-height-tight: 1.2;
+$line-height-snug: 1.35;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.6;
+
+// - Text primary -
+$text-primary: $color-dark-gray;

@@ -1,0 +1,171 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// - Custom properties (consumo desde SASS modules vía var(--…)) -
+:root {
+  // Brand
+  --color-dark-gray: #{v.$color-dark-gray};
+  --color-orange: #{v.$color-orange};
+  --color-light-green: #{v.$color-light-green};
+  --color-dark-green: #{v.$color-dark-green};
+  --color-yellow: #{v.$color-yellow};
+
+  // Neutros / superficies
+  --color-white: #{v.$color-white};
+  --color-surface-muted: #{v.$surface-muted};
+  --color-text-primary: #{v.$text-primary};
+  --color-text-muted: #{v.$text-muted};
+
+  // Spacing
+  --space-0: #{v.$space-0};
+  --space-1: #{v.$space-1};
+  --space-2: #{v.$space-2};
+  --space-3: #{v.$space-3};
+  --space-4: #{v.$space-4};
+  --space-5: #{v.$space-5};
+  --space-6: #{v.$space-6};
+  --space-8: #{v.$space-8};
+  --space-10: #{v.$space-10};
+  --space-12: #{v.$space-12};
+  --space-md: #{v.$space-md};
+  --space-lg: #{v.$space-lg};
+
+  // Typography
+  --font-family-display: #{v.$font-family-display};
+  --font-weight-regular: #{v.$font-weight-regular};
+  --font-weight-medium: #{v.$font-weight-medium};
+  --font-weight-semibold: #{v.$font-weight-semibold};
+  --font-weight-bold: #{v.$font-weight-bold};
+
+  --font-size-xs: #{v.$font-size-xs};
+  --font-size-sm: #{v.$font-size-sm};
+  --font-size-base: #{v.$font-size-base};
+  --font-size-md: #{v.$font-size-md};
+  --font-size-lg: #{v.$font-size-lg};
+  --font-size-xl: #{v.$font-size-xl};
+  --font-size-2xl: #{v.$font-size-2xl};
+  --font-size-3xl: #{v.$font-size-3xl};
+  --font-size-4xl: #{v.$font-size-4xl};
+
+  --line-height-tight: #{v.$line-height-tight};
+  --line-height-snug: #{v.$line-height-snug};
+  --line-height-normal: #{v.$line-height-normal};
+  --line-height-relaxed: #{v.$line-height-relaxed};
+}
+
+// - Reset (mínimo y predecible) -
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+// - Base document -
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: v.$font-family-display;
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-regular;
+  line-height: v.$line-height-normal;
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+// - Base typography -
+h1 {
+  @include m.heading-base;
+  font-size: v.$font-size-4xl;
+}
+
+h2 {
+  @include m.heading-base;
+  font-size: v.$font-size-3xl;
+}
+
+h3 {
+  @include m.heading-base;
+  font-size: v.$font-size-2xl;
+}
+
+h4 {
+  @include m.heading-base;
+  font-size: v.$font-size-xl;
+}
+
+h5 {
+  @include m.heading-base;
+  font-size: v.$font-size-lg;
+}
+
+h6 {
+  @include m.heading-base;
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-medium;
+}
+
+p {
+  font-family: v.$font-family-display;
+  font-size: v.$font-size-base;
+  line-height: v.$line-height-relaxed;
+  color: var(--color-text-primary);
+}
+
+a {
+  @include m.link-base;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  @include m.focus-visible-ring;
+}

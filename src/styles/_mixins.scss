@@ -1,1 +1,26 @@
-// Mixins compartidos
+@use 'variables' as v;
+
+@mixin focus-visible-ring {
+  outline: 2px solid v.$color-orange;
+  outline-offset: 2px;
+}
+
+@mixin link-base {
+  color: v.$color-dark-green;
+  text-decoration-skip-ink: auto;
+
+  &:hover {
+    color: v.$color-orange;
+  }
+
+  &:focus-visible {
+    @include focus-visible-ring;
+  }
+}
+
+@mixin heading-base {
+  font-family: v.$font-family-display;
+  font-weight: v.$font-weight-semibold;
+  line-height: v.$line-height-tight;
+  color: v.$text-primary;
+}
