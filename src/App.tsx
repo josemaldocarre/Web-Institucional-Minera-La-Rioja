@@ -1,10 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { MainLayout } from './layouts/MainLayout'
+import { Home } from './pages/Home'
+
 function App() {
   return (
-    <div className="layout">
-      <header className="layout__header">Encabezado</header>
-      <main className="layout__main">Contenido</main>
-      <footer className="layout__footer">Pie</footer>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

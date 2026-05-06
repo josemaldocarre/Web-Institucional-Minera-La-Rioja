@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "headerPlaceholder": "Header",
+    "footerPlaceholder": "Footer"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "common": {
+    "loading": "Loading…"
+  }
+}

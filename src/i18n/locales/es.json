@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "headerPlaceholder": "Encabezado",
+    "footerPlaceholder": "Pie de página"
+  },
+  "home": {
+    "title": "Inicio"
+  },
+  "common": {
+    "loading": "Cargando…"
+  }
+}

@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+:root {
+  --color-surface-muted: #{v.$surface-muted};
+  --color-text-muted: #{v.$text-muted};
+  --color-text-primary: #{v.$text-primary};
+  --space-md: #{v.$space-md};
+  --space-lg: #{v.$space-lg};
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+#root {
+  min-height: 100vh;
+}
