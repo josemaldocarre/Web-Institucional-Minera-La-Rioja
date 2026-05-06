@@ -44,6 +44,33 @@
       "title": "present and future of mining",
       "subtitle": "Institutional platform for the management, transparency, and development of mining activity in the province."
     },
+    "intro": {
+      "title": "Transparency and mining development",
+      "body": "This site is the Mining Secretariat’s institutional channel for publishing documentation, data, and geographic references. It aims to strengthen transparency, organize sector information, and support responsible mining development in the province."
+    },
+    "features": {
+      "title": "What the platform offers",
+      "items": {
+        "docs": {
+          "title": "Official documentation",
+          "description": "Plans, regulations, and reference publications on the mining policy and legal framework."
+        },
+        "geo": {
+          "title": "Geographic information",
+          "description": "Spatial layers and references related to concessions, boundaries, and land availability."
+        },
+        "openData": {
+          "title": "Open data",
+          "description": "Published datasets for consultation, reuse, and greater transparency for the public."
+        }
+      }
+    },
+    "contactCard": {
+      "title": "Mining that builds community",
+      "description": "Connect with the Secretariat: procedures, suppliers, job opportunities, and citizen participation.",
+      "cta": "Contact us",
+      "contactListLabel": "Contact details"
+    },
     "featureDocuments": {
       "title": "Public documents",
       "subtitle": "Access official documentation related to mining activity in the province.",

@@ -1,0 +1,25 @@
+.root {
+  padding-block: var(--space-12) var(--space-10);
+  background-color: var(--color-white);
+}
+
+.title {
+  margin: 0 0 var(--space-5);
+  max-width: 40rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(2.5rem, 2.5vw, 2.8rem);
+  font-weight: var(--font-weight-black);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+  text-wrap: balance;
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}

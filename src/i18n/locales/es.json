@@ -44,6 +44,33 @@
       "title": "presente y futuro minero",
       "subtitle": "Plataforma institucional para la gestión, transparencia y desarrollo de la actividad minera en la provincia."
     },
+    "intro": {
+      "title": "Transparencia y desarrollo minero",
+      "body": "Este sitio es el canal institucional de la Secretaría de Minería para publicar documentación, datos y referencias geográficas. Su objetivo es fortalecer la transparencia, ordenar la información del sector y acompañar un desarrollo minero responsable en la provincia."
+    },
+    "features": {
+      "title": "Qué ofrece la plataforma",
+      "items": {
+        "docs": {
+          "title": "Documentación oficial",
+          "description": "Planes, normas y publicaciones de referencia para conocer el marco y las políticas mineras."
+        },
+        "geo": {
+          "title": "Información geográfica",
+          "description": "Capas y referencias espaciales vinculadas a concesiones, límites y disponibilidad territorial."
+        },
+        "openData": {
+          "title": "Datos abiertos",
+          "description": "Conjuntos de datos publicados para consulta, reutilización y mayor transparencia hacia la ciudadanía."
+        }
+      }
+    },
+    "contactCard": {
+      "title": "Una minería que construye comunidad",
+      "description": "Conectá con la Secretaría: trámites, proveedores, oportunidades laborales y participación ciudadana.",
+      "cta": "Contactar",
+      "contactListLabel": "Datos de contacto"
+    },
     "featureDocuments": {
       "title": "Documentos públicos",
       "subtitle": "Accedé a la documentación oficial vinculada a la actividad minera en la provincia.",
