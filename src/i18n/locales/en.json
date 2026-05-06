@@ -40,6 +40,10 @@
     "metaDescriptionHome": "Institutional mining website for La Rioja: transparency, procedures, open data, and public information."
   },
   "common": {
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "pagePlaceholder": "This section is under construction. Official content will be published here soon.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The requested URL does not exist or has been moved.",
+    "notFoundHome": "Back to home"
   }
 }

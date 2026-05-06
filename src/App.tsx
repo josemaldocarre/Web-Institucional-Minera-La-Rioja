@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { MainLayout } from './layouts/MainLayout'
 import { MAIN_NAV_ITEMS } from './navigation/mainNav'
 import { Home } from './pages/Home'
+import { NotFound } from './pages/NotFound'
+import { PlaceholderPage } from './pages/PlaceholderPage'
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
             <Route
               key={item.path}
               path={item.path}
+              element={<PlaceholderPage />}
             />
           ))}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

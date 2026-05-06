@@ -40,6 +40,10 @@
     "metaDescriptionHome": "Sitio institucional de minería en La Rioja: transparencia, trámites, datos abiertos e información para la ciudadanía."
   },
   "common": {
-    "loading": "Cargando…"
+    "loading": "Cargando…",
+    "pagePlaceholder": "Esta sección está en preparación. Pronto habrá contenido oficial aquí.",
+    "notFoundTitle": "Página no encontrada",
+    "notFoundBody": "La dirección solicitada no existe o fue movida.",
+    "notFoundHome": "Volver al inicio"
   }
 }

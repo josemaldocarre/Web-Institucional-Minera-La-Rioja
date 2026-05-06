@@ -1,0 +1,11 @@
+.root {
+  padding: var(--space-lg);
+}
+
+.text {
+  margin: 0;
+  max-width: 40rem;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
