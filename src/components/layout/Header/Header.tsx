@@ -179,7 +179,7 @@ export function Header() {
       </div>
 
       {mobileOpen ? (
-        <div className={styles.mobilePanel} id={menuId} role="dialog" aria-modal="true">
+        <div className={styles.mobilePanel} id={menuId}>
           <div className={styles.mobileTop}>
             <Link className={styles.logoLink} to="/" onClick={closeMobile}>
               <img
