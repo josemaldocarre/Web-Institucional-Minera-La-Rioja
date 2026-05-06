@@ -7,11 +7,7 @@
     "langMobileHint": "IDIOMA: {{lang}}",
     "menuOpen": "Abrir menú de navegación",
     "menuClose": "Cerrar menú de navegación",
-    "footerAriaLabel": "Pie de página institucional",
-    "footerPlaceholder": "Sitio institucional de minería - La Rioja. Transparencia e información para la ciudadanía.",
-    "footerNavAriaLabel": "Enlaces útiles del pie de página",
-    "footerBackToContent": "Ir al contenido principal",
-    "scrollToTop": "Volver arriba"
+    "footerAriaLabel": "Pie de página institucional"
   },
   "nav": {
     "quienesSomos": "Quiénes Somos",
@@ -22,6 +18,25 @@
     "proveedores": "Proveedores",
     "tallerArtesanias": "Taller de Artesanías",
     "contacto": "Contacto"
+  },
+  "footer": {
+    "institutional": {
+      "regionLabel": "Información institucional",
+      "intro": "Plataforma institucional para una minería responsable, transparente y conectada con el desarrollo de la provincia."
+    },
+    "contact": {
+      "title": "Contacto",
+      "address": "Pelagio B. Luna 811, La Rioja, Argentina",
+      "phone": "+54 (380) 4453-068",
+      "email": "mineria@larioja.gob.ar"
+    },
+    "social": {
+      "facebook": "Facebook - Secretaría de Minería La Rioja",
+      "instagram": "Instagram - Secretaría de Minería La Rioja",
+      "linkedin": "LinkedIn - Secretaría de Minería La Rioja",
+      "youtube": "YouTube - Secretaría de Minería La Rioja"
+    },
+    "copyright": "© 2026 Secretaría de Minería - Gobierno de La Rioja. Todos los derechos reservados."
   },
   "home": {
     "title": "Minería en La Rioja",

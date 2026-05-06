@@ -55,6 +55,13 @@
   // Header
   --color-header-border: #{v.$header-border};
   --shadow-header: #{v.$header-shadow};
+
+  // Footer
+  --color-footer-bg: #{v.$footer-bg};
+  --color-footer-text: #{v.$footer-text};
+  --color-footer-text-muted: #{v.$footer-text-muted};
+  --color-footer-divider: #{v.$footer-divider};
+  --color-footer-social-border: #{v.$footer-social-border};
 }
 
 // - Reset (mínimo y predecible) -

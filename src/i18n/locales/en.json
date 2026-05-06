@@ -7,11 +7,7 @@
     "langMobileHint": "LANGUAGE: {{lang}}",
     "menuOpen": "Open navigation menu",
     "menuClose": "Close navigation menu",
-    "footerAriaLabel": "Institutional footer",
-    "footerPlaceholder": "Institutional mining site - La Rioja. Transparency and public information.",
-    "footerNavAriaLabel": "Footer utility links",
-    "footerBackToContent": "Go to main content",
-    "scrollToTop": "Back to top"
+    "footerAriaLabel": "Institutional footer"
   },
   "nav": {
     "quienesSomos": "About us",
@@ -22,6 +18,25 @@
     "proveedores": "Suppliers",
     "tallerArtesanias": "Crafts workshop",
     "contacto": "Contact"
+  },
+  "footer": {
+    "institutional": {
+      "regionLabel": "Institutional information",
+      "intro": "Institutional platform for responsible, transparent mining connected with the province’s development."
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Pelagio B. Luna 811, La Rioja, Argentina",
+      "phone": "+54 (380) 4453-068",
+      "email": "mineria@larioja.gob.ar"
+    },
+    "social": {
+      "facebook": "Facebook - Mining Secretariat La Rioja",
+      "instagram": "Instagram - Mining Secretariat La Rioja",
+      "linkedin": "LinkedIn - Mining Secretariat La Rioja",
+      "youtube": "YouTube - Mining Secretariat La Rioja"
+    },
+    "copyright": "© 2026 Mining Secretariat - Government of La Rioja. All rights reserved."
   },
   "home": {
     "title": "Mining in La Rioja",

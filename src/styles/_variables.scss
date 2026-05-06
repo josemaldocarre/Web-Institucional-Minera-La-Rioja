@@ -55,3 +55,11 @@ $text-primary: $color-dark-gray;
 $header-border: color-mix(in srgb, $color-dark-gray 12%, transparent);
 $header-shadow: 0 1px 3px color-mix(in srgb, $color-dark-gray 10%, transparent);
 $breakpoint-header-desktop: 60rem;
+
+// - Footer (tema oscuro) -
+$footer-bg: color-mix(in srgb, $color-dark-gray 42%, black);
+$footer-text: $color-white;
+$footer-text-muted: color-mix(in srgb, $color-white 68%, $footer-bg);
+$footer-divider: color-mix(in srgb, $color-white 16%, transparent);
+$footer-social-border: color-mix(in srgb, $color-white 35%, transparent);
+$breakpoint-footer-desktop: 60rem;
