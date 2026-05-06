@@ -35,3 +35,15 @@
 
 - Pensar siempre en backend futuro
 - Evitar soluciones rápidas que rompan arquitectura
+
+## SEO
+
+- Sigue las directrices definidas en /docs/seo.md
+- Asegúrate de que el HTML sea semántico
+- Mantén la jerarquía de los encabezados
+
+## Accessibility
+
+- Sigue las directrices definidas en /docs/accessibility.md
+- Utiliza elementos semánticos
+- Asegúrate de que la página sea accesible mediante el teclado
