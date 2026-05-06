@@ -115,8 +115,7 @@ export function Footer() {
               className={styles.logo}
               src={LOGO_SRC}
               alt={t('layout.logoAlt')}
-              width={220}
-              height={56}
+              height={80}
               decoding="async"
             />
             <p className={styles.intro}>{t('footer.institutional.intro')}</p>
@@ -138,20 +137,20 @@ export function Footer() {
           </section>
 
           <section className={styles.institutional}>
-            <img src="/images/logos/ministerio.svg" alt="Ministerio de Trabajo, Empleo, Industria y Minería - La Rioja" className={styles.logo}/>
+            <img src="/images/logos/ministerio.svg" alt="Ministerio de Trabajo, Empleo, Industria y Minería - La Rioja" className={styles.logo} height={80}/>
           </section>
 
           <section className={styles.institutional}>
-            <img src="/images/logos/lrgobierno.svg" alt="La Rioja Gobierno" className={styles.logo}/>
+            <img src="/images/logos/lrgobierno.svg" alt="La Rioja Gobierno" className={styles.logo} height={80}/>
           </section>
 
           <section
             className={styles.contact}
             aria-labelledby={contactTitleId}
           >
-            <h2 className={styles.columnTitle} id={contactTitleId}>
+            <h3 className={styles.columnTitle} id={contactTitleId}>
               {t('footer.contact.title')}
-            </h2>
+            </h3>
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <IconLocation className={styles.contactIcon} />
