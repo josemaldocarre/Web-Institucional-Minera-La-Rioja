@@ -50,7 +50,8 @@
   flex-direction: column;
   align-items: start;
   gap: v.$space-5;
-  padding: v.$space-10 v.$space-6;
+  padding-block: v.$space-10;
+  padding-inline: 0;
   text-align: start;
 }
 

@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import type { JSX } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Container } from '../../ui/Container/Container'
 import styles from './Footer.module.scss'
 
 const LOGO_SRC = '/images/logos/secretariamineria.svg'
@@ -105,82 +106,99 @@ export function Footer() {
 
   return (
     <footer className={styles.root} aria-label={t('layout.footerAriaLabel')}>
-      <div className={styles.inner}>
-        <div className={styles.grid}>
-          <section
-            className={styles.institutional}
-            aria-label={t('footer.institutional.regionLabel')}
-          >
-            <img
-              className={styles.logo}
-              src={LOGO_SRC}
-              alt={t('layout.logoAlt')}
-              height={80}
-              decoding="async"
-            />
-            <p className={styles.intro}>{t('footer.institutional.intro')}</p>
-            <ul className={styles.socialList}>
-              {SOCIAL_LINKS.map(({ href, labelKey, Icon }) => (
-                <li key={labelKey}>
+      <Container>
+        <div className={styles.inner}>
+          <div className={styles.grid}>
+            <section
+              className={styles.institutional}
+              aria-label={t('footer.institutional.regionLabel')}
+            >
+              <img
+                className={styles.logo}
+                src={LOGO_SRC}
+                alt={t('layout.logoAlt')}
+                height={80}
+                decoding="async"
+              />
+              <p className={styles.intro}>{t('footer.institutional.intro')}</p>
+              <ul className={styles.socialList}>
+                {SOCIAL_LINKS.map(({ href, labelKey, Icon }) => (
+                  <li key={labelKey}>
+                    <a
+                      className={styles.socialLink}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t(labelKey)}
+                    >
+                      <Icon />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className={styles.institutional}>
+              <img
+                src="/images/logos/ministerio.svg"
+                alt="Ministerio de Trabajo, Empleo, Industria y Minería - La Rioja"
+                className={styles.logo}
+                height={80}
+              />
+            </section>
+
+            <section className={styles.institutional}>
+              <img
+                src="/images/logos/lrgobierno.svg"
+                alt="La Rioja Gobierno"
+                className={styles.logo}
+                height={80}
+              />
+            </section>
+
+            <section
+              className={styles.contact}
+              aria-labelledby={contactTitleId}
+            >
+              <h3 className={styles.columnTitle} id={contactTitleId}>
+                {t('footer.contact.title')}
+              </h3>
+              <ul className={styles.contactList}>
+                <li className={styles.contactItem}>
+                  <IconLocation className={styles.contactIcon} />
                   <a
-                    className={styles.socialLink}
-                    href={href}
+                    className={styles.contactLink}
+                    href="https://maps.app.goo.gl/7w15sjinXLy39HjG6"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t(labelKey)}
                   >
-                    <Icon />
+                    {t('footer.contact.address')}
                   </a>
                 </li>
-              ))}
-            </ul>
-          </section>
+                <li className={styles.contactItem}>
+                  <IconPhone className={styles.contactIcon} />
+                  <a className={styles.contactLink} href="tel:+543804453068">
+                    {t('footer.contact.phone')}
+                  </a>
+                </li>
+                <li className={styles.contactItem}>
+                  <IconEmail className={styles.contactIcon} />
+                  <a
+                    className={styles.contactLink}
+                    href="mailto:mineria@larioja.gob.ar"
+                  >
+                    {t('footer.contact.email')}
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
 
-          <section className={styles.institutional}>
-            <img src="/images/logos/ministerio.svg" alt="Ministerio de Trabajo, Empleo, Industria y Minería - La Rioja" className={styles.logo} height={80}/>
-          </section>
-
-          <section className={styles.institutional}>
-            <img src="/images/logos/lrgobierno.svg" alt="La Rioja Gobierno" className={styles.logo} height={80}/>
-          </section>
-
-          <section
-            className={styles.contact}
-            aria-labelledby={contactTitleId}
-          >
-            <h3 className={styles.columnTitle} id={contactTitleId}>
-              {t('footer.contact.title')}
-            </h3>
-            <ul className={styles.contactList}>
-              <li className={styles.contactItem}>
-                <IconLocation className={styles.contactIcon} />
-                <a className={styles.contactLink} href="https://maps.app.goo.gl/7w15sjinXLy39HjG6" target="_blank" rel="noopener noreferrer">
-                  {t('footer.contact.address')}
-                </a>
-              </li>
-              <li className={styles.contactItem}>
-                <IconPhone className={styles.contactIcon} />
-                <a className={styles.contactLink} href="tel:+543804453068">
-                  {t('footer.contact.phone')}
-                </a>
-              </li>
-              <li className={styles.contactItem}>
-                <IconEmail className={styles.contactIcon} />
-                <a
-                  className={styles.contactLink}
-                  href="mailto:mineria@larioja.gob.ar"
-                >
-                  {t('footer.contact.email')}
-                </a>
-              </li>
-            </ul>
-          </section>
+          <div className={styles.bottom}>
+            <p className={styles.copyright}>{t('footer.copyright')}</p>
+          </div>
         </div>
-
-        <div className={styles.bottom}>
-          <p className={styles.copyright}>{t('footer.copyright')}</p>
-        </div>
-      </div>
+      </Container>
     </footer>
   )
 }

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Container } from '../../components/ui/Container/Container'
 import styles from './PlaceholderPage.module.scss'
 
 export function PlaceholderPage() {
@@ -6,7 +7,9 @@ export function PlaceholderPage() {
 
   return (
     <div className={styles.root}>
-      <p className={styles.text}>{t('common.pagePlaceholder')}</p>
+      <Container>
+        <p className={styles.text}>{t('common.pagePlaceholder')}</p>
+      </Container>
     </div>
   )
 }

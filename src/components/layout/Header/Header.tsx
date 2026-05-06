@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
+import { Container } from '../../ui/Container/Container'
 import { MAIN_NAV_ITEMS } from '../../../navigation/mainNav'
 import styles from './Header.module.scss'
 
@@ -136,87 +137,101 @@ export function Header() {
       </a>
 
       <div className={styles.bar}>
-        <div className={styles.brand}>
-          <Link className={styles.logoLink} to="/">
-            <img
-              className={styles.logo}
-              src={LOGO_SRC}
-              alt={t('layout.logoAlt')}
-              width={200}
-              height={48}
-              decoding="async"
-            />
-          </Link>
-        </div>
+        <Container>
+          <div className={styles.barGrid}>
+            <div className={styles.brand}>
+              <Link className={styles.logoLink} to="/">
+                <img
+                  className={styles.logo}
+                  src={LOGO_SRC}
+                  alt={t('layout.logoAlt')}
+                  width={200}
+                  height={48}
+                  decoding="async"
+                />
+              </Link>
+            </div>
 
-        <nav
-          className={styles.desktopNav}
-          aria-label={t('layout.navAriaLabel')}
-        >
-          {renderNavLinks('desktop')}
-        </nav>
+            <nav
+              className={styles.desktopNav}
+              aria-label={t('layout.navAriaLabel')}
+            >
+              {renderNavLinks('desktop')}
+            </nav>
 
-        <div className={styles.actions}>
-          {langSwitcher}
-          <button
-            ref={menuButtonRef}
-            type="button"
-            className={styles.menuToggle}
-            aria-expanded={mobileOpen}
-            aria-controls={menuId}
-            aria-label={
-              mobileOpen ? t('layout.menuClose') : t('layout.menuOpen')
-            }
-            onClick={() => {
-              setMobileOpen((open) => !open)
-            }}
-          >
-            <span className={styles.menuIcon} aria-hidden />
-            <span className={styles.menuIcon} aria-hidden />
-            <span className={styles.menuIcon} aria-hidden />
-          </button>
-        </div>
+            <div className={styles.actions}>
+              {langSwitcher}
+              <button
+                ref={menuButtonRef}
+                type="button"
+                className={styles.menuToggle}
+                aria-expanded={mobileOpen}
+                aria-controls={menuId}
+                aria-label={
+                  mobileOpen ? t('layout.menuClose') : t('layout.menuOpen')
+                }
+                onClick={() => {
+                  setMobileOpen((open) => !open)
+                }}
+              >
+                <span className={styles.menuIcon} aria-hidden />
+                <span className={styles.menuIcon} aria-hidden />
+                <span className={styles.menuIcon} aria-hidden />
+              </button>
+            </div>
+          </div>
+        </Container>
       </div>
 
       {mobileOpen ? (
         <div className={styles.mobilePanel} id={menuId}>
-          <div className={styles.mobileTop}>
-            <Link className={styles.logoLink} to="/" onClick={closeMobile}>
-              <img
-                className={styles.logoSmall}
-                src={LOGO_SRC}
-                alt={t('layout.logoAlt')}
-                width={160}
-                height={40}
-                decoding="async"
-              />
-            </Link>
-            <div className={styles.mobileTopActions}>
-              {langSwitcher}
-              <button
-                ref={closeButtonRef}
-                type="button"
-                className={styles.closeButton}
-                aria-label={t('layout.menuClose')}
-                onClick={closeMobile}
-              >
-                <span className={styles.closeIcon} aria-hidden />
-              </button>
-            </div>
+          <div className={styles.mobilePanelStretch}>
+            <Container>
+              <div className={styles.mobileColumn}>
+                <div className={styles.mobileTop}>
+                  <Link
+                    className={styles.logoLink}
+                    to="/"
+                    onClick={closeMobile}
+                  >
+                    <img
+                      className={styles.logoSmall}
+                      src={LOGO_SRC}
+                      alt={t('layout.logoAlt')}
+                      width={160}
+                      height={40}
+                      decoding="async"
+                    />
+                  </Link>
+                  <div className={styles.mobileTopActions}>
+                    {langSwitcher}
+                    <button
+                      ref={closeButtonRef}
+                      type="button"
+                      className={styles.closeButton}
+                      aria-label={t('layout.menuClose')}
+                      onClick={closeMobile}
+                    >
+                      <span className={styles.closeIcon} aria-hidden />
+                    </button>
+                  </div>
+                </div>
+
+                <nav
+                  className={styles.mobileNav}
+                  aria-label={t('layout.navAriaLabel')}
+                >
+                  {renderNavLinks('mobile')}
+                </nav>
+
+                <p className={styles.mobileLangHint}>
+                  {t('layout.langMobileHint', {
+                    lang: isEs ? 'ES' : 'EN',
+                  })}
+                </p>
+              </div>
+            </Container>
           </div>
-
-          <nav
-            className={styles.mobileNav}
-            aria-label={t('layout.navAriaLabel')}
-          >
-            {renderNavLinks('mobile')}
-          </nav>
-
-          <p className={styles.mobileLangHint}>
-            {t('layout.langMobileHint', {
-              lang: isEs ? 'ES' : 'EN',
-            })}
-          </p>
         </div>
       ) : null}
     </header>

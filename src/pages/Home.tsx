@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Container } from '../components/ui/Container/Container'
 import { HomeModule } from '../modules/home'
 import { useSyncPageMeta } from '../seo/useSyncPageMeta'
 import { fetchHomePageData, type HomePageData } from '../services/homeService'
@@ -20,14 +21,16 @@ export function Home() {
 
   if (data === null) {
     return (
-      <div
-        className={styles.loading}
-        role="status"
-        aria-live="polite"
-        aria-busy="true"
-      >
-        {t('common.loading')}
-      </div>
+      <Container>
+        <div
+          className={styles.loading}
+          role="status"
+          aria-live="polite"
+          aria-busy="true"
+        >
+          {t('common.loading')}
+        </div>
+      </Container>
     )
   }
 
