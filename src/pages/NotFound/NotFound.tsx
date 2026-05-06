@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Container } from '../../components/ui/Container/Container'
+import { Section } from '../../components/ui/Section/Section'
 import styles from './NotFound.module.scss'
 
 export function NotFound() {
   const { t } = useTranslation()
 
   return (
-    <div className={styles.root}>
+    <Section>
       <Container>
         <h1 className={styles.title}>{t('common.notFoundTitle')}</h1>
         <p className={styles.text}>{t('common.notFoundBody')}</p>
@@ -15,6 +16,6 @@ export function NotFound() {
           {t('common.notFoundHome')}
         </Link>
       </Container>
-    </div>
+    </Section>
   )
 }

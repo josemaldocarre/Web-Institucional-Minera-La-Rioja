@@ -45,10 +45,12 @@
       "subtitle": "Institutional platform for the management, transparency, and development of mining activity in the province."
     },
     "intro": {
+      "eyebrow": "Mining La Rioja",
       "title": "Transparency and mining development",
       "body": "This site is the Mining Secretariat’s institutional channel for publishing documentation, data, and geographic references. It aims to strengthen transparency, organize sector information, and support responsible mining development in the province."
     },
     "features": {
+      "eyebrow": "The platform",
       "title": "What the platform offers",
       "items": {
         "docs": {
@@ -66,12 +68,14 @@
       }
     },
     "contactCard": {
+      "eyebrow": "Contact",
       "title": "Mining that builds community",
       "description": "Connect with the Secretariat: procedures, suppliers, job opportunities, and citizen participation.",
       "cta": "Contact us",
       "contactListLabel": "Contact details"
     },
     "featureDocuments": {
+      "eyebrow": "Documentation",
       "title": "Public documents",
       "subtitle": "Access official documentation related to mining activity in the province.",
       "plan": {

@@ -45,10 +45,12 @@
       "subtitle": "Plataforma institucional para la gestión, transparencia y desarrollo de la actividad minera en la provincia."
     },
     "intro": {
+      "eyebrow": "Minería La Rioja",
       "title": "Transparencia y desarrollo minero",
       "body": "Este sitio es el canal institucional de la Secretaría de Minería para publicar documentación, datos y referencias geográficas. Su objetivo es fortalecer la transparencia, ordenar la información del sector y acompañar un desarrollo minero responsable en la provincia."
     },
     "features": {
+      "eyebrow": "La plataforma",
       "title": "Qué ofrece la plataforma",
       "items": {
         "docs": {
@@ -66,12 +68,14 @@
       }
     },
     "contactCard": {
+      "eyebrow": "Contacto",
       "title": "Una minería que construye comunidad",
       "description": "Conectá con la Secretaría: trámites, proveedores, oportunidades laborales y participación ciudadana.",
       "cta": "Contactar",
       "contactListLabel": "Datos de contacto"
     },
     "featureDocuments": {
+      "eyebrow": "Documentación",
       "title": "Documentos públicos",
       "subtitle": "Accedé a la documentación oficial vinculada a la actividad minera en la provincia.",
       "plan": {

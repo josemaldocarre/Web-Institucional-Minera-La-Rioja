@@ -1,0 +1,11 @@
+@use '../../../styles/variables' as v;
+
+.root {
+  padding-block: var(--section-padding-block);
+}
+
+@media (width >= v.$breakpoint-header-desktop) {
+  .root {
+    padding-block: var(--section-padding-block-desktop);
+  }
+}

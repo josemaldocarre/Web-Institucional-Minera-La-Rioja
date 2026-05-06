@@ -2,6 +2,8 @@ import { useId } from 'react'
 import type { JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
+import { Section } from '../../../../components/ui/Section/Section'
+import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
 import styles from './FeatureDocumentsSection.module.scss'
 
 function IconPlan() {
@@ -72,12 +74,15 @@ export function FeatureDocumentsSection() {
   const headingId = useId()
 
   return (
-    <section className={styles.root} aria-labelledby={headingId}>
+    <Section aria-labelledby={headingId}>
       <Container>
         <header className={styles.header}>
-          <h2 id={headingId} className={styles.title}>
-            {t('home.featureDocuments.title')}
-          </h2>
+          <SectionHeader
+            headingId={headingId}
+            eyebrow={t('home.featureDocuments.eyebrow')}
+            title={t('home.featureDocuments.title')}
+            variant="green"
+          />
           <p className={styles.subtitle}>
             {t('home.featureDocuments.subtitle')}
           </p>
@@ -123,6 +128,6 @@ export function FeatureDocumentsSection() {
           )}
         </div>
       </Container>
-    </section>
+    </Section>
   )
 }

@@ -1,0 +1,50 @@
+@use '../../../styles/variables' as v;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-3;
+  margin: 0;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  &::before {
+    content: '— ';
+  }
+}
+
+.title {
+  margin: 0;
+  max-width: 40rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(2.5rem, 2.5vw, 2.8rem);
+  font-weight: var(--font-weight-black);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  text-wrap: balance;
+}
+
+.variantGreen .eyebrow {
+  color: var(--color-dark-green);
+}
+
+.variantOrange .eyebrow {
+  color: var(--color-orange);
+}
+
+.inverse .eyebrow {
+  color: color-mix(in srgb, var(--color-white) 88%, var(--color-yellow));
+}
+
+.inverse .title {
+  color: var(--color-white);
+}

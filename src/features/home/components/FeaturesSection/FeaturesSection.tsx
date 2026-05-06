@@ -2,6 +2,8 @@ import { useId } from 'react'
 import type { JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
+import { Section } from '../../../../components/ui/Section/Section'
+import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
 import styles from './FeaturesSection.module.scss'
 
 function IconDocs() {
@@ -82,23 +84,28 @@ export function FeaturesSection() {
   const headingId = useId()
 
   return (
-    <section className={styles.root} aria-labelledby={headingId}>
+    <Section className={styles.surface} aria-labelledby={headingId}>
       <Container>
-        <h2 id={headingId} className={styles.sectionTitle}>
-          {t('home.features.title')}
-        </h2>
-        <ul className={styles.grid}>
-          {FEATURES.map(({ titleKey, descriptionKey, Icon }) => (
-            <li key={titleKey} className={styles.item}>
-              <div className={styles.iconWrap}>
-                <Icon />
-              </div>
-              <h3 className={styles.itemTitle}>{t(titleKey)}</h3>
-              <p className={styles.itemDescription}>{t(descriptionKey)}</p>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.inner}>
+          <SectionHeader
+            headingId={headingId}
+            eyebrow={t('home.features.eyebrow')}
+            title={t('home.features.title')}
+            variant="orange"
+          />
+          <ul className={styles.grid}>
+            {FEATURES.map(({ titleKey, descriptionKey, Icon }) => (
+              <li key={titleKey} className={styles.item}>
+                <div className={styles.iconWrap}>
+                  <Icon />
+                </div>
+                <h3 className={styles.itemTitle}>{t(titleKey)}</h3>
+                <p className={styles.itemDescription}>{t(descriptionKey)}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Container>
-    </section>
+    </Section>
   )
 }

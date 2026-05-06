@@ -1,18 +1,11 @@
-.root {
-  padding-block: var(--space-12) var(--space-10);
+.surface {
   background-color: var(--color-white);
 }
 
-.title {
-  margin: 0 0 var(--space-5);
-  max-width: 40rem;
-  font-family: var(--font-family-display);
-  font-size: clamp(2.5rem, 2.5vw, 2.8rem);
-  font-weight: var(--font-weight-black);
-  line-height: 1;
-  letter-spacing: -0.025em;
-  color: var(--color-text-primary);
-  text-wrap: balance;
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
 .text {

@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
+import { Section } from '../../../../components/ui/Section/Section'
 import styles from './ContactCard.module.scss'
 
 const MAILTO_HREF = 'mailto:mineria@larioja.gob.ar'
@@ -12,7 +13,7 @@ export function ContactCard() {
   const contactListId = useId()
 
   return (
-    <section className={styles.root} aria-labelledby={headingId}>
+    <Section className={styles.surface} aria-labelledby={headingId}>
       <Container>
         <div className={styles.card}>
           <div className={styles.left}>
@@ -49,6 +50,6 @@ export function ContactCard() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   )
 }

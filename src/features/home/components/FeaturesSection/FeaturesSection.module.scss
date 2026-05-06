@@ -1,7 +1,6 @@
 @use '../../../../styles/variables' as v;
 
-.root {
-  padding-block: var(--space-12) var(--space-10);
+.surface {
   background-color: color-mix(
     in srgb,
     var(--color-surface-muted) 65%,
@@ -9,15 +8,10 @@
   );
 }
 
-.sectionTitle {
-  margin: 0 0 var(--space-10);
-  max-width: 36rem;
-  font-family: var(--font-family-display);
-  font-size: clamp(var(--font-size-xl), 2vw, var(--font-size-2xl));
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  color: var(--color-text-primary);
-  letter-spacing: -0.02em;
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
 }
 
 .grid {

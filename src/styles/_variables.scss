@@ -57,6 +57,10 @@ $header-border: color-mix(in srgb, $color-dark-gray 12%, transparent);
 $header-shadow: 0 1px 3px color-mix(in srgb, $color-dark-gray 10%, transparent);
 $breakpoint-header-desktop: 60rem;
 
+// - Section vertical rhythm -
+$section-padding-block: 6rem;
+$section-padding-block-desktop: 8rem;
+
 // - Footer (tema oscuro) -
 $footer-bg: color-mix(in srgb, $color-dark-gray 42%, black);
 $footer-text: $color-white;

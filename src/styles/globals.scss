@@ -53,6 +53,10 @@
   --line-height-normal: #{v.$line-height-normal};
   --line-height-relaxed: #{v.$line-height-relaxed};
 
+  // Section layout
+  --section-padding-block: #{v.$section-padding-block};
+  --section-padding-block-desktop: #{v.$section-padding-block-desktop};
+
   // Header
   --color-header-border: #{v.$header-border};
   --shadow-header: #{v.$header-shadow};
