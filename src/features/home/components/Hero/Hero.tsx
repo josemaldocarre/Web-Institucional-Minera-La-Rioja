@@ -1,6 +1,7 @@
 import { useId, useRef, useState, type CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
+import type { HomeHeroBlock } from '../../../../services/homeService'
 import styles from './Hero.module.scss'
 
 const HERO_VIDEO_SRC = '/videos/hero_720.mp4'
@@ -22,11 +23,10 @@ const soundBtnStyle: CSSProperties = {
 }
 
 export interface HeroProps {
-  readonly titleKey: string
-  readonly subtitleKey: string
+  readonly hero: HomeHeroBlock
 }
 
-export function Hero({ titleKey, subtitleKey }: HeroProps) {
+export function Hero({ hero }: HeroProps) {
   const { t } = useTranslation()
   const headingId = useId()
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -57,10 +57,10 @@ export function Hero({ titleKey, subtitleKey }: HeroProps) {
       <Container>
         <div className={styles.content}>
           <h1 id={headingId} className={styles.title}>
-            <span className={styles.titleLight}>La Rioja, </span>
-            <span className={styles.titleAccent}>{t(titleKey)}</span>
+            <span className={styles.titleLight}>{t(hero.titlePrefixKey)}</span>
+            <span className={styles.titleAccent}>{t(hero.titleKey)}</span>
           </h1>
-          <p className={styles.subtitle}>{t(subtitleKey)}</p>
+          <p className={styles.subtitle}>{t(hero.subtitleKey)}</p>
         </div>
       </Container>
       <button

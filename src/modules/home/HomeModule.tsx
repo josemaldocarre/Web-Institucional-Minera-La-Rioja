@@ -13,12 +13,12 @@ export interface HomeModuleProps {
 export function HomeModule({ data }: HomeModuleProps) {
   return (
     <div className={styles.page}>
-      <Hero titleKey={data.hero.titleKey} subtitleKey={data.hero.subtitleKey} />
+      <Hero hero={data.hero} />
 
-      <IntroSection />
-      <FeaturesSection />
-      <FeatureDocumentsSection />
-      <ContactCard />
+      <IntroSection preview={data.institutionalPreview} />
+      <FeaturesSection features={data.features} />
+      <FeatureDocumentsSection documents={data.documents} />
+      <ContactCard contact={data.contactPreview} />
     </div>
   )
 }

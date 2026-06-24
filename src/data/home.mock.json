@@ -1,6 +1,68 @@
 {
   "hero": {
+    "titlePrefixKey": "home.hero.titlePrefix",
     "titleKey": "home.hero.title",
     "subtitleKey": "home.hero.subtitle"
+  },
+  "institutionalPreview": {
+    "eyebrowKey": "home.intro.eyebrow",
+    "titleKey": "home.intro.title",
+    "bodyKey": "home.intro.body"
+  },
+  "features": {
+    "eyebrowKey": "home.features.eyebrow",
+    "titleKey": "home.features.title",
+    "items": [
+      {
+        "id": "docs",
+        "titleKey": "home.features.items.docs.title",
+        "descriptionKey": "home.features.items.docs.description"
+      },
+      {
+        "id": "geo",
+        "titleKey": "home.features.items.geo.title",
+        "descriptionKey": "home.features.items.geo.description"
+      },
+      {
+        "id": "openData",
+        "titleKey": "home.features.items.openData.title",
+        "descriptionKey": "home.features.items.openData.description"
+      }
+    ]
+  },
+  "documents": {
+    "eyebrowKey": "home.featureDocuments.eyebrow",
+    "titleKey": "home.featureDocuments.title",
+    "subtitleKey": "home.featureDocuments.subtitle",
+    "items": [
+      {
+        "href": "/docs/plan-quinquenal.pdf",
+        "icon": "plan",
+        "titleKey": "home.featureDocuments.plan.title",
+        "descriptionKey": "home.featureDocuments.plan.description",
+        "ctaKey": "home.featureDocuments.plan.cta",
+        "badgeKey": "home.featureDocuments.plan.badge",
+        "accent": "orange"
+      },
+      {
+        "href": "/docs/catastro-minero.dwg",
+        "icon": "catastro",
+        "titleKey": "home.featureDocuments.catastro.title",
+        "descriptionKey": "home.featureDocuments.catastro.description",
+        "ctaKey": "home.featureDocuments.catastro.cta",
+        "badgeKey": "home.featureDocuments.catastro.badge",
+        "accent": "green"
+      }
+    ]
+  },
+  "contactPreview": {
+    "titleKey": "home.contactCard.title",
+    "descriptionKey": "home.contactCard.description",
+    "ctaKey": "home.contactCard.cta",
+    "contactListLabelKey": "home.contactCard.contactListLabel",
+    "emailHref": "mailto:mineria@larioja.gob.ar",
+    "phoneHref": "tel:+5438044453068",
+    "emailLabelKey": "footer.contact.email",
+    "phoneLabelKey": "footer.contact.phone"
   }
 }

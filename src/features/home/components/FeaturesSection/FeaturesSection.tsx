@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
 import { Section } from '../../../../components/ui/Section/Section'
 import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
+import type { HomeFeaturesBlock } from '../../../../services/homeService'
 import styles from './FeaturesSection.module.scss'
 
 function IconDocs() {
@@ -57,29 +58,20 @@ function IconOpenData() {
   )
 }
 
-const FEATURES: ReadonlyArray<{
-  titleKey: string
-  descriptionKey: string
-  Icon: () => JSX.Element
-}> = [
-  {
-    titleKey: 'home.features.items.docs.title',
-    descriptionKey: 'home.features.items.docs.description',
-    Icon: IconDocs,
-  },
-  {
-    titleKey: 'home.features.items.geo.title',
-    descriptionKey: 'home.features.items.geo.description',
-    Icon: IconGeo,
-  },
-  {
-    titleKey: 'home.features.items.openData.title',
-    descriptionKey: 'home.features.items.openData.description',
-    Icon: IconOpenData,
-  },
-]
+const FEATURE_ICONS: Record<
+  HomeFeaturesBlock['items'][number]['id'],
+  () => JSX.Element
+> = {
+  docs: IconDocs,
+  geo: IconGeo,
+  openData: IconOpenData,
+}
 
-export function FeaturesSection() {
+export interface FeaturesSectionProps {
+  readonly features: HomeFeaturesBlock
+}
+
+export function FeaturesSection({ features }: FeaturesSectionProps) {
   const { t } = useTranslation()
   const headingId = useId()
 
@@ -89,20 +81,24 @@ export function FeaturesSection() {
         <div className={styles.inner}>
           <SectionHeader
             headingId={headingId}
-            eyebrow={t('home.features.eyebrow')}
-            title={t('home.features.title')}
+            eyebrow={t(features.eyebrowKey)}
+            title={t(features.titleKey)}
             variant="orange"
           />
           <ul className={styles.grid}>
-            {FEATURES.map(({ titleKey, descriptionKey, Icon }) => (
-              <li key={titleKey} className={styles.item}>
-                <div className={styles.iconWrap}>
-                  <Icon />
-                </div>
-                <h3 className={styles.itemTitle}>{t(titleKey)}</h3>
-                <p className={styles.itemDescription}>{t(descriptionKey)}</p>
-              </li>
-            ))}
+            {features.items.map(({ id, titleKey, descriptionKey }) => {
+              const Icon = FEATURE_ICONS[id]
+
+              return (
+                <li key={titleKey} className={styles.item}>
+                  <div className={styles.iconWrap}>
+                    <Icon />
+                  </div>
+                  <h3 className={styles.itemTitle}>{t(titleKey)}</h3>
+                  <p className={styles.itemDescription}>{t(descriptionKey)}</p>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </Container>

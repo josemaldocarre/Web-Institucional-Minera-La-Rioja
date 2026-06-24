@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
 import { Section } from '../../../../components/ui/Section/Section'
 import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
+import type { HomeDocumentsBlock } from '../../../../services/homeService'
 import styles from './FeatureDocumentsSection.module.scss'
 
 function IconPlan() {
@@ -40,36 +41,21 @@ function IconCatastro() {
   )
 }
 
-const FEATURES: ReadonlyArray<{
-  href: string
-  titleKey: string
-  descriptionKey: string
-  ctaKey: string
-  badgeKey: string
-  Icon: () => JSX.Element
-  accent: 'orange' | 'green'
-}> = [
-  {
-    href: '/docs/plan-quinquenal.pdf',
-    titleKey: 'home.featureDocuments.plan.title',
-    descriptionKey: 'home.featureDocuments.plan.description',
-    ctaKey: 'home.featureDocuments.plan.cta',
-    badgeKey: 'home.featureDocuments.plan.badge',
-    Icon: IconPlan,
-    accent: 'orange',
-  },
-  {
-    href: '/docs/catastro-minero.dwg',
-    titleKey: 'home.featureDocuments.catastro.title',
-    descriptionKey: 'home.featureDocuments.catastro.description',
-    ctaKey: 'home.featureDocuments.catastro.cta',
-    badgeKey: 'home.featureDocuments.catastro.badge',
-    Icon: IconCatastro,
-    accent: 'green',
-  },
-]
+const DOCUMENT_ICONS: Record<
+  HomeDocumentsBlock['items'][number]['icon'],
+  () => JSX.Element
+> = {
+  plan: IconPlan,
+  catastro: IconCatastro,
+}
 
-export function FeatureDocumentsSection() {
+export interface FeatureDocumentsSectionProps {
+  readonly documents: HomeDocumentsBlock
+}
+
+export function FeatureDocumentsSection({
+  documents,
+}: FeatureDocumentsSectionProps) {
   const { t } = useTranslation()
   const headingId = useId()
 
@@ -79,26 +65,29 @@ export function FeatureDocumentsSection() {
         <header className={styles.header}>
           <SectionHeader
             headingId={headingId}
-            eyebrow={t('home.featureDocuments.eyebrow')}
-            title={t('home.featureDocuments.title')}
+            eyebrow={t(documents.eyebrowKey)}
+            title={t(documents.titleKey)}
             variant="green"
           />
           <p className={styles.subtitle}>
-            {t('home.featureDocuments.subtitle')}
+            {t(documents.subtitleKey)}
           </p>
         </header>
 
         <div className={styles.grid}>
-          {FEATURES.map(
+          {documents.items.map(
             ({
               href,
+              icon,
               titleKey,
               descriptionKey,
               ctaKey,
               badgeKey,
-              Icon,
               accent,
-            }) => (
+            }) => {
+              const Icon = DOCUMENT_ICONS[icon]
+
+              return (
               <article
                 key={href}
                 className={`${styles.card} ${accent === 'orange' ? styles.cardOrange : styles.cardGreen}`}
@@ -124,7 +113,8 @@ export function FeatureDocumentsSection() {
                   {t(ctaKey)}
                 </a>
               </article>
-            ),
+              )
+            },
           )}
         </div>
       </Container>
