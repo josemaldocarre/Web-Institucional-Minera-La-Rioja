@@ -12,13 +12,15 @@
   "nav": {
     "inicio": "Home",
     "quienesSomos": "About us",
+    "autoridades": "Authorities",
+    "contacto": "Contact",
     "tramites": "Procedures",
-    "normativas": "Regulations",
-    "transparencia": "Transparency",
-    "planQuinquenal": "Five-year plan",
+    "catastroMinero": "Mining Cadastre",
     "proveedores": "Suppliers",
-    "tallerArtesanias": "Crafts workshop",
-    "contacto": "Contact"
+    "transparencia": "Transparency",
+    "normativas": "Regulations",
+    "planQuinquenal": "Five-year plan",
+    "tallerArtesanias": "Crafts workshop"
   },
   "footer": {
     "institutional": {

@@ -3,14 +3,29 @@ export interface MainNavItem {
   readonly labelKey: string
 }
 
+/** 
+ * Navegación principal del sitio. 
+ * Agrupación lógica alineada con la arquitectura de rutas del sitio.
+*/
 export const MAIN_NAV_ITEMS: readonly MainNavItem[] = [
-  { path: 'inicio', labelKey: 'nav.inicio' },
-/*   { path: 'quienes-somos', labelKey: 'nav.quienesSomos' },
-  { path: 'tramites', labelKey: 'nav.tramites' },
-  { path: 'normativas', labelKey: 'nav.normativas' },
-  { path: 'transparencia', labelKey: 'nav.transparencia' }, */
-  { path: 'plan-quinquenal', labelKey: 'nav.planQuinquenal' },
-/*   { path: 'proveedores', labelKey: 'nav.proveedores' },
-  { path: 'taller-de-artesanias', labelKey: 'nav.tallerArtesanias' }, */
-  { path: 'contacto', labelKey: 'nav.contacto' },
+  // Inicio
+  { path: '', labelKey: 'nav.inicio' },
+
+  // Institucional
+  { path: 'institucional/quienes-somos', labelKey: 'nav.quienesSomos' },
+  { path: 'institucional/autoridades', labelKey: 'nav.autoridades' },
+  { path: 'institucional/contacto', labelKey: 'nav.contacto' },
+
+  // Gestión Minera
+  { path: 'gestion-minera/tramites', labelKey: 'nav.tramites' },
+  { path: 'gestion-minera/catastro-minero', labelKey: 'nav.catastroMinero' },
+  { path: 'gestion-minera/proveedores', labelKey: 'nav.proveedores' },
+
+  // Información Pública
+  { path: 'informacion-publica/transparencia', labelKey: 'nav.transparencia' },
+  { path: 'informacion-publica/normativas', labelKey: 'nav.normativas' },
+  { path: 'informacion-publica/plan-quinquenal', labelKey: 'nav.planQuinquenal' },
+
+  // Programas
+  { path: 'programas/taller-artesanias', labelKey: 'nav.tallerArtesanias' },
 ]

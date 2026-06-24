@@ -12,13 +12,15 @@
   "nav": {
     "inicio": "Inicio",
     "quienesSomos": "Quiénes Somos",
+    "autoridades": "Autoridades",
+    "contacto": "Contacto",
     "tramites": "Trámites",
-    "normativas": "Normativas",
-    "transparencia": "Transparencia",
-    "planQuinquenal": "Plan Quinquenal",
+    "catastroMinero": "Catastro Minero",
     "proveedores": "Proveedores",
-    "tallerArtesanias": "Taller de Artesanías",
-    "contacto": "Contacto"
+    "transparencia": "Transparencia",
+    "normativas": "Normativas",
+    "planQuinquenal": "Plan Quinquenal",
+    "tallerArtesanias": "Taller de Artesanías"
   },
   "footer": {
     "institutional": {
