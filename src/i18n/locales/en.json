@@ -11,16 +11,11 @@
   },
   "nav": {
     "inicio": "Home",
-    "quienesSomos": "About us",
-    "autoridades": "Authorities",
-    "contacto": "Contact",
-    "tramites": "Procedures",
-    "catastroMinero": "Mining Cadastre",
-    "proveedores": "Suppliers",
-    "transparencia": "Transparency",
-    "normativas": "Regulations",
-    "planQuinquenal": "Five-year plan",
-    "tallerArtesanias": "Crafts workshop"
+    "institucional": "Institutional",
+    "gestionMinera": "Mining management",
+    "informacionPublica": "Public information",
+    "programas": "Programs",
+    "contacto": "Contact"
   },
   "footer": {
     "institutional": {

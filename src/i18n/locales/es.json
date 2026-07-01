@@ -11,16 +11,11 @@
   },
   "nav": {
     "inicio": "Inicio",
-    "quienesSomos": "Quiénes Somos",
-    "autoridades": "Autoridades",
-    "contacto": "Contacto",
-    "tramites": "Trámites",
-    "catastroMinero": "Catastro Minero",
-    "proveedores": "Proveedores",
-    "transparencia": "Transparencia",
-    "normativas": "Normativas",
-    "planQuinquenal": "Plan Quinquenal",
-    "tallerArtesanias": "Taller de Artesanías"
+    "institucional": "Institucional",
+    "gestionMinera": "Gestión Minera",
+    "informacionPublica": "Información Pública",
+    "programas": "Programas",
+    "contacto": "Contacto"
   },
   "footer": {
     "institutional": {
