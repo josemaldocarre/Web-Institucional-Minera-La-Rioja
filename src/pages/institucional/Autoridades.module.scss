@@ -1,0 +1,199 @@
+@use '../../styles/variables' as v;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.secretariaCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 40rem;
+  padding: var(--space-8) var(--space-6);
+  border-radius: 1rem;
+  color: var(--color-white);
+  background: linear-gradient(135deg, hsl(80 75% 40%) 0%, hsl(79 98% 25%) 100%);
+  box-shadow:
+    0 16px 40px color-mix(in srgb, v.$color-dark-gray 14%, transparent),
+    0 4px 12px color-mix(in srgb, v.$color-dark-green 20%, transparent);
+}
+
+.secretariaHeading {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-white) 88%, transparent);
+}
+
+.secretariaFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.fieldBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.fieldLabel {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-white) 72%, transparent);
+}
+
+.secretariaCard .fieldLabel {
+  color: color-mix(in srgb, var(--color-white) 72%, transparent);
+}
+
+.secretariaName {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+.secretariaRole {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.subsectionTitle {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+}
+
+.supportList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.supportItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-header-border);
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.supportRole {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+}
+
+.responsibleName {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.panel .fieldLabel {
+  color: var(--color-text-muted);
+}
+
+.dependentList,
+.programList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dependentItem,
+.programItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-header-border);
+
+  &:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.dependentTitle,
+.programTitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+}
+
+.vacantBadge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-muted);
+  border: 1px solid var(--color-header-border);
+  border-radius: 0.25rem;
+}
+
+@media (width >= v.$breakpoint-header-desktop) {
+  .secretariaCard {
+    padding: var(--space-10) var(--space-8);
+  }
+
+  .subsectionTitle {
+    font-size: var(--font-size-xl);
+  }
+}
