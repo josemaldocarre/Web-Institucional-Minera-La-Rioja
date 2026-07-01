@@ -1,7 +1,12 @@
+import { SectionLayout } from '../../layouts/SectionLayout'
 import { institucionalService } from '../../services/institucionalService'
 
-void institucionalService.quienesSomos
+const { title, intro } = institucionalService.quienesSomos
 
 export default function QuienesSomos() {
-  return <div>QuienesSomos</div>
+  return (
+    <SectionLayout id="quienes-somos" title={title} description={intro}>
+      <div>QuienesSomos</div>
+    </SectionLayout>
+  )
 }

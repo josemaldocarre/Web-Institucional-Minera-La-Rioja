@@ -1,7 +1,12 @@
+import { SectionLayout } from '../../layouts/SectionLayout'
 import { gestionMineraService } from '../../services/gestionMineraService'
 
-void gestionMineraService.tramites
+const { intro } = gestionMineraService.tramites
 
 export default function Tramites() {
-  return <div>Tramites</div>
+  return (
+    <SectionLayout id="tramites" title="Trámites" description={intro}>
+      <div>Tramites</div>
+    </SectionLayout>
+  )
 }

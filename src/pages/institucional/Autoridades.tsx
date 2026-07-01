@@ -1,7 +1,12 @@
+import { SectionLayout } from '../../layouts/SectionLayout'
 import { institucionalService } from '../../services/institucionalService'
 
-void institucionalService.autoridades
+const { title, intro } = institucionalService.autoridades
 
 export default function Autoridades() {
-  return <div>Autoridades</div>
+  return (
+    <SectionLayout id="autoridades" title={title} description={intro}>
+      <div>Autoridades</div>
+    </SectionLayout>
+  )
 }

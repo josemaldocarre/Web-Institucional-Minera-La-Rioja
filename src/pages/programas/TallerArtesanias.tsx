@@ -1,7 +1,12 @@
+import { SectionLayout } from '../../layouts/SectionLayout'
 import { programasService } from '../../services/programasService'
 
-void programasService.tallerArtesanias
+const { title, intro } = programasService.tallerArtesanias
 
 export default function TallerArtesanias() {
-  return <div>TallerArtesanias</div>
+  return (
+    <SectionLayout id="taller-artesanias" title={title} description={intro}>
+      <div>TallerArtesanias</div>
+    </SectionLayout>
+  )
 }
