@@ -2,39 +2,98 @@
 
 .root {
   padding-block: var(--space-10);
-  background-color: var(--color-surface-muted);
-}
-
-@media (width >= v.$breakpoint-header-desktop) {
-  .root {
-    padding-block: var(--space-12);
-  }
+  background-color: var(--color-white);
+  background-image:
+    radial-gradient(at 20% 0%, hsl(21 94% 50% / 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsl(80 75% 40% / 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsl(38 96% 58% / 0.1) 0px, transparent 50%);
+    padding-block: 5rem;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.breadcrumbNav {
+  margin: 0;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: "Red Hat Mono", monospace;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+.breadcrumbIcon {
+  flex-shrink: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 0.25rem;
+    border-radius: 9999px;
+    background-color: currentColor;
+  }
 }
 
 .title {
   margin: 0;
-  max-width: 48rem;
   font-family: var(--font-family-display);
-  font-size: clamp(var(--font-size-3xl), 3vw, var(--font-size-4xl));
+  font-size: clamp(var(--font-size-4xl), 3vw, 3.75rem);
   font-weight: var(--font-weight-black);
-  line-height: var(--line-height-tight);
+  line-height: 1;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
   text-wrap: balance;
-}
+}        
 
 .description {
   margin: 0;
-  max-width: 40rem;
+  max-width: 42ch;
   font-family: var(--font-family-display);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-muted);
+}
+
+.cta {
+  padding-top: var(--space-2);
 }
