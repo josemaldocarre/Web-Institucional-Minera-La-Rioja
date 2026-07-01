@@ -1,19 +1,11 @@
 export interface MainNavItem {
-
   readonly path: string
-
   readonly labelKey: string
-
 }
 
-
-
 /**
-
  * Navegación principal del sitio.
-
  * Rutas padre que agrupan secciones institucionales.
-
  */
 export const MAIN_NAV_ITEMS: readonly MainNavItem[] = [
   { path: '', labelKey: 'nav.inicio' },

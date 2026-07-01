@@ -5,7 +5,7 @@ import Institucional from './pages/institucional/Institucional'
 import GestionMinera from './pages/gestion-minera/GestionMinera'
 import InformacionPublica from './pages/informacion-publica/InformacionPublica'
 import Programas from './pages/programas/Programas'
-import Contacto from './pages/institucional/Contacto'
+import Contacto from './pages/contacto/Contacto'
 import { NotFound } from './pages/NotFound'
 
 function App() {
