@@ -1,0 +1,48 @@
+@use '../../../styles/variables' as v;
+
+.root {
+  margin-top: var(--space-6);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-header-border);
+  border-radius: 999px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-dark-gray);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+}
+
+@media (width >= v.$breakpoint-header-desktop) {
+  .list {
+    gap: var(--space-3);
+  }
+}
