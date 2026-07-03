@@ -1,11 +1,14 @@
-import { SectionPageLayout } from '../../layouts/SectionPageLayout'
-import { PROGRAMAS_PAGE } from '../../navigation/sectionNav'
+import { PageHero } from '../../components/ui/PageHero/PageHero'
+import { programasService } from '../../services/programasService'
 import TallerArtesanias from './TallerArtesanias'
+
+const { page } = programasService
 
 export default function Programas() {
   return (
-    <SectionPageLayout config={PROGRAMAS_PAGE}>
+    <>
+      <PageHero {...page} />
       <TallerArtesanias />
-    </SectionPageLayout>
+    </>
   )
 }
