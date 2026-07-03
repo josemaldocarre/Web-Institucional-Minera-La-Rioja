@@ -1,0 +1,104 @@
+@use '../../styles/variables' as v;
+
+.editorial {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.media {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  background-color: var(--color-surface-muted);
+}
+
+.mediaPlaceholder {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: 0.75rem;
+  background-color: var(--color-surface-muted);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--space-6);
+  border-radius: 1rem;
+  background-color: color-mix(in srgb, var(--color-white) 94%, transparent);
+  box-shadow:
+    0 4px 8px color-mix(in srgb, v.$color-dark-gray 6%, transparent),
+    0 20px 48px color-mix(in srgb, v.$color-dark-gray 14%, transparent);
+}
+
+.body {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: 999px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    color: var(--color-white);
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--color-orange) 35%, transparent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-dark-green);
+    outline-offset: 3px;
+  }
+}
+
+@media (width >= v.$breakpoint-header-desktop) {
+  .editorial {
+    gap: 0;
+  }
+
+  .card {
+    position: absolute;
+    bottom: var(--space-10);
+    left: var(--space-10);
+    width: clamp(18rem, 40%, 32rem);
+    padding: var(--space-10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .image,
+  .mediaPlaceholder {
+    min-height: 22rem;
+  }
+}

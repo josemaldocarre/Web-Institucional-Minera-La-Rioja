@@ -1,15 +1,34 @@
-import { SectionPageLayout } from '../../layouts/SectionPageLayout'
-import { GESTION_MINERA_PAGE } from '../../navigation/sectionNav'
-import CatastroMinero from './CatastroMinero'
+import { Container } from '../../components/ui/Container/Container'
+import { PageHero } from '../../components/ui/PageHero/PageHero'
+import { SectionNavTabs } from '../../components/ui/SectionNavTabs/SectionNavTabs'
+import { gestionMineraService } from '../../services/gestionMineraService'
 import Proveedores from './Proveedores'
 import Tramites from './Tramites'
+import styles from './GestionMinera.module.scss'
+
+const { page, tramites, proveedores } = gestionMineraService
+
+const sectionNavItems = [
+  { id: 'tramites', label: tramites.title },
+  { id: 'proveedores', label: proveedores.title },
+] as const
 
 export default function GestionMinera() {
   return (
-    <SectionPageLayout config={GESTION_MINERA_PAGE}>
+    <>
+      <PageHero {...page} />
+
+      <div className={styles.navBar}>
+        <Container>
+          <SectionNavTabs
+            items={sectionNavItems}
+            ariaLabel="Secciones de la página de gestión minera"
+          />
+        </Container>
+      </div>
+
       <Tramites />
-      <CatastroMinero />
       <Proveedores />
-    </SectionPageLayout>
+    </>
   )
 }
