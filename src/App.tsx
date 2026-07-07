@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ScrollRestoration } from './components/common/ScrollRestoration/ScrollRestoration'
 import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home'
 import Institucional from './pages/institucional/Institucional'
@@ -11,6 +12,7 @@ import { NotFound } from './pages/NotFound'
 function App() {
   return (
     <BrowserRouter>
+      <ScrollRestoration />
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
