@@ -1,5 +1,6 @@
 @use 'variables' as v;
 @use 'mixins' as m;
+@use 'motion';
 
 // - Custom properties (consumo desde SASS modules vía var(--…)) -
 :root {

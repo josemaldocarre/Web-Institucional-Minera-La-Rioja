@@ -1,0 +1,47 @@
+// - Motion tokens (custom properties) -
+:root {
+  // Duraciones
+  --motion-fast: 150ms;
+  --motion-normal: 250ms;
+  --motion-slow: 400ms;
+  --motion-enter: 500ms;
+
+  // Easing
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  // Distancias
+  --motion-distance-sm: 8px;
+  --motion-distance-md: 12px;
+}
+
+// - Mixins reutilizables -
+@mixin motion-transition($properties...) {
+  transition-property: $properties;
+  transition-duration: var(--motion-normal);
+  transition-timing-function: var(--ease-standard);
+}
+
+@mixin motion-card-hover {
+  transform: translateY(-4px);
+  @include motion-transition(transform);
+}
+
+@mixin motion-cta-hover {
+  transform: translateY(-2px);
+  @include motion-transition(transform);
+}
+
+// - Accesibilidad: reducción de movimiento -
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+    scroll-behavior: auto !important;
+  }
+}
