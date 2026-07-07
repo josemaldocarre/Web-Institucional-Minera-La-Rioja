@@ -1,0 +1,12 @@
+.root {
+  opacity: 0;
+  transform: translateY(var(--motion-distance-md));
+  transition:
+    opacity var(--motion-slow) var(--ease-enter),
+    transform var(--motion-slow) var(--ease-enter);
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+}

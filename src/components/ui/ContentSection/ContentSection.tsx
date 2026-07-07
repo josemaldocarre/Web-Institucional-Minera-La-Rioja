@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import type { ReactNode } from 'react'
 import { Container } from '../Container/Container'
+import { MotionReveal } from '../MotionReveal/MotionReveal'
 import { Section } from '../Section/Section'
 import {
   SectionHeader,
@@ -28,11 +29,13 @@ export function ContentSection({
   return (
     <Section id={id} aria-labelledby={headingId}>
       <Container>
-        <div className={styles.block}>
-          <SectionHeader headingId={headingId} title={title} variant={variant} />
-          {description ? <p className={styles.description}>{description}</p> : null}
-          {children}
-        </div>
+        <MotionReveal>
+          <div className={styles.block}>
+            <SectionHeader headingId={headingId} title={title} variant={variant} />
+            {description ? <p className={styles.description}>{description}</p> : null}
+            {children}
+          </div>
+        </MotionReveal>
       </Container>
     </Section>
   )
