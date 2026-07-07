@@ -66,6 +66,8 @@
   line-height: 1.05;
   letter-spacing: -0.02em;
 
+  animation: heroEnter var(--motion-enter) var(--ease-enter) both;
+
   &Light {
     color: var(--color-white);
   }
@@ -89,4 +91,24 @@
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-relaxed);
   color: rgba(255, 255, 255, 0.92);
+
+  animation: heroEnter var(--motion-enter) var(--ease-enter) both;
+  animation-delay: 120ms;
+}
+
+.soundButton {
+  animation: heroEnter var(--motion-enter) var(--ease-enter) both;
+  animation-delay: 240ms;
+}
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-distance-md));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

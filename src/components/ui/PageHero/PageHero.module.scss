@@ -19,6 +19,7 @@
 
 .breadcrumbNav {
   margin: 0;
+  animation: pageHeroEnter var(--motion-enter) var(--ease-enter) both;
 }
 
 .breadcrumb {
@@ -63,6 +64,9 @@
   text-transform: uppercase;
   color: var(--color-orange);
 
+  animation: pageHeroEnter var(--motion-enter) var(--ease-enter) both;
+  animation-delay: 60ms;
+
   &::before {
     content: '';
     flex-shrink: 0;
@@ -82,6 +86,9 @@
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
   text-wrap: balance;
+
+  animation: pageHeroEnter var(--motion-enter) var(--ease-enter) both;
+  animation-delay: 120ms;
 }        
 
 .description {
@@ -92,8 +99,26 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-muted);
+
+  animation: pageHeroEnter var(--motion-enter) var(--ease-enter) both;
+  animation-delay: 180ms;
 }
 
 .cta {
   padding-top: var(--space-2);
+
+  animation: pageHeroEnter var(--motion-enter) var(--ease-enter) both;
+  animation-delay: 240ms;
+}
+
+@keyframes pageHeroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-distance-md));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -65,6 +65,7 @@ export function Hero({ hero }: HeroProps) {
       </Container>
       <button
         type="button"
+        className={styles.soundButton}
         style={soundBtnStyle}
         onClick={toggleSound}
         aria-label={isMuted ? 'Activar sonido del video' : 'Silenciar video'}
