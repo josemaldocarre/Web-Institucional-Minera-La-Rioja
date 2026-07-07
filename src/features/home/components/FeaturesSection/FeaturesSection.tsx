@@ -2,6 +2,7 @@ import { useId } from 'react'
 import type { JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
+import { MotionReveal } from '../../../../components/ui/MotionReveal/MotionReveal'
 import { Section } from '../../../../components/ui/Section/Section'
 import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
 import type { HomeFeaturesBlock } from '../../../../services/homeService'
@@ -78,29 +79,31 @@ export function FeaturesSection({ features }: FeaturesSectionProps) {
   return (
     <Section className={styles.surface} aria-labelledby={headingId}>
       <Container>
-        <div className={styles.inner}>
-          <SectionHeader
-            headingId={headingId}
-            eyebrow={t(features.eyebrowKey)}
-            title={t(features.titleKey)}
-            variant="orange"
-          />
-          <ul className={styles.grid}>
-            {features.items.map(({ id, titleKey, descriptionKey }) => {
-              const Icon = FEATURE_ICONS[id]
+        <MotionReveal>
+          <div className={styles.inner}>
+            <SectionHeader
+              headingId={headingId}
+              eyebrow={t(features.eyebrowKey)}
+              title={t(features.titleKey)}
+              variant="orange"
+            />
+            <ul className={styles.grid}>
+              {features.items.map(({ id, titleKey, descriptionKey }) => {
+                const Icon = FEATURE_ICONS[id]
 
-              return (
-                <li key={titleKey} className={styles.item}>
-                  <div className={styles.iconWrap}>
-                    <Icon />
-                  </div>
-                  <h3 className={styles.itemTitle}>{t(titleKey)}</h3>
-                  <p className={styles.itemDescription}>{t(descriptionKey)}</p>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+                return (
+                  <li key={titleKey} className={styles.item}>
+                    <div className={styles.iconWrap}>
+                      <Icon />
+                    </div>
+                    <h3 className={styles.itemTitle}>{t(titleKey)}</h3>
+                    <p className={styles.itemDescription}>{t(descriptionKey)}</p>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </MotionReveal>
       </Container>
     </Section>
   )

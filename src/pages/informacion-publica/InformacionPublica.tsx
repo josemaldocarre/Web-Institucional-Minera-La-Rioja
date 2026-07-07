@@ -1,5 +1,6 @@
 import { useState, type JSX } from 'react'
 import { Container } from '../../components/ui/Container/Container'
+import { MotionReveal } from '../../components/ui/MotionReveal/MotionReveal'
 import { PageHero } from '../../components/ui/PageHero/PageHero'
 import { Section } from '../../components/ui/Section/Section'
 import {
@@ -99,88 +100,90 @@ export default function InformacionPublica() {
         aria-label="Centro de consulta de información pública"
       >
         <Container>
-          <div className={styles.layout}>
-            <aside className={styles.sidebar} aria-label="Categorías">
-              <p className={styles.sidebarLabel}>Categorías</p>
-              <ul className={styles.categoryList}>
-                {categories.map((category) => {
-                  const isActive = category.id === activeCategoryId
-                  const Icon = CATEGORY_ICONS[category.id]
+          <MotionReveal>
+            <div className={styles.layout}>
+              <aside className={styles.sidebar} aria-label="Categorías">
+                <p className={styles.sidebarLabel}>Categorías</p>
+                <ul className={styles.categoryList}>
+                  {categories.map((category) => {
+                    const isActive = category.id === activeCategoryId
+                    const Icon = CATEGORY_ICONS[category.id]
 
-                  return (
-                    <li key={category.id}>
-                      <button
-                        type="button"
-                        className={[
-                          styles.categoryCard,
-                          isActive ? styles.categoryCardActive : '',
-                        ]
-                          .filter(Boolean)
-                          .join(' ')}
-                        aria-pressed={isActive}
-                        onClick={() => setActiveCategoryId(category.id)}
-                      >
-                        <span className={styles.categoryIcon} aria-hidden>
-                          <Icon size={22} />
-                        </span>
-                        <span className={styles.categoryTitle}>
-                          {category.title}
-                        </span>
-                        {isActive ? (
-                          <span className={styles.categoryChevron} aria-hidden>
-                            <IconChevron />
+                    return (
+                      <li key={category.id}>
+                        <button
+                          type="button"
+                          className={[
+                            styles.categoryCard,
+                            isActive ? styles.categoryCardActive : '',
+                          ]
+                            .filter(Boolean)
+                            .join(' ')}
+                          aria-pressed={isActive}
+                          onClick={() => setActiveCategoryId(category.id)}
+                        >
+                          <span className={styles.categoryIcon} aria-hidden>
+                            <Icon size={22} />
                           </span>
-                        ) : null}
-                      </button>
+                          <span className={styles.categoryTitle}>
+                            {category.title}
+                          </span>
+                          {isActive ? (
+                            <span className={styles.categoryChevron} aria-hidden>
+                              <IconChevron />
+                            </span>
+                          ) : null}
+                        </button>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </aside>
+
+              <div className={styles.panel} aria-live="polite">
+                <header className={styles.panelHeader}>
+                  <span className={styles.panelIcon} aria-hidden>
+                    <ActiveIcon size={32} />
+                  </span>
+                  <div className={styles.panelHeading}>
+                    <h2 className={styles.panelTitle}>{activeCategory.title}</h2>
+                    <p className={styles.panelIntro}>{activeCategory.intro}</p>
+                  </div>
+                </header>
+
+                <div className={styles.divider} />
+
+                <ul
+                  className={[
+                    styles.resourceGrid,
+                    activeCategory.resources.length === 1
+                      ? styles.resourceGridSingle
+                      : '',
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
+                >
+                  {activeCategory.resources.map((resource) => (
+                    <li key={resource.id}>
+                      <a
+                        className={styles.resourceCard}
+                        href={resource.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className={styles.resourceTitle}>
+                          {resource.title}
+                        </span>
+                        <span className={styles.resourceAction} aria-hidden>
+                          <IconExternalLink />
+                        </span>
+                      </a>
                     </li>
-                  )
-                })}
-              </ul>
-            </aside>
-
-            <div className={styles.panel} aria-live="polite">
-              <header className={styles.panelHeader}>
-                <span className={styles.panelIcon} aria-hidden>
-                  <ActiveIcon size={32} />
-                </span>
-                <div className={styles.panelHeading}>
-                  <h2 className={styles.panelTitle}>{activeCategory.title}</h2>
-                  <p className={styles.panelIntro}>{activeCategory.intro}</p>
-                </div>
-              </header>
-
-              <div className={styles.divider} />
-
-              <ul
-                className={[
-                  styles.resourceGrid,
-                  activeCategory.resources.length === 1
-                    ? styles.resourceGridSingle
-                    : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                {activeCategory.resources.map((resource) => (
-                  <li key={resource.id}>
-                    <a
-                      className={styles.resourceCard}
-                      href={resource.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className={styles.resourceTitle}>
-                        {resource.title}
-                      </span>
-                      <span className={styles.resourceAction} aria-hidden>
-                        <IconExternalLink />
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          </MotionReveal>
         </Container>
       </Section>
     </>

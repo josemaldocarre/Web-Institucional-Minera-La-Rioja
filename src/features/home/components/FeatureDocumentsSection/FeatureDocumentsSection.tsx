@@ -2,6 +2,7 @@ import { useId } from 'react'
 import type { JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
+import { MotionReveal } from '../../../../components/ui/MotionReveal/MotionReveal'
 import { Section } from '../../../../components/ui/Section/Section'
 import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
 import type { HomeDocumentsBlock } from '../../../../services/homeService'
@@ -203,38 +204,40 @@ export function FeatureDocumentsSection({
   return (
     <Section aria-labelledby={headingId}>
       <Container>
-        <header className={styles.header}>
-          <SectionHeader
-            headingId={headingId}
-            eyebrow={t(documents.eyebrowKey)}
-            title={t(documents.titleKey)}
-            variant="green"
-          />
-          <p className={styles.subtitle}>{t(documents.subtitleKey)}</p>
-        </header>
+        <MotionReveal>
+          <header className={styles.header}>
+            <SectionHeader
+              headingId={headingId}
+              eyebrow={t(documents.eyebrowKey)}
+              title={t(documents.titleKey)}
+              variant="green"
+            />
+            <p className={styles.subtitle}>{t(documents.subtitleKey)}</p>
+          </header>
 
-        <FeatureDocumentCards
-          items={documents.items.map(
-            ({
-              href,
-              icon,
-              titleKey,
-              descriptionKey,
-              ctaKey,
-              badgeKey,
-              accent,
-            }) => ({
-              href,
-              icon,
-              title: t(titleKey),
-              description: t(descriptionKey),
-              cta: t(ctaKey),
-              badge: t(badgeKey),
-              accent,
-              openInNewTab: true,
-            }),
-          )}
-        />
+          <FeatureDocumentCards
+            items={documents.items.map(
+              ({
+                href,
+                icon,
+                titleKey,
+                descriptionKey,
+                ctaKey,
+                badgeKey,
+                accent,
+              }) => ({
+                href,
+                icon,
+                title: t(titleKey),
+                description: t(descriptionKey),
+                cta: t(ctaKey),
+                badge: t(badgeKey),
+                accent,
+                openInNewTab: true,
+              }),
+            )}
+          />
+        </MotionReveal>
       </Container>
     </Section>
   )
