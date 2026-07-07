@@ -1,4 +1,5 @@
 @use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
 
 .surface {
   background-color: var(--color-white);
@@ -28,6 +29,8 @@
   box-shadow:
     0 16px 40px color-mix(in srgb, v.$color-dark-gray 18%, transparent),
     0 4px 12px color-mix(in srgb, v.$color-dark-green 25%, transparent);
+  @include m.motion-transition(transform);
+  @include m.motion-card-hover;
 }
 
 .left {
@@ -100,14 +103,10 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+  @include m.motion-transition(transform, box-shadow, background-color, color);
+  @include m.motion-cta-hover;
 
   &:hover {
-    transform: translateY(-2px);
     background-color: color-mix(in srgb, var(--color-white) 94%, v.$color-yellow);
     box-shadow: 0 8px 24px color-mix(in srgb, black 22%, transparent);
   }

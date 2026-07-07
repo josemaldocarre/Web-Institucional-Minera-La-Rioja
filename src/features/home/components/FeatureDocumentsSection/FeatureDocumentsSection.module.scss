@@ -1,4 +1,5 @@
 @use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
 
 .header {
   display: flex;
@@ -38,17 +39,11 @@
     color-mix(in srgb, var(--color-surface-muted) 55%, var(--color-white)) 100%
   );
   box-shadow: var(--shadow-header);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+  @include m.motion-transition(transform, border-color);
+  @include m.motion-card-hover;
 
   &:hover {
-    transform: translateY(-6px);
     border-color: color-mix(in srgb, var(--color-dark-gray) 14%, transparent);
-    box-shadow:
-      0 12px 32px color-mix(in srgb, var(--color-dark-gray) 14%, transparent),
-      0 4px 12px color-mix(in srgb, var(--color-dark-gray) 8%, transparent);
   }
 }
 
@@ -146,10 +141,8 @@
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+  @include m.motion-transition(background-color, box-shadow, transform);
+  @include m.motion-cta-hover;
 
   &:hover {
     color: var(--color-white);

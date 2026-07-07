@@ -16,22 +16,6 @@
   --motion-distance-md: 12px;
 }
 
-// - Mixins reutilizables -
-@mixin motion-transition($properties...) {
-  transition-property: $properties;
-  transition-duration: var(--motion-normal);
-  transition-timing-function: var(--ease-standard);
-}
-
-@mixin motion-card-hover {
-  transform: translateY(-4px);
-  @include motion-transition(transform);
-}
-
-@mixin motion-cta-hover {
-  transform: translateY(-2px);
-  @include motion-transition(transform);
-}
 
 // - Accesibilidad: reducción de movimiento -
 @media (prefers-reduced-motion: reduce) {
