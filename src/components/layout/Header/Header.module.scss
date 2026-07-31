@@ -7,6 +7,11 @@
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-header-border);
   box-shadow: var(--shadow-header);
+  transition: box-shadow var(--motion-normal) var(--ease-standard);
+}
+
+.scrolled {
+  box-shadow: 0 6px 16px color-mix(in srgb, v.$color-dark-gray 14%, transparent);
 }
 
 .skipLink {
@@ -183,7 +188,9 @@
   cursor: pointer;
   transition:
     background-color 0.15s ease,
-    border-color 0.15s ease;
+    border-color 0.15s ease,
+    transform var(--motion-fast) var(--ease-standard),
+    opacity var(--motion-fast) var(--ease-standard);
 
   &:hover {
     border-color: var(--color-dark-gray);
@@ -203,6 +210,9 @@
   width: 1.1rem;
   background-color: var(--color-text-primary);
   border-radius: 1px;
+  transition:
+    transform var(--motion-fast) var(--ease-standard),
+    opacity var(--motion-fast) var(--ease-standard);
 }
 
 .mobilePanel {
@@ -214,6 +224,21 @@
   background-color: var(--color-white);
   padding-block: var(--space-4) var(--space-6);
   padding-inline: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(calc(-1 * var(--motion-distance-sm)));
+  transition:
+    opacity var(--motion-normal) var(--ease-standard),
+    transform var(--motion-normal) var(--ease-standard),
+    visibility var(--motion-normal) var(--ease-standard);
+}
+
+.mobilePanelOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .mobilePanelStretch {

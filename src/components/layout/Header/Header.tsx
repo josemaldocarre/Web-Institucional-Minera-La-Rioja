@@ -13,12 +13,22 @@ export function Header() {
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   const isEs = i18n.language.startsWith('es')
   const isEn = i18n.language.startsWith('en')
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false)
+  }, [])
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   useEffect(() => {
@@ -131,7 +141,9 @@ export function Header() {
   )
 
   return (
-    <header className={styles.root}>
+    <header
+      className={`${styles.root} ${scrolled ? styles.scrolled : ''}`.trim()}
+    >
       <a className={styles.skipLink} href="#main-content">
         {t('layout.skipToContent')}
       </a>
@@ -183,9 +195,11 @@ export function Header() {
         </Container>
       </div>
 
-      {mobileOpen ? (
-        <div className={styles.mobilePanel} id={menuId}>
-          <div className={styles.mobilePanelStretch}>
+      <div
+        className={`${styles.mobilePanel} ${mobileOpen ? styles.mobilePanelOpen : ''}`.trim()}
+        id={menuId}
+      >
+        <div className={styles.mobilePanelStretch}>
             <Container>
               <div className={styles.mobileColumn}>
                 <div className={styles.mobileTop}>
@@ -233,7 +247,6 @@ export function Header() {
             </Container>
           </div>
         </div>
-      ) : null}
     </header>
   )
 }
