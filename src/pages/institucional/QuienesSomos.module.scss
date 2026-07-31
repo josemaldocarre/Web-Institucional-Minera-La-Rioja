@@ -61,9 +61,9 @@
     left: var(--space-10);
     width: clamp(18rem, 40%, 32rem);
     padding: var(--space-10);
+    background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, .4);
   }
 
   .image,
