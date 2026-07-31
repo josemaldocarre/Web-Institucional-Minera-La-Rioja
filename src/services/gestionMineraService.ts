@@ -16,6 +16,22 @@ export interface GestionMineraImage {
   readonly alt: string
 }
 
+export interface CatastroVersion {
+  readonly id: string
+  readonly version: string
+  readonly date: string
+  readonly previewImage: string
+  readonly pdf: string
+  readonly dwg: string
+  readonly current: boolean
+}
+
+export interface CatastroMineroData {
+  readonly title: string
+  readonly description: string
+  readonly versions: readonly CatastroVersion[]
+}
+
 export type GestionMineraServiceIcon =
   | 'catastro'
   | 'productoresVigentes'
@@ -32,6 +48,7 @@ export interface GestionMineraServiceItem {
   readonly icon: GestionMineraServiceIcon
   readonly accent: 'orange' | 'green'
   readonly badge?: string
+  readonly catastroData?: CatastroMineroData
 }
 
 export interface GestionMineraTramites {
@@ -88,6 +105,21 @@ const gestionMineraData: GestionMineraPageData = {
         icon: 'catastro',
         accent: 'green',
         badge: 'DWG',
+        catastroData: {
+          title: 'Catastro Minero',
+          description: 'Información geográfica sobre concesiones, límites y disponibilidad minera.',
+          versions: [
+            {
+              id: '2026-01',
+              version: 'Catastro 2026',
+              date: 'Julio 2026',
+              previewImage: '/images/gestion-minera/catastro-minero.jpg',
+              pdf: '/docs/catastro-minero.pdf',
+              dwg: '/docs/catastro-minero.dwg',
+              current: true,
+            },
+          ],
+        },
       },
     ],
   },

@@ -6,6 +6,7 @@ import { MotionReveal } from '../../../../components/ui/MotionReveal/MotionRevea
 import { Section } from '../../../../components/ui/Section/Section'
 import { SectionHeader } from '../../../../components/ui/SectionHeader/SectionHeader'
 import type { HomeDocumentsBlock } from '../../../../services/homeService'
+import { gestionMineraService } from '../../../../services/gestionMineraService'
 import styles from './FeatureDocumentsSection.module.scss'
 
 function IconPlan() {
@@ -136,6 +137,8 @@ export interface FeatureDocumentCardProps {
   readonly accent?: 'orange' | 'green'
   readonly icon: FeatureDocumentIcon
   readonly openInNewTab?: boolean
+  readonly versionText?: string
+  readonly versionDate?: string
 }
 
 export function FeatureDocumentCard({
@@ -147,6 +150,8 @@ export function FeatureDocumentCard({
   accent = 'green',
   icon,
   openInNewTab = false,
+  versionText,
+  versionDate,
 }: FeatureDocumentCardProps) {
   const Icon = DOCUMENT_ICONS[icon]
 
@@ -162,6 +167,12 @@ export function FeatureDocumentCard({
       </div>
 
       <h3 className={styles.cardTitle}>{title}</h3>
+      {(versionText || versionDate) ? (
+        <div className={styles.versionInfo}>
+          {versionText && <strong>{versionText}</strong>}
+          {versionDate && <span> - Actualizado: {versionDate}</span>}
+        </div>
+      ) : null}
       <p className={styles.cardDescription}>{description}</p>
 
       <a
@@ -225,16 +236,36 @@ export function FeatureDocumentsSection({
                 ctaKey,
                 badgeKey,
                 accent,
-              }) => ({
-                href,
-                icon,
-                title: t(titleKey),
-                description: t(descriptionKey),
-                cta: t(ctaKey),
-                badge: t(badgeKey),
-                accent,
-                openInNewTab: true,
-              }),
+              }) => {
+                let currentHref = href;
+                let versionText = undefined;
+                let versionDate = undefined;
+
+                if (icon === 'catastro') {
+                  const catastroSvc = gestionMineraService.tramites.services.find(s => s.id === 'catastro-minero');
+                  if (catastroSvc?.catastroData) {
+                    const currentVersion = catastroSvc.catastroData.versions.find(v => v.current);
+                    if (currentVersion) {
+                      currentHref = currentVersion.dwg;
+                      versionText = 'Versión vigente';
+                      versionDate = currentVersion.date;
+                    }
+                  }
+                }
+
+                return {
+                  href: currentHref,
+                  icon,
+                  title: t(titleKey),
+                  description: t(descriptionKey),
+                  cta: t(ctaKey),
+                  badge: t(badgeKey),
+                  accent,
+                  openInNewTab: true,
+                  versionText,
+                  versionDate,
+                }
+              },
             )}
           />
         </MotionReveal>
