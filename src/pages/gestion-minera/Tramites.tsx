@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { ContentSection } from '../../components/ui/ContentSection/ContentSection'
 import { FeatureDocumentCards } from '../../features/home/components/FeatureDocumentsSection/FeatureDocumentsSection'
 import { gestionMineraService } from '../../services/gestionMineraService'
@@ -17,25 +16,19 @@ function IconDownload() {
   )
 }
 
+function buildShareCadUrl(dwgPath: string): string {
+  const absoluteDwgUrl = new URL(dwgPath, window.location.origin).href
+  return `https://iframe.sharecad.org/cadframe/load?url=${encodeURIComponent(absoluteDwgUrl)}`
+}
+
 export default function Tramites() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
-
-  useEffect(() => {
-    if (!selectedImage) return
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setSelectedImage(null)
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [selectedImage])
-
   const catastroSvc = services.find((s) => s.id === 'catastro-minero')
   const catastroData = catastroSvc?.catastroData
   const filteredServices = services.filter((s) => s.id !== 'catastro-minero')
+
+  const hasDwg = Boolean(catastroData?.dwg?.trim())
+  const hasPdf = Boolean(catastroData?.pdf?.trim())
+  const shareCadUrl = hasDwg && catastroData ? buildShareCadUrl(catastroData.dwg) : null
 
   return (
     <ContentSection id="tramites" title={title} description={intro}>
@@ -58,60 +51,37 @@ export default function Tramites() {
             <p className={styles.catastroIntro}>{catastroData.description}</p>
           </header>
 
-          <div className={styles.previewContainer}>
-            <button
-              type="button"
-              className={styles.previewButton}
-              onClick={() => setSelectedImage(catastroData.previewImage)}
-              aria-label="Ampliar vista previa del Catastro Minero"
-            >
-              <img
-                src={catastroData.previewImage}
-                alt={`Vista previa de ${catastroData.title}`}
+          <div className={styles.viewerContainer}>
+            {shareCadUrl ? (
+              <iframe
+                className={styles.viewer}
+                src={shareCadUrl}
+                title={`Visor interactivo de ${catastroData.title}`}
                 loading="lazy"
-                decoding="async"
+                allowFullScreen
               />
-            </button>
+            ) : (
+              <p className={styles.viewerUnavailable}>
+                El visor del Catastro Minero no se encuentra disponible actualmente.
+              </p>
+            )}
+
             <div className={styles.downloadActions}>
-              <a href={catastroData.dwg} className={styles.btnDownload} target="_blank" rel="noopener noreferrer">
-                <IconDownload />
-                <span style={{ marginLeft: '8px' }}>Descargar DWG</span>
-              </a>
-              <a href={catastroData.pdf} className={`${styles.btnDownload} ${styles.btnDownloadPdf}`} target="_blank" rel="noopener noreferrer">
-                <IconDownload />
-                <span style={{ marginLeft: '8px' }}>Descargar PDF</span>
-              </a>
+              {hasDwg && (
+                <a href={catastroData.dwg} className={styles.btnDownload} target="_blank" rel="noopener noreferrer">
+                  <IconDownload />
+                  <span style={{ marginLeft: '8px' }}>Descargar DWG</span>
+                </a>
+              )}
+              {hasPdf && (
+                <a href={catastroData.pdf} className={`${styles.btnDownload} ${styles.btnDownloadPdf}`} target="_blank" rel="noopener noreferrer">
+                  <IconDownload />
+                  <span style={{ marginLeft: '8px' }}>Descargar PDF</span>
+                </a>
+              )}
             </div>
           </div>
         </section>
-      )}
-
-      {selectedImage !== null && (
-        <div
-          className={`${styles.modalOverlay} ${styles.isOpen}`}
-          onClick={() => setSelectedImage(null)}
-        >
-          <div
-            className={styles.modalContainer}
-            onClick={(event) => event.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-          >
-            <button
-              type="button"
-              className={styles.modalClose}
-              onClick={() => setSelectedImage(null)}
-              aria-label="Cerrar imagen"
-            >
-              &times;
-            </button>
-            <img
-              src={selectedImage}
-              alt="Catastro Minero ampliado"
-              className={styles.modalImage}
-            />
-          </div>
-        </div>
       )}
     </ContentSection>
   )

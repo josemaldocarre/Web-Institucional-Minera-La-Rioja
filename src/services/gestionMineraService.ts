@@ -19,7 +19,6 @@ export interface GestionMineraImage {
 export interface CatastroMineroData {
   readonly title: string
   readonly description: string
-  readonly previewImage: string
   readonly pdf: string
   readonly dwg: string
 }
@@ -100,7 +99,6 @@ const gestionMineraData: GestionMineraPageData = {
         catastroData: {
           title: 'Catastro Minero',
           description: 'Información geográfica sobre concesiones, límites y disponibilidad minera.',
-          previewImage: '/images/gestion-minera/catastro-minero.jpg',
           pdf: '/docs/catastro-minero.pdf',
           dwg: '/docs/catastro-minero.dwg',
         },
