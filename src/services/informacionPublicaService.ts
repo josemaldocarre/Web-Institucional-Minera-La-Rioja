@@ -37,9 +37,9 @@ const informacionPublicaData: InformacionPublicaPageData = {
     },
     eyebrow: {
       number: '3',
-      label: 'Información Pública',
+      label: 'Documentos Públicos',
     },
-    title: 'Información Pública',
+    title: 'Documentos Públicos',
     description:
       'Portal de documentación, transparencia y acceso a la información pública de la Secretaría de Minería de La Rioja.',
   },
@@ -69,11 +69,6 @@ const informacionPublicaData: InformacionPublicaPageData = {
           id: 'codigo-minero-nacional',
           title: 'Código Minero Nacional',
           href: 'https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do?id=43797',
-        },
-        {
-          id: 'ley-de-glaciares',
-          title: 'Ley de Glaciares',
-          href: 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/170000-174999/174117/norma.htm',
         },
         {
           id: 'ley-ambiental-nacional',
