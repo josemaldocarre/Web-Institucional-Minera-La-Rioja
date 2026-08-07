@@ -28,8 +28,7 @@ export const INSTITUCIONAL_AUTHORITY_VACANT = 'VACANTE' as const
 export interface AuthorityLabels {
   readonly name: string
   readonly role: string
-  readonly titular: string
-  readonly dependents: string
+  readonly directorPrefix: string
 }
 
 export interface AuthoritySecretaria {
@@ -40,37 +39,33 @@ export interface AuthoritySecretaria {
 
 export interface AuthoritySupportMember {
   readonly id: string
-  readonly role: string
-  readonly responsible: string
+  readonly cargo: string
+  readonly responsable: string
 }
 
-export interface AuthoritySupport {
+export interface AuthorityPersonalApoyo {
   readonly title: string
   readonly members: readonly AuthoritySupportMember[]
 }
 
-export interface AuthorityDependent {
+export interface AuthoritySubdependencia {
   readonly id: string
-  readonly title: string
-  readonly responsible: string
+  readonly cargo: string
+  readonly responsable: string | null | undefined
 }
 
-export interface AuthorityGroup {
+export interface AuthorityDependencia {
   readonly id: string
-  readonly title: string
-  readonly titular: string
-  readonly dependents: readonly AuthorityDependent[]
+  readonly cargo: string
+  readonly responsable: string | null | undefined
+  readonly subdependencias?: readonly AuthoritySubdependencia[]
 }
 
-export interface AuthorityProgram {
+export interface AuthorityDireccionGeneral {
   readonly id: string
-  readonly title: string
-  readonly responsible: string
-}
-
-export interface AuthorityPrograms {
-  readonly title: string
-  readonly items: readonly AuthorityProgram[]
+  readonly nombre: string
+  readonly director: string | null | undefined
+  readonly dependencias: readonly AuthorityDependencia[]
 }
 
 export interface InstitucionalAuthorities {
@@ -78,9 +73,8 @@ export interface InstitucionalAuthorities {
   readonly intro?: string
   readonly labels: AuthorityLabels
   readonly secretaria: AuthoritySecretaria
-  readonly support: AuthoritySupport
-  readonly groups: readonly AuthorityGroup[]
-  readonly programs: AuthorityPrograms
+  readonly personalApoyo: AuthorityPersonalApoyo
+  readonly direccionesGenerales: readonly AuthorityDireccionGeneral[]
 }
 
 export interface InstitucionalPageData {
@@ -120,146 +114,160 @@ const institucionalData: InstitucionalPageData = {
     labels: {
       name: 'Nombre',
       role: 'Cargo',
-      titular: 'Titular',
-      dependents: 'Direcciones dependientes',
+      directorPrefix: 'Dir.',
     },
     secretaria: {
       heading: 'SECRETARÍA DE MINERÍA',
       name: 'Abogada Ivanna María Guardia',
       role: 'Secretaria de Minería',
     },
-    support: {
-      title: 'Personal de Apoyo Directo',
+    personalApoyo: {
+      title: 'Personal de Apoyo',
       members: [
         {
           id: 'secretaria-privada',
-          role: 'Secretaria Privada',
-          responsible: 'Bettiana Flores Antúnez',
+          cargo: 'Secretaría Privada',
+          responsable: 'Bettiana Flores Antúnez',
         },
         {
           id: 'chofer-secretario',
-          role: 'Chofer del Secretario',
-          responsible: 'Ramón Alberto Herrera',
+          cargo: 'Chofer del Secretario',
+          responsable: 'Ramón Alberto Herrera',
         },
       ],
     },
-    groups: [
+    direccionesGenerales: [
       {
         id: 'dg-mineria',
-        title: 'Dirección General de Minería',
-        titular: 'Florencia Olivera Buteler',
-        dependents: [
+        nombre: 'Dirección General de Minería',
+        director: 'Florencia Olivera Buteler',
+        dependencias: [
           {
             id: 'd-escribania-minas',
-            title: 'Dirección de Escribanía de Minas',
-            responsible: 'Agustina Delgado',
+            cargo: 'Dirección de Escribanía de Minas',
+            responsable: 'Agustina Delgado',
+            subdependencias: [
+              {
+                id: 'prom-mesa-e-s',
+                cargo: 'PROM. DE MESA DE E/S',
+                responsable: 'María Leticia Díaz',
+              },
+            ],
           },
           {
             id: 'd-catastro-minero',
-            title: 'Dirección de Catastro Minero',
-            responsible: INSTITUCIONAL_AUTHORITY_VACANT,
+            cargo: 'Dirección de Catastro Minero',
+            responsable: INSTITUCIONAL_AUTHORITY_VACANT,
+            subdependencias: [
+              {
+                id: 'prom-registro-grafico-catastral',
+                cargo: 'PROM. REGISTRO GRÁFICO CATASTRAL',
+                responsable: 'Gabriel Sergio Gómez',
+              },
+              {
+                id: 'prom-topografia',
+                cargo: 'PROM. TOPOGRAFÍA',
+                responsable: 'Adrián Gabriel Córdoba',
+              },
+            ],
           },
           {
             id: 'd-geologia-minera',
-            title: 'Dirección de Geología Minera',
-            responsible: 'Nicolás Fernando Pereyra',
-          },
-          {
-            id: 'dg-asuntos-legales',
-            title: 'Dirección General de Asuntos Legales',
-            responsible: 'Clotilde Mabel Páez',
+            cargo: 'Dirección de Geología Minera',
+            responsable: 'Nicolás Fernando Pereyra',
+            subdependencias: [
+              {
+                id: 'prom-trabajos-geologicos',
+                cargo: 'PROM. TRABAJOS GEOLÓGICOS',
+                responsable: 'Edgar Iván Bricco Moreno',
+              },
+            ],
           },
           {
             id: 'd-economia-minera',
-            title: 'Dirección de Economía Minera',
-            responsible: INSTITUCIONAL_AUTHORITY_VACANT,
+            cargo: 'Dirección de Economía Minera',
+            responsable: 'Fabiola Rivera',
+            subdependencias: [
+              {
+                id: 'prom-registro-productores',
+                cargo: 'PROM. REGISTRO DE PRODUCTORES Y MINERALES',
+                responsable: 'Ercilla Rosario Valladares',
+              },
+              {
+                id: 'coord-valle-bermejo-llanos-del-sur',
+                cargo: 'COORD. VALLE BERMEJO Y LLANOS DEL SUR',
+                responsable: 'Gisela Rufina Baigorria Nieto',
+              },
+            ],
           },
           {
             id: 'd-policia-minera',
-            title: 'Dirección de Policía Minera',
-            responsible: 'Julián Emmanuel López',
+            cargo: 'Dirección de Policía Minera',
+            responsable: 'Julián Emmanuel López',
+            subdependencias: [
+              {
+                id: 'prom-fiscalizacion-trabajo',
+                cargo:
+                  'PROM. FISCALIZACIÓN DE TRABAJO DE EXPLORACIÓN, EXPLOTACIÓN Y ESTABLECIMIENTO',
+                responsable: 'Santiago Tadeo',
+              },
+            ],
           },
+        ],
+      },
+      {
+        id: 'dg-asuntos-legales',
+        nombre: 'Dirección General de Asuntos Legales',
+        director: 'Clotilde Mabel Páez',
+        dependencias: [],
+      },
+      {
+        id: 'dg-desarrollo-productivo',
+        nombre: 'Dirección General de Desarrollo Productivo Minero',
+        director: 'Carlos Nicolás Molina',
+        dependencias: [
           {
-            id: 'dg-desarrollo-productivo',
-            title: 'Dirección General de Desarrollo Productivo Minero',
-            responsible: 'Carlos Nicolás Molina',
-          },
-          {
-            id: 'dg-despacho',
-            title: 'Dirección General de Despacho',
-            responsible: 'Karina Elizabeth Caliva',
-          },
+            id: 'd-servicio-minero',
+            cargo: 'Dirección Servicio Minero',
+            responsable: 'Hilda Valladares',
+          }
         ],
       },
       {
         id: 'dg-administracion',
-        title: 'Dirección General de Administración',
-        titular: 'Cira. Brizuela Camila Soledad',
-        dependents: [
-          {
-            id: 'd-servicio-minero',
-            title: 'Dirección Servicio Minero',
-            responsible: 'Hilda Valladares',
-          },
-          {
-            id: 'c-valle-bermejo-llanos-del-sur',
-            title: 'Coordinación Valle Bermejo y Llanos del Sur',
-            responsible: 'Gisela Rufina Baigorrí Nieto',
-          },
+        nombre: 'Dirección General de Administración',
+        director: 'Cira. Brizuela Camila Soledad',
+        dependencias: [
           {
             id: 'c-rendiciones-cuentas-presupuesto-patrimonio',
-            title: 'Coordinación Rendiciones de Cuentas, Presupuesto y Patrimonio',
-            responsible: INSTITUCIONAL_AUTHORITY_VACANT,
+            cargo: 'Coordinación Rendiciones de Cuentas, Presupuesto y Patrimonio',
+            responsable: INSTITUCIONAL_AUTHORITY_VACANT,
           },
           {
             id: 'c-tesoreria',
-            title: 'Coordinación Tesorería',
-            responsible: INSTITUCIONAL_AUTHORITY_VACANT,
+            cargo: 'Coordinación Tesorería',
+            responsable: 'Gimena Soler',
           },
           {
             id: 'c-personal',
-            title: 'Coordinación Personal',
-            responsible: INSTITUCIONAL_AUTHORITY_VACANT,
+            cargo: 'Coordinación Personal',
+            responsable: INSTITUCIONAL_AUTHORITY_VACANT,
           },
         ],
       },
+      {
+        id: 'dg-despacho',
+        nombre: 'Dirección General de Despacho',
+        director: 'Karina Elizabeth Caliva',
+        dependencias: [],
+      },
+      {
+        id: 'dg-comunicaciones-estrategicas-y-responsabilidad-social-minera',
+        nombre: 'Dirección General de Comunicaciones Estratégicas y Responsabilidad Social Minera',
+        director: 'Josefina Guadalupe Herrera Aguad',
+        dependencias: []
+      },
     ],
-    programs: {
-      title: 'Programas y Áreas Dependientes',
-      items: [
-        {
-          id: 'mesa-entradas',
-          title: 'Mesa de Entradas y Salidas',
-          responsible: INSTITUCIONAL_AUTHORITY_VACANT,
-        },
-        {
-          id: 'topografia',
-          title: 'Topografía',
-          responsible: 'Adrián Gabriel Córdoba',
-        },
-        {
-          id: 'trabajos-geologicos',
-          title: 'Trabajos Geológicos',
-          responsible: 'Edgar Iván Bricco Moreno',
-        },
-        {
-          id: 'registro-productores',
-          title: 'Registro de Productores y Minerales',
-          responsible: 'Valladares Ercilla Rosario',
-        },
-        {
-          id: 'fiscalizacion-trabajo',
-          title:
-            'Fiscalización de Trabajo de Exploración, Explotación y Establecimiento',
-          responsible: 'Santiago Tadeo',
-        },
-        {
-          id: 'registro-grafico-catastral',
-          title: 'Registro Gráfico Catastral',
-          responsible: 'Gabriel Sergio Gómez',
-        },
-      ],
-    },
   },
 }
 
