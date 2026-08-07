@@ -66,23 +66,6 @@ function IconLocation({ className }: { className?: string }) {
   )
 }
 
-function IconPhone({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width={20}
-      height={20}
-      viewBox="0 0 24 24"
-      aria-hidden
-    >
-      <path
-        fill="currentColor"
-        d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-      />
-    </svg>
-  )
-}
-
 function IconEmail({ className }: { className?: string }) {
   return (
     <svg

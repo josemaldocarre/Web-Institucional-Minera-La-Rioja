@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type CSSProperties } from 'react'
+import { useId, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
 import type { HomeHeroBlock } from '../../../../services/homeService'
@@ -8,21 +8,6 @@ const HERO_VIDEO_SRC = '/videos/hero_720.mp4'
 const HERO_POSTER_SRC = '/images/hero/fallback.jpg'
 const HERO_LOGO_SRC = '/images/logos/larioja_blanco.svg'
 
-const soundBtnStyle: CSSProperties = {
-  position: 'absolute',
-  bottom: '2rem',
-  right: '2rem',
-  zIndex: 4,
-  padding: '0.45rem 0.6rem',
-  fontSize: '1.125rem',
-  lineHeight: 1,
-  border: '1px solid rgba(255, 255, 255, 0.35)',
-  borderRadius: '999px',
-  background: 'rgba(0, 0, 0, 0.35)',
-  cursor: 'pointer',
-  color: '#fff',
-}
-
 export interface HeroProps {
   readonly hero: HomeHeroBlock
 }
@@ -31,13 +16,6 @@ export function Hero({ hero }: HeroProps) {
   const { t } = useTranslation()
   const headingId = useId()
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isMuted, setIsMuted] = useState(true)
-
-  const toggleSound = () => {
-    if (!videoRef.current) return
-    videoRef.current.muted = !videoRef.current.muted
-    setIsMuted(videoRef.current.muted)
-  }
 
   return (
     <section className={styles.hero} aria-labelledby={headingId}>
