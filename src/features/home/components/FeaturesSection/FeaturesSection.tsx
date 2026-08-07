@@ -42,30 +42,12 @@ function IconGeo() {
   )
 }
 
-function IconOpenData() {
-  return (
-    <svg
-      className={styles.iconSvg}
-      width={32}
-      height={32}
-      viewBox="0 0 24 24"
-      aria-hidden
-    >
-      <path
-        fill="currentColor"
-        d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"
-      />
-    </svg>
-  )
-}
-
 const FEATURE_ICONS: Record<
   HomeFeaturesBlock['items'][number]['id'],
   () => JSX.Element
 > = {
   docs: IconDocs,
-  geo: IconGeo,
-  openData: IconOpenData,
+  geo: IconGeo
 }
 
 export interface FeaturesSectionProps {

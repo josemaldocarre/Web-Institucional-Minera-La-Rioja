@@ -25,7 +25,6 @@
     "contact": {
       "title": "Contacto",
       "address": "Pelagio B. Luna 811, La Rioja, Argentina",
-      "phone": "+54 (380) 4453-068",
       "email": "mineria@larioja.gob.ar"
     },
     "social": {
@@ -58,10 +57,6 @@
         "geo": {
           "title": "Información geográfica",
           "description": "Capas y referencias espaciales vinculadas a concesiones, límites y disponibilidad territorial."
-        },
-        "openData": {
-          "title": "Datos abiertos",
-          "description": "Conjuntos de datos publicados para consulta, reutilización y mayor transparencia hacia la ciudadanía."
         }
       }
     },
@@ -74,7 +69,7 @@
     },
     "featureDocuments": {
       "eyebrow": "Documentación",
-      "title": "Documentos públicos",
+      "title": "Información pública",
       "subtitle": "Accedé a la documentación oficial vinculada a la actividad minera en la provincia.",
       "plan": {
         "title": "Plan Quinquenal 2026-2030",
@@ -92,7 +87,7 @@
   },
   "seo": {
     "documentTitleHome": "Minería La Rioja - Web Institucional",
-    "metaDescriptionHome": "Sitio institucional de minería en La Rioja: transparencia, trámites, datos abiertos e información para la ciudadanía."
+    "metaDescriptionHome": "Sitio institucional de minería en La Rioja: transparencia, trámites e información para la ciudadanía."
   },
   "common": {
     "loading": "Cargando…",

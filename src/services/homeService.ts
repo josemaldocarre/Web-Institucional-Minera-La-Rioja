@@ -13,7 +13,7 @@ export interface HomeInstitutionalPreview {
 }
 
 export interface HomeFeatureItem {
-  readonly id: 'docs' | 'geo' | 'openData'
+  readonly id: 'docs' | 'geo'
   readonly titleKey: string
   readonly descriptionKey: string
 }
@@ -47,9 +47,7 @@ export interface HomeContactPreview {
   readonly ctaKey: string
   readonly contactListLabelKey: string
   readonly emailHref: string
-  readonly phoneHref: string
   readonly emailLabelKey: string
-  readonly phoneLabelKey: string
 }
 
 export interface HomePageData {

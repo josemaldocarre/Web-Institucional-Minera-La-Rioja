@@ -38,11 +38,6 @@ export function ContactCard({ contact }: ContactCardProps) {
                   {t(contact.emailLabelKey)}
                 </a>
               </li>
-              <li className={styles.contactItem}>
-                <a className={styles.contactLink} href={contact.phoneHref}>
-                  {t(contact.phoneLabelKey)}
-                </a>
-              </li>
             </ul>
           </div>
           <div className={styles.right}>

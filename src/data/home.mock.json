@@ -9,27 +9,22 @@
     "titleKey": "home.intro.title",
     "bodyKey": "home.intro.body"
   },
-  "features": {
-    "eyebrowKey": "home.features.eyebrow",
-    "titleKey": "home.features.title",
-    "items": [
-      {
-        "id": "docs",
-        "titleKey": "home.features.items.docs.title",
-        "descriptionKey": "home.features.items.docs.description"
-      },
-      {
-        "id": "geo",
-        "titleKey": "home.features.items.geo.title",
-        "descriptionKey": "home.features.items.geo.description"
-      },
-      {
-        "id": "openData",
-        "titleKey": "home.features.items.openData.title",
-        "descriptionKey": "home.features.items.openData.description"
-      }
-    ]
-  },
+    "features": {
+      "eyebrowKey": "home.features.eyebrow",
+      "titleKey": "home.features.title",
+      "items": [
+        {
+          "id": "docs",
+          "titleKey": "home.features.items.docs.title",
+          "descriptionKey": "home.features.items.docs.description"
+        },
+        {
+          "id": "geo",
+          "titleKey": "home.features.items.geo.title",
+          "descriptionKey": "home.features.items.geo.description"
+        }
+      ]
+    },
   "documents": {
     "eyebrowKey": "home.featureDocuments.eyebrow",
     "titleKey": "home.featureDocuments.title",
@@ -61,8 +56,6 @@
     "ctaKey": "home.contactCard.cta",
     "contactListLabelKey": "home.contactCard.contactListLabel",
     "emailHref": "mailto:mineria@larioja.gob.ar",
-    "phoneHref": "tel:+5438044453068",
-    "emailLabelKey": "footer.contact.email",
-    "phoneLabelKey": "footer.contact.phone"
+    "emailLabelKey": "footer.contact.email"
   }
 }

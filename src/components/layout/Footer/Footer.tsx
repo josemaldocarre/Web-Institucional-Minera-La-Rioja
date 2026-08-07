@@ -176,12 +176,6 @@ export function Footer() {
                   </a>
                 </li>
                 <li className={styles.contactItem}>
-                  <IconPhone className={styles.contactIcon} />
-                  <a className={styles.contactLink} href="tel:+543804453068">
-                    {t('footer.contact.phone')}
-                  </a>
-                </li>
-                <li className={styles.contactItem}>
                   <IconEmail className={styles.contactIcon} />
                   <a
                     className={styles.contactLink}

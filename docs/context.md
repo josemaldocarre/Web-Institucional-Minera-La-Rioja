@@ -6,7 +6,6 @@ Construir una plataforma web institucional moderna que combine:
 
 - Transparencia
 - Gestión de trámites
-- Datos abiertos
 - Educación para la ciudadanía
 
 La web NO debe parecer un portal de noticias.

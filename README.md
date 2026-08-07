@@ -5,7 +5,6 @@ Plataforma web institucional orientada a:
 
 - Transparencia
 - Gestión de trámites
-- Datos abiertos
 - Educación para la ciudadanía
 
 ## 🧠 Objetivo
