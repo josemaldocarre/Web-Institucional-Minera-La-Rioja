@@ -4,7 +4,7 @@ import { Container } from '../../../../components/ui/Container/Container'
 import type { HomeHeroBlock } from '../../../../services/homeService'
 import styles from './Hero.module.scss'
 
-const HERO_VIDEO_SRC = '/videos/hero_720.mp4'
+const HERO_VIDEO_SRC = '/videos/hero_video.mp4'
 const HERO_POSTER_SRC = '/images/hero/fallback.jpg'
 const HERO_LOGO_SRC = '/images/logos/larioja_blanco.svg'
 
