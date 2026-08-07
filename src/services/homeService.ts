@@ -1,7 +1,6 @@
 import homeMock from '../data/home.mock.json'
 
 export interface HomeHeroBlock {
-  readonly titlePrefixKey: string
   readonly titleKey: string
   readonly subtitleKey: string
 }

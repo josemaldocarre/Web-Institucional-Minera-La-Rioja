@@ -1,6 +1,5 @@
 {
   "hero": {
-    "titlePrefixKey": "home.hero.titlePrefix",
     "titleKey": "home.hero.title",
     "subtitleKey": "home.hero.subtitle"
   },

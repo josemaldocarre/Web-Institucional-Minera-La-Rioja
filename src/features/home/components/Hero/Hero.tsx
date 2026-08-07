@@ -6,6 +6,7 @@ import styles from './Hero.module.scss'
 
 const HERO_VIDEO_SRC = '/videos/hero_720.mp4'
 const HERO_POSTER_SRC = '/images/hero/fallback.jpg'
+const HERO_LOGO_SRC = '/images/logos/larioja_blanco.svg'
 
 const soundBtnStyle: CSSProperties = {
   position: 'absolute',
@@ -44,7 +45,6 @@ export function Hero({ hero }: HeroProps) {
         ref={videoRef}
         className={styles.video}
         autoPlay
-        muted={isMuted}
         loop
         playsInline
         preload="metadata"
@@ -57,21 +57,18 @@ export function Hero({ hero }: HeroProps) {
       <Container>
         <div className={styles.content}>
           <h1 id={headingId} className={styles.title}>
-            <span className={styles.titleLight}>{t(hero.titlePrefixKey)}</span>
+            <img
+              className={styles.titleLogo}
+              src={HERO_LOGO_SRC}
+              alt={t('layout.logoAlt')}
+              width={505}
+              height={126}
+            />
             <span className={styles.titleAccent}>{t(hero.titleKey)}</span>
           </h1>
           <p className={styles.subtitle}>{t(hero.subtitleKey)}</p>
         </div>
       </Container>
-      <button
-        type="button"
-        className={styles.soundButton}
-        style={soundBtnStyle}
-        onClick={toggleSound}
-        aria-label={isMuted ? 'Activar sonido del video' : 'Silenciar video'}
-      >
-        {isMuted ? '🔇' : '🔊'}
-      </button>
     </section>
   )
 }

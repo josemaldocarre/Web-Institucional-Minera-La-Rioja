@@ -50,7 +50,7 @@
   flex-direction: column;
   align-items: start;
   gap: v.$space-5;
-  padding-block: v.$space-10;
+  padding-block: 10rem v.$space-10;
   padding-inline: 0;
   text-align: start;
 }
@@ -68,10 +68,14 @@
 
   animation: heroEnter var(--motion-enter) var(--ease-enter) both;
 
-  &Light {
-    color: var(--color-white);
+  &Logo {
+    display: block;
+    height: 84px;
+    width: auto;
+    max-width: 100%;
+    margin-right: auto;
   }
-  
+
   &Accent {  
     background: linear-gradient(
       90deg,
