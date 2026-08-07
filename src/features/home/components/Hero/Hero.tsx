@@ -1,4 +1,4 @@
-import { useId, useRef } from 'react'
+import { useId } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../../../components/ui/Container/Container'
 import type { HomeHeroBlock } from '../../../../services/homeService'
@@ -15,17 +15,16 @@ export interface HeroProps {
 export function Hero({ hero }: HeroProps) {
   const { t } = useTranslation()
   const headingId = useId()
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   return (
     <section className={styles.hero} aria-labelledby={headingId}>
       <video
-        ref={videoRef}
         className={styles.video}
         autoPlay
+        muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={HERO_POSTER_SRC}
         aria-hidden="true"
       >
