@@ -16,20 +16,12 @@ export interface GestionMineraImage {
   readonly alt: string
 }
 
-export interface CatastroVersion {
-  readonly id: string
-  readonly version: string
-  readonly date: string
-  readonly previewImage: string
-  readonly pdf: string
-  readonly dwg: string
-  readonly current: boolean
-}
-
 export interface CatastroMineroData {
   readonly title: string
   readonly description: string
-  readonly versions: readonly CatastroVersion[]
+  readonly previewImage: string
+  readonly pdf: string
+  readonly dwg: string
 }
 
 export type GestionMineraServiceIcon =
@@ -108,17 +100,9 @@ const gestionMineraData: GestionMineraPageData = {
         catastroData: {
           title: 'Catastro Minero',
           description: 'Información geográfica sobre concesiones, límites y disponibilidad minera.',
-          versions: [
-            {
-              id: '2026-01',
-              version: 'Catastro 2026',
-              date: 'Julio 2026',
-              previewImage: '/images/gestion-minera/catastro-minero.jpg',
-              pdf: '/docs/catastro-minero.pdf',
-              dwg: '/docs/catastro-minero.dwg',
-              current: true,
-            },
-          ],
+          previewImage: '/images/gestion-minera/catastro-minero.jpg',
+          pdf: '/docs/catastro-minero.pdf',
+          dwg: '/docs/catastro-minero.dwg',
         },
       },
     ],

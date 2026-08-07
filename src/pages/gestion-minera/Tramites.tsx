@@ -35,7 +35,6 @@ export default function Tramites() {
 
   const catastroSvc = services.find((s) => s.id === 'catastro-minero')
   const catastroData = catastroSvc?.catastroData
-  const currentVersion = catastroData?.versions.find((v) => v.current)
   const filteredServices = services.filter((s) => s.id !== 'catastro-minero')
 
   return (
@@ -52,7 +51,7 @@ export default function Tramites() {
         }))}
       />
 
-      {catastroData && currentVersion && (
+      {catastroData && (
         <section id="catastro-detalle" className={styles.catastroSection}>
           <header className={styles.catastroHeader}>
             <h3 className={styles.catastroTitle}>{catastroData.title}</h3>
@@ -63,50 +62,25 @@ export default function Tramites() {
             <button
               type="button"
               className={styles.previewButton}
-              onClick={() => setSelectedImage(currentVersion.previewImage)}
+              onClick={() => setSelectedImage(catastroData.previewImage)}
               aria-label="Ampliar vista previa del Catastro Minero"
             >
-              <img src={currentVersion.previewImage} alt={`Vista previa ${currentVersion.version}`} loading="lazy" decoding="async" />
+              <img
+                src={catastroData.previewImage}
+                alt={`Vista previa de ${catastroData.title}`}
+                loading="lazy"
+                decoding="async"
+              />
             </button>
             <div className={styles.downloadActions}>
-              <a href={currentVersion.dwg} className={styles.btnDownload} target="_blank" rel="noopener noreferrer">
+              <a href={catastroData.dwg} className={styles.btnDownload} target="_blank" rel="noopener noreferrer">
                 <IconDownload />
                 <span style={{ marginLeft: '8px' }}>Descargar DWG</span>
               </a>
-              <a href={currentVersion.pdf} className={`${styles.btnDownload} ${styles.btnDownloadPdf}`} target="_blank" rel="noopener noreferrer">
+              <a href={catastroData.pdf} className={`${styles.btnDownload} ${styles.btnDownloadPdf}`} target="_blank" rel="noopener noreferrer">
                 <IconDownload />
                 <span style={{ marginLeft: '8px' }}>Descargar PDF</span>
               </a>
-            </div>
-          </div>
-
-          <div className={styles.historySection}>
-            <h4 className={styles.historyTitle}>Historial de versiones</h4>
-            <div className={styles.tableContainer}>
-              <table className={styles.table}>
-                <thead className={styles.tableHead}>
-                  <tr>
-                    <th>Fecha</th>
-                    <th>Versión</th>
-                    <th>DWG</th>
-                    <th>PDF</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {catastroData.versions.map((v) => (
-                    <tr key={v.id} className={styles.tableRow}>
-                      <td className={styles.tableCell} data-label="Fecha">{v.date}</td>
-                      <td className={styles.tableCell} data-label="Versión">{v.version}</td>
-                      <td className={styles.tableCell} data-label="DWG">
-                        <a href={v.dwg} target="_blank" rel="noopener noreferrer">Descargar</a>
-                      </td>
-                      <td className={styles.tableCell} data-label="PDF">
-                        <a href={v.pdf} target="_blank" rel="noopener noreferrer">Descargar</a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             </div>
           </div>
         </section>

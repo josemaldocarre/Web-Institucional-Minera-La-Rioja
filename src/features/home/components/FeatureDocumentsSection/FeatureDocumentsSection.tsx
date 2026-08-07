@@ -137,8 +137,6 @@ export interface FeatureDocumentCardProps {
   readonly accent?: 'orange' | 'green'
   readonly icon: FeatureDocumentIcon
   readonly openInNewTab?: boolean
-  readonly versionText?: string
-  readonly versionDate?: string
 }
 
 export function FeatureDocumentCard({
@@ -150,8 +148,6 @@ export function FeatureDocumentCard({
   accent = 'green',
   icon,
   openInNewTab = false,
-  versionText,
-  versionDate,
 }: FeatureDocumentCardProps) {
   const Icon = DOCUMENT_ICONS[icon]
 
@@ -167,12 +163,6 @@ export function FeatureDocumentCard({
       </div>
 
       <h3 className={styles.cardTitle}>{title}</h3>
-      {(versionText || versionDate) ? (
-        <div className={styles.versionInfo}>
-          {versionText && <strong>{versionText}</strong>}
-          {versionDate && <span> - Actualizado: {versionDate}</span>}
-        </div>
-      ) : null}
       <p className={styles.cardDescription}>{description}</p>
 
       <a
@@ -237,19 +227,14 @@ export function FeatureDocumentsSection({
                 badgeKey,
                 accent,
               }) => {
-                let currentHref = href;
-                let versionText = undefined;
-                let versionDate = undefined;
+                let currentHref = href
 
                 if (icon === 'catastro') {
-                  const catastroSvc = gestionMineraService.tramites.services.find(s => s.id === 'catastro-minero');
+                  const catastroSvc = gestionMineraService.tramites.services.find(
+                    (s) => s.id === 'catastro-minero',
+                  )
                   if (catastroSvc?.catastroData) {
-                    const currentVersion = catastroSvc.catastroData.versions.find(v => v.current);
-                    if (currentVersion) {
-                      currentHref = currentVersion.dwg;
-                      versionText = 'Versión vigente';
-                      versionDate = currentVersion.date;
-                    }
+                    currentHref = catastroSvc.catastroData.dwg
                   }
                 }
 
@@ -262,8 +247,6 @@ export function FeatureDocumentsSection({
                   badge: t(badgeKey),
                   accent,
                   openInNewTab: true,
-                  versionText,
-                  versionDate,
                 }
               },
             )}

@@ -125,7 +125,7 @@ const institucionalData: InstitucionalPageData = {
     },
     secretaria: {
       heading: 'SECRETARÍA DE MINERÍA',
-      name: 'Dra. Ivanna María Guardia',
+      name: 'Abogada Ivanna María Guardia',
       role: 'Secretaria de Minería',
     },
     support: {
