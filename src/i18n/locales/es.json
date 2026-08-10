@@ -94,5 +94,47 @@
     "notFoundTitle": "Página no encontrada",
     "notFoundBody": "La dirección solicitada no existe o fue movida.",
     "notFoundHome": "Volver al inicio"
+  },
+  "institucional": {
+    "page": {
+      "eyebrow": "Sobre la Secretaría",
+      "title": "Institucional",
+      "description": "Bienvenidos al portal institucional de la Secretaría de Minería del Gobierno de La Rioja.",
+      "sectionNavAria": "Secciones de la página institucional"
+    },
+    "quienesSomos": {
+      "title": "Quiénes Somos",
+      "body": "Somos la autoridad competente encargada de planificar, regular, promover y controlar la actividad minera en todo el territorio provincial. Nuestro propósito es impulsar el desarrollo de una minería moderna, inclusiva y con una fuerte identidad riojana, combinando de manera estratégica el crecimiento económico con el bienestar social y el cuidado ambiental. Trabajamos bajo un modelo participativo que articula esfuerzos con el sector científico-académico, la Secretaría de Ambiente, empresas públicas como EMSE, plataformas de innovación como Kallpa I+D, y fundamentalmente, con la comunidad local como eje central de nuestras políticas.",
+      "imageAlt": "Paisaje minero de La Rioja"
+    },
+    "autoridades": {
+      "title": "Autoridades",
+      "intro": "El equipo de gestión de la Secretaría de Minería lidera la ejecución y el control técnico-institucional de la política minera provincial, velando por el cumplimiento de las metas estratégicas de sostenibilidad, transparencia y desarrollo local definidas para el bienestar de la provincia.",
+      "labels": {
+        "name": "Nombre",
+        "role": "Cargo",
+        "directorPrefix": "Dir."
+      },
+      "secretaria": {
+        "heading": "SECRETARÍA DE MINERÍA",
+        "role": "Secretaria de Minería"
+      },
+      "unidades": {
+        "dgMineria": "Dirección General de Minería",
+        "dEscribaniaMinas": "Dirección de Escribanía de Minas",
+        "dCatastroMinero": "Dirección de Catastro Minero",
+        "dGeologiaMinera": "Dirección de Geología Minera",
+        "dEconomiaMinera": "Dirección de Economía Minera",
+        "dPoliciaMinera": "Dirección de Policía Minera",
+        "dgAsuntosLegales": "Dirección General de Asuntos Legales",
+        "dgDesarrolloProductivo": "Dirección General de Desarrollo Productivo Minero",
+        "dServicioMinero": "Dirección Servicio Minero",
+        "dgAdministracion": "Dirección General de Administración",
+        "cRendicionesCuentasPresupuestoPatrimonio": "Coordinación Rendiciones de Cuentas, Presupuesto y Patrimonio",
+        "cTesoreria": "Coordinación Tesorería",
+        "cPersonal": "Coordinación Personal",
+        "dgDespacho": "Dirección General de Despacho"
+      }
+    }
   }
 }

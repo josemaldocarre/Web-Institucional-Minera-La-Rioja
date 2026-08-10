@@ -1,79 +1,60 @@
 export interface InstitucionalPageHero {
   readonly breadcrumb: {
     href: string
-    label: string
+    labelKey: string
   }
   readonly eyebrow: {
     number: string
-    label: string
+    labelKey: string
   }
-  readonly title: string
-  readonly description: string
+  readonly titleKey: string
+  readonly descriptionKey: string
 }
 
 export interface InstitucionalImage {
   readonly src: string
-  readonly alt: string
+  readonly altKey: string
 }
 
 export interface InstitucionalSection {
-  readonly title: string
-  readonly intro?: string
-  readonly body: string
+  readonly titleKey: string
+  readonly introKey?: string
+  readonly bodyKey: string
   readonly image?: InstitucionalImage
 }
 
 export const INSTITUCIONAL_AUTHORITY_VACANT = 'VACANTE' as const
 
 export interface AuthorityLabels {
-  readonly name: string
-  readonly role: string
-  readonly directorPrefix: string
+  readonly nameKey: string
+  readonly roleKey: string
+  readonly directorPrefixKey: string
 }
 
 export interface AuthoritySecretaria {
-  readonly heading: string
+  readonly headingKey: string
   readonly name: string
-  readonly role: string
-}
-
-export interface AuthoritySupportMember {
-  readonly id: string
-  readonly cargo: string
-  readonly responsable: string
-}
-
-export interface AuthorityPersonalApoyo {
-  readonly title: string
-  readonly members: readonly AuthoritySupportMember[]
-}
-
-export interface AuthoritySubdependencia {
-  readonly id: string
-  readonly cargo: string
-  readonly responsable: string | null | undefined
+  readonly roleKey: string
 }
 
 export interface AuthorityDependencia {
   readonly id: string
-  readonly cargo: string
+  readonly cargoKey: string
   readonly responsable: string | null | undefined
-  readonly subdependencias?: readonly AuthoritySubdependencia[]
 }
 
 export interface AuthorityDireccionGeneral {
   readonly id: string
-  readonly nombre: string
+  readonly nombreKey: string
   readonly director: string | null | undefined
   readonly dependencias: readonly AuthorityDependencia[]
 }
 
 export interface InstitucionalAuthorities {
-  readonly title: string
-  readonly intro?: string
+  readonly titleKey: string
+  readonly introKey?: string
   readonly labels: AuthorityLabels
   readonly secretaria: AuthoritySecretaria
-  readonly personalApoyo: AuthorityPersonalApoyo
   readonly direccionesGenerales: readonly AuthorityDireccionGeneral[]
 }
 
@@ -87,185 +68,98 @@ const institucionalData: InstitucionalPageData = {
   page: {
     breadcrumb: {
       href: '/',
-      label: 'Inicio',
+      labelKey: 'nav.inicio',
     },
     eyebrow: {
       number: '1',
-      label: 'Sobre la Secretaría',
+      labelKey: 'institucional.page.eyebrow',
     },
-    title: 'Institucional',
-    description:
-      'Bienvenidos al portal institucional de la Secretaría de Minería del Gobierno de La Rioja.',
+    titleKey: 'institucional.page.title',
+    descriptionKey: 'institucional.page.description',
   },
   quienesSomos: {
-    title: 'Quiénes Somos',
-    intro: '',
-    body:
-      'Somos la autoridad competente encargada de planificar, regular, promover y controlar la actividad minera en todo el territorio provincial. Nuestro propósito es impulsar el desarrollo de una minería moderna, inclusiva y con una fuerte identidad riojana, combinando de manera estratégica el crecimiento económico con el bienestar social y el cuidado ambiental. Trabajamos bajo un modelo participativo que articula esfuerzos con el sector científico-académico, la Secretaría de Ambiente, empresas públicas como EMSE, plataformas de innovación como Kallpa I+D, y fundamentalmente, con la comunidad local como eje central de nuestras políticas.',
+    titleKey: 'institucional.quienesSomos.title',
+    bodyKey: 'institucional.quienesSomos.body',
     image: {
       src: '/images/institucional/quienes-somos.JPG',
-      alt: 'Paisaje minero de La Rioja',
+      altKey: 'institucional.quienesSomos.imageAlt',
     },
   },
   autoridades: {
-    title: 'Autoridades',
-    intro:
-      'El equipo de gestión de la Secretaría de Minería lidera la ejecución y el control técnico-institucional de la política minera provincial, velando por el cumplimiento de las metas estratégicas de sostenibilidad, transparencia y desarrollo local definidas para el bienestar de la provincia.',
+    titleKey: 'institucional.autoridades.title',
+    introKey: 'institucional.autoridades.intro',
     labels: {
-      name: 'Nombre',
-      role: 'Cargo',
-      directorPrefix: 'Dir.',
+      nameKey: 'institucional.autoridades.labels.name',
+      roleKey: 'institucional.autoridades.labels.role',
+      directorPrefixKey: 'institucional.autoridades.labels.directorPrefix',
     },
     secretaria: {
-      heading: 'SECRETARÍA DE MINERÍA',
+      headingKey: 'institucional.autoridades.secretaria.heading',
       name: 'Abogada Ivanna María Guardia',
-      role: 'Secretaria de Minería',
-    },
-    personalApoyo: {
-      title: 'Personal de Apoyo',
-      members: [
-        {
-          id: 'secretaria-privada',
-          cargo: 'Secretaría Privada',
-          responsable: 'Bettiana Flores Antúnez',
-        },
-        {
-          id: 'chofer-secretario',
-          cargo: 'Chofer del Secretario',
-          responsable: 'Ramón Alberto Herrera',
-        },
-      ],
+      roleKey: 'institucional.autoridades.secretaria.role',
     },
     direccionesGenerales: [
       {
         id: 'dg-mineria',
-        nombre: 'Dirección General de Minería',
-        director: 'Florencia Olivera Buteler',
+        nombreKey: 'institucional.autoridades.unidades.dgMineria',
+        director: 'Ing. Florencia Olivera Butel',
         dependencias: [
           {
             id: 'd-escribania-minas',
-            cargo: 'Dirección de Escribanía de Minas',
+            cargoKey: 'institucional.autoridades.unidades.dEscribaniaMinas',
             responsable: 'Agustina Delgado',
-            subdependencias: [
-              {
-                id: 'prom-mesa-e-s',
-                cargo: 'PROM. DE MESA DE E/S',
-                responsable: 'María Leticia Díaz',
-              },
-            ],
           },
           {
             id: 'd-catastro-minero',
-            cargo: 'Dirección de Catastro Minero',
+            cargoKey: 'institucional.autoridades.unidades.dCatastroMinero',
             responsable: INSTITUCIONAL_AUTHORITY_VACANT,
-            subdependencias: [
-              {
-                id: 'prom-registro-grafico-catastral',
-                cargo: 'PROM. REGISTRO GRÁFICO CATASTRAL',
-                responsable: 'Gabriel Sergio Gómez',
-              },
-              {
-                id: 'prom-topografia',
-                cargo: 'PROM. TOPOGRAFÍA',
-                responsable: 'Adrián Gabriel Córdoba',
-              },
-            ],
           },
           {
             id: 'd-geologia-minera',
-            cargo: 'Dirección de Geología Minera',
+            cargoKey: 'institucional.autoridades.unidades.dGeologiaMinera',
             responsable: 'Nicolás Fernando Pereyra',
-            subdependencias: [
-              {
-                id: 'prom-trabajos-geologicos',
-                cargo: 'PROM. TRABAJOS GEOLÓGICOS',
-                responsable: 'Edgar Iván Bricco Moreno',
-              },
-            ],
           },
           {
             id: 'd-economia-minera',
-            cargo: 'Dirección de Economía Minera',
+            cargoKey: 'institucional.autoridades.unidades.dEconomiaMinera',
             responsable: 'Fabiola Rivera',
-            subdependencias: [
-              {
-                id: 'prom-registro-productores',
-                cargo: 'PROM. REGISTRO DE PRODUCTORES Y MINERALES',
-                responsable: 'Ercilla Rosario Valladares',
-              },
-              {
-                id: 'coord-valle-bermejo-llanos-del-sur',
-                cargo: 'COORD. VALLE BERMEJO Y LLANOS DEL SUR',
-                responsable: 'Gisela Rufina Baigorria Nieto',
-              },
-            ],
           },
           {
             id: 'd-policia-minera',
-            cargo: 'Dirección de Policía Minera',
+            cargoKey: 'institucional.autoridades.unidades.dPoliciaMinera',
             responsable: 'Julián Emmanuel López',
-            subdependencias: [
-              {
-                id: 'prom-fiscalizacion-trabajo',
-                cargo:
-                  'PROM. FISCALIZACIÓN DE TRABAJO DE EXPLORACIÓN, EXPLOTACIÓN Y ESTABLECIMIENTO',
-                responsable: 'Santiago Tadeo',
-              },
-            ],
           },
         ],
       },
       {
         id: 'dg-asuntos-legales',
-        nombre: 'Dirección General de Asuntos Legales',
+        nombreKey: 'institucional.autoridades.unidades.dgAsuntosLegales',
         director: 'Clotilde Mabel Páez',
         dependencias: [],
       },
       {
         id: 'dg-desarrollo-productivo',
-        nombre: 'Dirección General de Desarrollo Productivo Minero',
+        nombreKey: 'institucional.autoridades.unidades.dgDesarrolloProductivo',
         director: 'Carlos Nicolás Molina',
         dependencias: [
           {
             id: 'd-servicio-minero',
-            cargo: 'Dirección Servicio Minero',
+            cargoKey: 'institucional.autoridades.unidades.dServicioMinero',
             responsable: 'Hilda Valladares',
-          }
+          },
         ],
       },
       {
         id: 'dg-administracion',
-        nombre: 'Dirección General de Administración',
-        director: 'Cira. Brizuela Camila Soledad',
-        dependencias: [
-          {
-            id: 'c-rendiciones-cuentas-presupuesto-patrimonio',
-            cargo: 'Coordinación Rendiciones de Cuentas, Presupuesto y Patrimonio',
-            responsable: INSTITUCIONAL_AUTHORITY_VACANT,
-          },
-          {
-            id: 'c-tesoreria',
-            cargo: 'Coordinación Tesorería',
-            responsable: 'Gimena Soler',
-          },
-          {
-            id: 'c-personal',
-            cargo: 'Coordinación Personal',
-            responsable: INSTITUCIONAL_AUTHORITY_VACANT,
-          },
-        ],
-      },
-      {
-        id: 'dg-despacho',
-        nombre: 'Dirección General de Despacho',
-        director: 'Karina Elizabeth Caliva',
+        nombreKey: 'institucional.autoridades.unidades.dgAdministracion',
+        director: 'Cra. Brizuela Camila Soledad',
         dependencias: [],
       },
       {
-        id: 'dg-comunicaciones-estrategicas-y-responsabilidad-social-minera',
-        nombre: 'Dirección General de Comunicaciones Estratégicas y Responsabilidad Social Minera',
-        director: 'Josefina Guadalupe Herrera Aguad',
-        dependencias: []
+        id: 'dg-despacho',
+        nombreKey: 'institucional.autoridades.unidades.dgDespacho',
+        director: 'Karina Elizabeth Caliva',
+        dependencias: [],
       },
     ],
   },

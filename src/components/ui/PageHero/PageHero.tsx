@@ -1,5 +1,6 @@
-import type { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import type { ReactNode } from 'react'
 import { Container } from '../Container/Container'
 import { Section } from '../Section/Section'
 import styles from './PageHero.module.scss'
@@ -44,6 +45,7 @@ function BreadcrumbArrow() {
 }
 
 export function PageHero({ title, description, breadcrumb, eyebrow, cta }: PageHeroProps) {
+  const { t } = useTranslation()
   const showEyebrow = Boolean(eyebrow?.number && eyebrow?.label)
 
   return (
@@ -51,7 +53,7 @@ export function PageHero({ title, description, breadcrumb, eyebrow, cta }: PageH
       <Container>
         <header className={styles.header}>
           {breadcrumb ? (
-            <nav className={styles.breadcrumbNav} aria-label="Breadcrumb">
+            <nav className={styles.breadcrumbNav} aria-label={t('common.breadcrumbAria')}>
               <Link className={styles.breadcrumb} to={breadcrumb.href}>
                 <BreadcrumbArrow />
                 {breadcrumb.label}
@@ -61,7 +63,10 @@ export function PageHero({ title, description, breadcrumb, eyebrow, cta }: PageH
 
           {showEyebrow && eyebrow ? (
             <p className={styles.eyebrow}>
-              EJE {eyebrow.number} · {eyebrow.label}
+              {t('common.pageHeroEyebrow', {
+                number: eyebrow.number,
+                label: eyebrow.label,
+              })}
             </p>
           ) : null}
 

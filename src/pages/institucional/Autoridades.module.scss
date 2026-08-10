@@ -75,51 +75,6 @@
   line-height: var(--line-height-snug);
 }
 
-.support {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.subsectionTitle {
-  margin: 0;
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-snug);
-  color: var(--color-text-primary);
-}
-
-.supportList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.supportItem {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-header-border);
-
-  &:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-}
-
-.supportRole {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-snug);
-  color: var(--color-text-primary);
-}
-
 .responsibleName {
   font-family: var(--font-family-display);
   font-size: var(--font-size-base);
@@ -173,45 +128,8 @@
   color: var(--color-text-primary);
 }
 
-.subdependentList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  margin: var(--space-3) 0 0;
-  padding: 0 0 0 var(--space-5);
-  list-style: none;
-  border-left: 2px solid var(--color-header-border);
-}
-
-.subdependentItem {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.subdependentTitle {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-snug);
-  letter-spacing: 0.02em;
-  color: var(--color-text-primary);
-}
-
-.subdependentName {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-relaxed);
-  color: var(--color-text-muted);
-}
-
 @media (width >= v.$breakpoint-header-desktop) {
   .secretariaCard {
     padding: var(--space-10) var(--space-8);
-  }
-
-  .subsectionTitle {
-    font-size: var(--font-size-xl);
   }
 }

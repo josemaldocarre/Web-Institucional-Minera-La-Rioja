@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Accordion } from '../../components/ui/Accordion/Accordion'
 import { ContentSection } from '../../components/ui/ContentSection/ContentSection'
 import {
@@ -5,11 +6,10 @@ import {
   institucionalService,
   type AuthorityDependencia,
   type AuthorityDireccionGeneral,
-  type AuthoritySubdependencia,
 } from '../../services/institucionalService'
 import styles from './Autoridades.module.scss'
 
-const { title, intro, labels, secretaria, personalApoyo, direccionesGenerales } =
+const { titleKey, introKey, labels, secretaria, direccionesGenerales } =
   institucionalService.autoridades
 
 function hasResponsible(
@@ -28,27 +28,10 @@ function hasResponsible(
   return trimmed.toUpperCase() !== INSTITUCIONAL_AUTHORITY_VACANT
 }
 
-function getVisibleSubdependencias(
-  subdependencias: readonly AuthoritySubdependencia[] | undefined,
-): AuthoritySubdependencia[] {
-  if (!subdependencias) {
-    return []
-  }
-
-  return subdependencias.filter((item) => hasResponsible(item.responsable))
-}
-
-function isVisibleDependencia(dependencia: AuthorityDependencia): boolean {
-  return (
-    hasResponsible(dependencia.responsable) ||
-    getVisibleSubdependencias(dependencia.subdependencias).length > 0
-  )
-}
-
 function getVisibleDependencias(
   dependencias: readonly AuthorityDependencia[],
 ): AuthorityDependencia[] {
-  return dependencias.filter(isVisibleDependencia)
+  return dependencias.filter((dependencia) => hasResponsible(dependencia.responsable))
 }
 
 function DireccionGeneralPanel({
@@ -56,6 +39,7 @@ function DireccionGeneralPanel({
 }: {
   readonly direccion: AuthorityDireccionGeneral
 }) {
+  const { t } = useTranslation()
   const directorName = hasResponsible(direccion.director)
     ? direccion.director
     : null
@@ -69,48 +53,18 @@ function DireccionGeneralPanel({
     <div className={styles.panel}>
       {directorName ? (
         <p className={styles.directorName}>
-          {labels.directorPrefix} {directorName}
+          {t(labels.directorPrefixKey)} {directorName}
         </p>
       ) : null}
 
       {dependencias.length > 0 ? (
         <ul className={styles.dependentList}>
-          {dependencias.map((dependencia) => {
-            const responsable = hasResponsible(dependencia.responsable)
-              ? dependencia.responsable
-              : null
-            const subdependencias = getVisibleSubdependencias(
-              dependencia.subdependencias,
-            )
-
-            return (
-              <li key={dependencia.id} className={styles.dependentItem}>
-                <span className={styles.dependentTitle}>{dependencia.cargo}</span>
-
-                {responsable ? (
-                  <span className={styles.responsibleName}>{responsable}</span>
-                ) : null}
-
-                {subdependencias.length > 0 ? (
-                  <ul className={styles.subdependentList}>
-                    {subdependencias.map((subdependencia) => (
-                      <li
-                        key={subdependencia.id}
-                        className={styles.subdependentItem}
-                      >
-                        <span className={styles.subdependentTitle}>
-                          {subdependencia.cargo}
-                        </span>
-                        <span className={styles.subdependentName}>
-                          {subdependencia.responsable}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </li>
-            )
-          })}
+          {dependencias.map((dependencia) => (
+            <li key={dependencia.id} className={styles.dependentItem}>
+              <span className={styles.dependentTitle}>{t(dependencia.cargoKey)}</span>
+              <span className={styles.responsibleName}>{dependencia.responsable}</span>
+            </li>
+          ))}
         </ul>
       ) : null}
     </div>
@@ -118,50 +72,35 @@ function DireccionGeneralPanel({
 }
 
 export default function Autoridades() {
-  const visibleSupportMembers = personalApoyo.members.filter((member) =>
-    hasResponsible(member.responsable),
-  )
+  const { t } = useTranslation()
 
   return (
-    <ContentSection id="autoridades" title={title} description={intro}>
+    <ContentSection
+      id="autoridades"
+      title={t(titleKey)}
+      description={introKey ? t(introKey) : undefined}
+    >
       <div className={styles.layout}>
-        <article className={styles.secretariaCard} aria-label={secretaria.heading}>
-          <p className={styles.secretariaHeading}>{secretaria.heading}</p>
+        <article className={styles.secretariaCard} aria-label={t(secretaria.headingKey)}>
+          <p className={styles.secretariaHeading}>{t(secretaria.headingKey)}</p>
 
           <div className={styles.secretariaFields}>
             <div className={styles.fieldBlock}>
-              <p className={styles.fieldLabel}>{labels.name}</p>
+              <p className={styles.fieldLabel}>{t(labels.nameKey)}</p>
               <p className={styles.secretariaName}>{secretaria.name}</p>
             </div>
 
             <div className={styles.fieldBlock}>
-              <p className={styles.fieldLabel}>{labels.role}</p>
-              <p className={styles.secretariaRole}>{secretaria.role}</p>
+              <p className={styles.fieldLabel}>{t(labels.roleKey)}</p>
+              <p className={styles.secretariaRole}>{t(secretaria.roleKey)}</p>
             </div>
           </div>
         </article>
 
-        {visibleSupportMembers.length > 0 ? (
-          <section className={styles.support} aria-labelledby="support-heading">
-            <h3 id="support-heading" className={styles.subsectionTitle}>
-              {personalApoyo.title}
-            </h3>
-
-            <ul className={styles.supportList}>
-              {visibleSupportMembers.map((member) => (
-                <li key={member.id} className={styles.supportItem}>
-                  <span className={styles.supportRole}>{member.cargo}</span>
-                  <span className={styles.responsibleName}>{member.responsable}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
-
         <Accordion
           items={direccionesGenerales.map((direccion) => ({
             id: direccion.id,
-            title: direccion.nombre,
+            title: t(direccion.nombreKey),
             content: <DireccionGeneralPanel direccion={direccion} />,
           }))}
         />
