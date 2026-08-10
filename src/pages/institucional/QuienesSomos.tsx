@@ -1,13 +1,15 @@
 import { useId } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Container } from '../../components/ui/Container/Container'
 import { Section } from '../../components/ui/Section/Section'
 import { SectionHeader } from '../../components/ui/SectionHeader/SectionHeader'
 import { institucionalService } from '../../services/institucionalService'
 import styles from './QuienesSomos.module.scss'
 
-const { title, body, image } = institucionalService.quienesSomos
+const { titleKey, bodyKey, image } = institucionalService.quienesSomos
 
 export default function QuienesSomos() {
+  const { t } = useTranslation()
   const headingId = useId()
 
   return (
@@ -19,7 +21,7 @@ export default function QuienesSomos() {
               <img
                 className={styles.image}
                 src={image.src}
-                alt={image.alt}
+                alt={t(image.altKey)}
                 loading="lazy"
                 decoding="async"
               />
@@ -29,8 +31,8 @@ export default function QuienesSomos() {
           )}
 
           <div className={styles.card}>
-            <SectionHeader headingId={headingId} title={title} variant="green" />
-            <p className={styles.body}>{body}</p>
+            <SectionHeader headingId={headingId} title={t(titleKey)} variant="green" />
+            <p className={styles.body}>{t(bodyKey)}</p>
           </div>
         </div>
       </Container>
