@@ -1,9 +1,10 @@
+import { useTranslation } from 'react-i18next'
 import { ContentSection } from '../../components/ui/ContentSection/ContentSection'
 import { FeatureDocumentCards } from '../../features/home/components/FeatureDocumentsSection/FeatureDocumentsSection'
 import { gestionMineraService } from '../../services/gestionMineraService'
 import styles from './Tramites.module.scss'
 
-const { title, intro, services } = gestionMineraService.tramites
+const { titleKey, introKey, services } = gestionMineraService.tramites
 
 function IconDownload() {
   return (
@@ -22,6 +23,7 @@ function buildShareCadUrl(dwgPath: string): string {
 }
 
 export default function Tramites() {
+  const { t } = useTranslation()
   const catastroSvc = services.find((s) => s.id === 'catastro-minero')
   const catastroData = catastroSvc?.catastroData
   const filteredServices = services.filter((s) => s.id !== 'catastro-minero')
@@ -29,26 +31,33 @@ export default function Tramites() {
   const hasDwg = Boolean(catastroData?.dwg?.trim())
   const hasPdf = Boolean(catastroData?.pdf?.trim())
   const shareCadUrl = hasDwg && catastroData ? buildShareCadUrl(catastroData.dwg) : null
+  const catastroTitle = catastroSvc ? t(catastroSvc.titleKey) : ''
 
   return (
-    <ContentSection id="tramites" title={title} description={intro}>
+    <ContentSection
+      id="tramites"
+      title={t(titleKey)}
+      description={introKey ? t(introKey) : undefined}
+    >
       <FeatureDocumentCards
-        items={filteredServices.map(({ title: serviceTitle, description, cta, href, icon, accent, badge }) => ({
-          title: serviceTitle,
-          description,
-          cta,
-          href,
-          icon,
-          accent,
-          badge,
-        }))}
+        items={filteredServices.map(
+          ({ titleKey: serviceTitleKey, descriptionKey, ctaKey, href, icon, accent, badgeKey }) => ({
+            title: t(serviceTitleKey),
+            description: t(descriptionKey),
+            cta: t(ctaKey),
+            href,
+            icon,
+            accent,
+            badge: badgeKey ? t(badgeKey) : undefined,
+          }),
+        )}
       />
 
-      {catastroData && (
+      {catastroSvc && catastroData ? (
         <section id="catastro-detalle" className={styles.catastroSection}>
           <header className={styles.catastroHeader}>
-            <h3 className={styles.catastroTitle}>{catastroData.title}</h3>
-            <p className={styles.catastroIntro}>{catastroData.description}</p>
+            <h3 className={styles.catastroTitle}>{catastroTitle}</h3>
+            <p className={styles.catastroIntro}>{t(catastroSvc.descriptionKey)}</p>
           </header>
 
           <div className={styles.viewerContainer}>
@@ -56,13 +65,15 @@ export default function Tramites() {
               <iframe
                 className={styles.viewer}
                 src={shareCadUrl}
-                title={`Visor interactivo de ${catastroData.title}`}
+                title={t('gestionMinera.tramites.catastro.viewerTitle', {
+                  title: catastroTitle,
+                })}
                 loading="lazy"
                 allowFullScreen
               />
             ) : (
               <p className={styles.viewerUnavailable}>
-                El visor del Catastro Minero no se encuentra disponible actualmente.
+                {t('gestionMinera.tramites.catastro.viewerUnavailable')}
               </p>
             )}
 
@@ -70,19 +81,23 @@ export default function Tramites() {
               {hasDwg && (
                 <a href={catastroData.dwg} className={styles.btnDownload} target="_blank" rel="noopener noreferrer">
                   <IconDownload />
-                  <span style={{ marginLeft: '8px' }}>Descargar DWG</span>
+                  <span style={{ marginLeft: '8px' }}>
+                    {t('gestionMinera.tramites.catastro.downloadDwg')}
+                  </span>
                 </a>
               )}
               {hasPdf && (
                 <a href={catastroData.pdf} className={`${styles.btnDownload} ${styles.btnDownloadPdf}`} target="_blank" rel="noopener noreferrer">
                   <IconDownload />
-                  <span style={{ marginLeft: '8px' }}>Descargar PDF</span>
+                  <span style={{ marginLeft: '8px' }}>
+                    {t('gestionMinera.tramites.catastro.downloadPdf')}
+                  </span>
                 </a>
               )}
             </div>
           </div>
         </section>
-      )}
+      ) : null}
     </ContentSection>
   )
 }

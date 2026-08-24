@@ -1,4 +1,5 @@
 import { useState, type JSX } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Container } from '../../components/ui/Container/Container'
 import { MotionReveal } from '../../components/ui/MotionReveal/MotionReveal'
 import { PageHero } from '../../components/ui/PageHero/PageHero'
@@ -85,6 +86,7 @@ function getCategoryById(id: CategoryId): InformacionPublicaCategory {
 }
 
 export default function InformacionPublica() {
+  const { t } = useTranslation()
   const [activeCategoryId, setActiveCategoryId] =
     useState<CategoryId>(INITIAL_CATEGORY)
 
@@ -93,17 +95,28 @@ export default function InformacionPublica() {
 
   return (
     <>
-      <PageHero {...page} />
+      <PageHero
+        title={t(page.titleKey)}
+        description={t(page.descriptionKey)}
+        breadcrumb={{
+          href: page.breadcrumb.href,
+          label: t(page.breadcrumb.labelKey),
+        }}
+        eyebrow={{
+          number: page.eyebrow.number,
+          label: t(page.eyebrow.labelKey),
+        }}
+      />
 
       <Section
         className={styles.section}
-        aria-label="Centro de consulta de información pública"
+        aria-label={t('informacionPublica.page.sectionAria')}
       >
         <Container>
           <MotionReveal>
             <div className={styles.layout}>
-              <aside className={styles.sidebar} aria-label="Categorías">
-                <p className={styles.sidebarLabel}>Categorías</p>
+              <aside className={styles.sidebar} aria-label={t('informacionPublica.categoriesLabel')}>
+                <p className={styles.sidebarLabel}>{t('informacionPublica.categoriesLabel')}</p>
                 <ul className={styles.categoryList}>
                   {categories.map((category) => {
                     const isActive = category.id === activeCategoryId
@@ -126,7 +139,7 @@ export default function InformacionPublica() {
                             <Icon size={22} />
                           </span>
                           <span className={styles.categoryTitle}>
-                            {category.title}
+                            {t(category.titleKey)}
                           </span>
                           {isActive ? (
                             <span className={styles.categoryChevron} aria-hidden>
@@ -146,8 +159,8 @@ export default function InformacionPublica() {
                     <ActiveIcon size={32} />
                   </span>
                   <div className={styles.panelHeading}>
-                    <h2 className={styles.panelTitle}>{activeCategory.title}</h2>
-                    <p className={styles.panelIntro}>{activeCategory.intro}</p>
+                    <h2 className={styles.panelTitle}>{t(activeCategory.titleKey)}</h2>
+                    <p className={styles.panelIntro}>{t(activeCategory.introKey)}</p>
                   </div>
                 </header>
 
@@ -172,7 +185,7 @@ export default function InformacionPublica() {
                         rel="noopener noreferrer"
                       >
                         <span className={styles.resourceTitle}>
-                          {resource.title}
+                          {t(resource.titleKey)}
                         </span>
                         <span className={styles.resourceAction} aria-hidden>
                           <IconExternalLink />

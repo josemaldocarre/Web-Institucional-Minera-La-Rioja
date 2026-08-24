@@ -1,63 +1,64 @@
 export interface ContactoPageHero {
   readonly breadcrumb: {
     href: string
-    label: string
+    labelKey: string
   }
   readonly eyebrow: {
     number: string
-    label: string
+    labelKey: string
   }
-  readonly title: string
-  readonly description: string
+  readonly titleKey: string
+  readonly descriptionKey: string
 }
 
 export interface ContactoEmail {
   readonly id: string
-  readonly area: string
+  readonly areaKey: string
   readonly email: string
 }
 
 export interface ContactoSocialItem {
   readonly id: string
   readonly network: string
-  readonly label: string
+  readonly label?: string
+  readonly labelKey?: string
   readonly href: string
 }
 
 export interface ContactoLocation {
-  readonly title: string
+  readonly titleKey: string
   readonly street: string
   readonly city: string
   readonly mapEmbedUrl: string
-  readonly mapTitle: string
+  readonly mapTitleKey: string
 }
 
 export interface ContactoHours {
-  readonly title: string
-  readonly days: string
-  readonly time: string
+  readonly titleKey: string
+  readonly daysKey: string
+  readonly timeKey: string
 }
 
 export interface ContactoPrimaryContact {
-  readonly title: string
-  readonly label: string
+  readonly titleKey: string
+  readonly labelKey: string
   readonly email: string
 }
 
 export interface ContactoEmailsBlock {
-  readonly title: string
+  readonly titleKey: string
   readonly items: readonly ContactoEmail[]
 }
 
 export interface ContactoSocialBlock {
-  readonly title: string
+  readonly titleKey: string
   readonly items: readonly ContactoSocialItem[]
 }
 
 export interface ContactoContact {
-  readonly title: string
-  readonly intro: string
-  readonly body: string
+  readonly titleKey: string
+  readonly introKey: string
+  readonly bodyKey: string
   readonly hours: ContactoHours
   readonly primaryContact: ContactoPrimaryContact
   readonly emails: ContactoEmailsBlock
@@ -74,78 +75,76 @@ const contactoData: ContactoPageData = {
   page: {
     breadcrumb: {
       href: '/',
-      label: 'Inicio',
+      labelKey: 'nav.inicio',
     },
     eyebrow: {
       number: '5',
-      label: 'Contacto',
+      labelKey: 'nav.contacto',
     },
-    title: 'Contacto',
-    description:
-      'Canales oficiales de comunicación de la Secretaría de Minería del Gobierno de La Rioja.',
+    titleKey: 'nav.contacto',
+    descriptionKey: 'contacto.page.description',
   },
   contact: {
-    title: 'Canales de atención',
-    intro:
-      'Estamos a su disposición para resolver consultas técnicas, recibir denuncias administrativas, tramitar guías de transporte o brindar asistencia institucional a productores y ciudadanos.',
-    body: 'Encuentre aquí nuestras vías de comunicación telefónica, correo electrónico oficial, horarios de atención al público y la ubicación geográfica de nuestras oficinas centrales en la ciudad de La Rioja.',
+    titleKey: 'contacto.contact.title',
+    introKey: 'contacto.contact.intro',
+    bodyKey: 'contacto.contact.body',
     hours: {
-      title: 'Horario',
-      days: 'Lunes a Viernes',
-      time: '08:00 a 13:00 hs',
+      titleKey: 'contacto.hours.title',
+      daysKey: 'contacto.hours.days',
+      timeKey: 'contacto.hours.time',
     },
     primaryContact: {
-      title: 'Contacto institucional',
-      label: 'Correo principal',
+      titleKey: 'contacto.primaryContact.title',
+      labelKey: 'contacto.primaryContact.label',
       email: 'mineria@larioja.gob.ar',
     },
     emails: {
-      title: 'Correos electrónicos',
+      titleKey: 'contacto.emails.title',
       items: [
         {
           id: 'secretaria-mineria',
-          area: 'Secretaría de Minería',
+          areaKey: 'contacto.emails.areas.secretaria',
           email: 'mineria@larioja.gob.ar',
         },
         {
           id: 'direccion-general-mineria',
-          area: 'Dirección General de Minería',
+          areaKey: 'institucional.autoridades.unidades.dgMineria',
           email: 'direcciongeneraldemineria@larioja.gob.ar',
         },
         {
           id: 'escribania-minas',
-          area: 'Dirección de Escribanía de Minas',
+          areaKey: 'institucional.autoridades.unidades.dEscribaniaMinas',
           email: 'escribaniademinaslr@larioja.gob.ar',
         },
         {
           id: 'catastro-minero',
-          area: 'Dirección de Catastro Minero',
+          areaKey: 'institucional.autoridades.unidades.dCatastroMinero',
           email: 'catastrominerolr@larioja.gob.ar',
         },
         {
           id: 'policia-minera',
-          area: 'Dirección de Policía Minera',
+          areaKey: 'institucional.autoridades.unidades.dPoliciaMinera',
           email: 'policiaminerallr@larioja.gob.ar',
         },
         {
           id: 'economia-minera',
-          area: 'Dirección de Economía Minera',
+          areaKey: 'institucional.autoridades.unidades.dEconomiaMinera',
           email: 'economiaminerallr@larioja.gob.ar',
         },
         {
           id: 'geologia-minera',
-          area: 'Dirección de Geología Minera',
+          areaKey: 'institucional.autoridades.unidades.dGeologiaMinera',
           email: 'geologiamineralr@larioja.gob.ar',
         },
         {
           id: 'desarrollo-productivo',
-          area: 'Dirección General de Desarrollo Productivo Minero',
+          areaKey: 'institucional.autoridades.unidades.dgDesarrolloProductivo',
           email: 'div.gral.dedes.prod.min.p@larioja.gob.ar',
         },
       ],
     },
     social: {
-      title: 'Redes sociales',
+      titleKey: 'contacto.social.title',
       items: [
         {
           id: 'instagram',
@@ -156,18 +155,18 @@ const contactoData: ContactoPageData = {
         {
           id: 'facebook',
           network: 'Facebook',
-          label: 'Secretaría de Minería La Rioja',
+          labelKey: 'contacto.social.facebookLabel',
           href: 'https://www.facebook.com/minerialr/',
         },
       ],
     },
     location: {
-      title: 'Dirección',
+      titleKey: 'contacto.location.title',
       street: 'Pelagio B. Luna 800',
       city: 'La Rioja',
       mapEmbedUrl:
         'https://maps.google.com/maps?q=Pelagio+B.+Luna+800,+La+Rioja,+Argentina&hl=es&z=16&output=embed',
-      mapTitle: 'Ubicación de las oficinas centrales de la Secretaría de Minería',
+      mapTitleKey: 'contacto.location.mapTitle',
     },
   },
 }

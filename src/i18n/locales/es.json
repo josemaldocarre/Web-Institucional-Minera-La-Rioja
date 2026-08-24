@@ -137,5 +137,111 @@
         "dgDespacho": "Dirección General de Despacho"
       }
     }
+  },
+  "gestionMinera": {
+    "page": {
+      "description": "Acceda a los servicios, trámites y recursos de la Secretaría de Minería para la gestión de la actividad minera en La Rioja.",
+      "sectionNavAria": "Secciones de la página de gestión minera"
+    },
+    "tramites": {
+      "title": "Trámites",
+      "intro": "Con el objetivo de agilizar y transparentar la gestión administrativa de los recursos minerales de la provincia, ponemos a disposición de los usuarios y profesionales nuestra plataforma de servicios y trámites digitales. Desde este espacio técnico, la Secretaría administra el registro de productores, gestiona el Catastro Minero Provincial conforme al Código Nacional de Minería, tramita pedimentos, emite guías de tránsito y procesa las notificaciones y declaraciones juradas obligatorias, garantizando la seguridad jurídica y el estricto control de la actividad.",
+      "catastro": {
+        "viewerTitle": "Visor interactivo de {{title}}",
+        "viewerUnavailable": "El visor del Catastro Minero no se encuentra disponible actualmente.",
+        "downloadDwg": "Descargar DWG",
+        "downloadPdf": "Descargar PDF"
+      }
+    },
+    "proveedores": {
+      "title": "Proveedores",
+      "body": "El crecimiento minero adquiere valor real cuando impulsa el entramado socioproductivo local. A través de la articulación con la Secretaría de Industria, priorizamos y potenciamos la contratación de industrias, pymes y emprendimientos riojanos dentro de la cadena de valor minera. Acceda al Registro Oficial de Proveedores Mineros de La Rioja para inscribir su empresa, postularse a demandas del sector y formar parte del ecosistema de servicios regionales que dinamizan la economía de nuestros departamentos.",
+      "imageAlt": "Proveedores mineros de La Rioja",
+      "cta": "Ir al Registro de Proveedores"
+    }
+  },
+  "informacionPublica": {
+    "page": {
+      "description": "Portal de documentación, transparencia y acceso a la información pública de la Secretaría de Minería de La Rioja.",
+      "sectionAria": "Centro de consulta de información pública"
+    },
+    "categoriesLabel": "Categorías",
+    "categories": {
+      "normativas": {
+        "title": "Normativas",
+        "intro": "La seguridad jurídica, la previsibilidad económica y la estricta protección del patrimonio natural se sustentan en un marco legal robusto y transparente. En esta sección podrá acceder a las regulaciones nacionales y provinciales que rigen la actividad minera. Nuestro marco regulatorio asegura que cada fase de prospección, exploración y explotación se ejecute bajo los más rigurosos estándares ambientales, resguardando de forma prioritaria los recursos hídricos en articulación con el Ministerio del Agua y Energía, y garantizando la plena vigencia de las leyes que protegen nuestro territorio.",
+        "resources": {
+          "constitucionNacional": "Constitución Nacional",
+          "codigoProcedimientoMinero": "Código de Procedimiento Minero",
+          "constitucionProvincial": "Constitución Provincial",
+          "codigoMineroNacional": "Código Minero Nacional",
+          "leyAmbientalNacional": "Ley Ambiental Nacional",
+          "normativaProveedores": "Normativa de Proveedores"
+        }
+      },
+      "transparencia": {
+        "title": "Transparencia",
+        "intro": "La transparencia y el libre acceso a la información pública son los pilares fundamentales para la legitimidad de la minería como política de Estado. Creemos en un modelo de gestión abierta al ciudadano, donde la fiscalización y los datos estadísticos reflejen la realidad técnica y económica del sector.",
+        "resources": {
+          "empresasProvincia": "Empresas trabajando en la provincia",
+          "datosEstadisticos": "Datos Estadísticos",
+          "capacitaciones": "Capacitaciones"
+        }
+      },
+      "planQuinquenal": {
+        "title": "Plan Quinquenal",
+        "intro": "El Plan Quinquenal para el Desarrollo Minero de La Rioja 2026-2030 constituye nuestra hoja de ruta estratégica para transformar el potencial geológico y humano de la provincia en bienestar real para las y los riojanos. Este documento es el resultado de un extenso diálogo técnico y territorial, consolidando un modelo que aporta de manera competitiva a la transición energética global a través de minerales críticos como el cobre y el litio, promoviendo el empleo formal y las inversiones con una clara responsabilidad social y climática. Lo invitamos a descargar y conocer el plan completo que guía el futuro productivo de nuestra región."
+      }
+    }
+  },
+  "programas": {
+    "page": {
+      "description": "Conozca los programas de la Secretaría de Minería orientados al desarrollo local y la valorización del trabajo artesanal en La Rioja."
+    },
+    "tallerArtesanias": {
+      "title": "Taller de Artesanías",
+      "intro": "La minería con identidad riojana incluye de manera especial el fomento y la visibilización de la pequeña escala y el trabajo artesanal.",
+      "body": "A través del Taller de Piedra, la Secretaría promueve de forma activa el agregado de valor en origen a las rocas de aplicación y minerales industriales característicos de nuestra tierra, tales como el granito, la laja y el travertino.",
+      "imageAlt": "Taller de Artesanías",
+      "gallery": {
+        "itemAlt": "Artesanía en piedra {{n}}",
+        "expandAria": "Ver imagen ampliada: {{alt}}",
+        "closeAria": "Cerrar imagen",
+        "dialogAria": "Vista ampliada de la imagen"
+      }
+    }
+  },
+  "contacto": {
+    "page": {
+      "description": "Canales oficiales de comunicación de la Secretaría de Minería del Gobierno de La Rioja."
+    },
+    "contact": {
+      "title": "Canales de atención",
+      "intro": "Estamos a su disposición para resolver consultas técnicas, recibir denuncias administrativas, tramitar guías de transporte o brindar asistencia institucional a productores y ciudadanos.",
+      "body": "Encuentre aquí nuestras vías de comunicación telefónica, correo electrónico oficial, horarios de atención al público y la ubicación geográfica de nuestras oficinas centrales en la ciudad de La Rioja."
+    },
+    "hours": {
+      "title": "Horario",
+      "days": "Lunes a Viernes",
+      "time": "08:00 a 13:00 hs"
+    },
+    "primaryContact": {
+      "title": "Contacto institucional",
+      "label": "Correo principal"
+    },
+    "emails": {
+      "title": "Correos electrónicos",
+      "areas": {
+        "secretaria": "Secretaría de Minería"
+      }
+    },
+    "social": {
+      "title": "Redes sociales",
+      "facebookLabel": "Secretaría de Minería La Rioja"
+    },
+    "location": {
+      "title": "Dirección",
+      "mapTitle": "Ubicación de las oficinas centrales de la Secretaría de Minería"
+    }
   }
 }

@@ -1,24 +1,22 @@
 export interface GestionMineraPageHero {
   readonly breadcrumb: {
     href: string
-    label: string
+    labelKey: string
   }
   readonly eyebrow: {
     number: string
-    label: string
+    labelKey: string
   }
-  readonly title: string
-  readonly description: string
+  readonly titleKey: string
+  readonly descriptionKey: string
 }
 
 export interface GestionMineraImage {
   readonly src: string
-  readonly alt: string
+  readonly altKey: string
 }
 
 export interface CatastroMineroData {
-  readonly title: string
-  readonly description: string
   readonly pdf: string
   readonly dwg: string
 }
@@ -32,30 +30,29 @@ export type GestionMineraServiceIcon =
 
 export interface GestionMineraServiceItem {
   readonly id: string
-  readonly title: string
-  readonly description: string
-  readonly cta: string
+  readonly titleKey: string
+  readonly descriptionKey: string
+  readonly ctaKey: string
   readonly href: string
   readonly icon: GestionMineraServiceIcon
   readonly accent: 'orange' | 'green'
-  readonly badge?: string
+  readonly badgeKey?: string
   readonly catastroData?: CatastroMineroData
 }
 
 export interface GestionMineraTramites {
-  readonly title: string
-  readonly intro?: string
-  readonly body: string
+  readonly titleKey: string
+  readonly introKey?: string
   readonly services: readonly GestionMineraServiceItem[]
 }
 
 export interface GestionMineraProveedores {
-  readonly title: string
-  readonly intro?: string
-  readonly body: string
+  readonly titleKey: string
+  readonly introKey?: string
+  readonly bodyKey: string
   readonly image: GestionMineraImage
   readonly cta: {
-    readonly label: string
+    readonly labelKey: string
     readonly href: string
   }
 }
@@ -70,35 +67,29 @@ const gestionMineraData: GestionMineraPageData = {
   page: {
     breadcrumb: {
       href: '/',
-      label: 'Inicio',
+      labelKey: 'nav.inicio',
     },
     eyebrow: {
       number: '2',
-      label: 'Gestión Minera',
+      labelKey: 'nav.gestionMinera',
     },
-    title: 'Gestión Minera',
-    description:
-      'Acceda a los servicios, trámites y recursos de la Secretaría de Minería para la gestión de la actividad minera en La Rioja.',
+    titleKey: 'nav.gestionMinera',
+    descriptionKey: 'gestionMinera.page.description',
   },
   tramites: {
-    title: 'Trámites',
-    intro:
-      'Con el objetivo de agilizar y transparentar la gestión administrativa de los recursos minerales de la provincia, ponemos a disposición de los usuarios y profesionales nuestra plataforma de servicios y trámites digitales. Desde este espacio técnico, la Secretaría administra el registro de productores, gestiona el Catastro Minero Provincial conforme al Código Nacional de Minería, tramita pedimentos, emite guías de tránsito y procesa las notificaciones y declaraciones juradas obligatorias, garantizando la seguridad jurídica y el estricto control de la actividad.',
-    body: '',
+    titleKey: 'gestionMinera.tramites.title',
+    introKey: 'gestionMinera.tramites.intro',
     services: [
       {
         id: 'catastro-minero',
-        title: 'Catastro Minero',
-        description:
-          'Información geográfica sobre concesiones, límites y disponibilidad minera.',
-        cta: 'Descargar',
+        titleKey: 'home.featureDocuments.catastro.title',
+        descriptionKey: 'home.featureDocuments.catastro.description',
+        ctaKey: 'home.featureDocuments.catastro.cta',
         href: '#',
         icon: 'catastro',
         accent: 'green',
-        badge: 'DWG',
+        badgeKey: 'home.featureDocuments.catastro.badge',
         catastroData: {
-          title: 'Catastro Minero',
-          description: 'Información geográfica sobre concesiones, límites y disponibilidad minera.',
           pdf: '/docs/catastro-minero.pdf',
           dwg: '/docs/catastro-minero.dwg',
         },
@@ -106,16 +97,14 @@ const gestionMineraData: GestionMineraPageData = {
     ],
   },
   proveedores: {
-    title: 'Proveedores',
-    intro: '',
-    body:
-      'El crecimiento minero adquiere valor real cuando impulsa el entramado socioproductivo local. A través de la articulación con la Secretaría de Industria, priorizamos y potenciamos la contratación de industrias, pymes y emprendimientos riojanos dentro de la cadena de valor minera. Acceda al Registro Oficial de Proveedores Mineros de La Rioja para inscribir su empresa, postularse a demandas del sector y formar parte del ecosistema de servicios regionales que dinamizan la economía de nuestros departamentos.',
+    titleKey: 'gestionMinera.proveedores.title',
+    bodyKey: 'gestionMinera.proveedores.body',
     image: {
       src: '/images/gestion-minera/proveedores.jpg',
-      alt: 'Proveedores mineros de La Rioja',
+      altKey: 'gestionMinera.proveedores.imageAlt',
     },
     cta: {
-      label: 'Ir al Registro de Proveedores',
+      labelKey: 'gestionMinera.proveedores.cta',
       href: '#',
     },
   },
