@@ -156,7 +156,7 @@ const institucionalData: InstitucionalPageData = {
       {
         id: 'dg-despacho',
         nombreKey: 'institucional.autoridades.unidades.dgDespacho',
-        director: 'Karina Elizabeth Caliva',
+        director: 'Tec. en Adm. de Doc. y Arch. Karina Elizabeth Caliva',
         dependencias: [],
       },
     ],
