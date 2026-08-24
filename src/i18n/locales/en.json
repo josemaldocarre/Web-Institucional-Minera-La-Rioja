@@ -12,8 +12,8 @@
   "nav": {
     "inicio": "Home",
     "institucional": "Institutional",
-    "gestionMinera": "Mining management",
-    "informacionPublica": "Public information",
+    "gestionMinera": "Mining Management",
+    "informacionPublica": "Public Documents",
     "programas": "Programs",
     "contacto": "Contact"
   },
@@ -28,12 +28,12 @@
       "email": "mineria@larioja.gob.ar"
     },
     "social": {
-      "facebook": "Facebook - Mining Secretariat La Rioja",
-      "instagram": "Instagram - Mining Secretariat La Rioja",
-      "linkedin": "LinkedIn - Mining Secretariat La Rioja",
-      "youtube": "YouTube - Mining Secretariat La Rioja"
+      "facebook": "Facebook - Secretariat of Mining La Rioja",
+      "instagram": "Instagram - Secretariat of Mining La Rioja",
+      "linkedin": "LinkedIn - Secretariat of Mining La Rioja",
+      "youtube": "YouTube - Secretariat of Mining La Rioja"
     },
-    "copyright": "© 2026 Mining Secretariat - Government of La Rioja. All rights reserved."
+    "copyright": "© 2026 Secretariat of Mining - Government of La Rioja. All rights reserved."
   },
   "home": {
     "hero": {
@@ -43,7 +43,7 @@
     "intro": {
       "eyebrow": "Mining La Rioja",
       "title": "Transparency and mining development",
-      "body": "This site is the Mining Secretariat’s institutional channel for publishing documentation, data, and geographic references. It aims to strengthen transparency, organize sector information, and support responsible mining development in the province."
+      "body": "This site is the institutional channel of the Secretariat of Mining for publishing documentation, data, and geographic references. Its purpose is to strengthen transparency, organize sector information, and support responsible mining development in the province."
     },
     "features": {
       "eyebrow": "The platform",
@@ -51,7 +51,7 @@
       "items": {
         "docs": {
           "title": "Official documentation",
-          "description": "Plans, regulations, and reference publications on the mining policy and legal framework."
+          "description": "Plans, regulations, and reference publications to understand the mining framework and policies."
         },
         "geo": {
           "title": "Geographic information",
@@ -68,16 +68,16 @@
     },
     "featureDocuments": {
       "eyebrow": "Documentation",
-      "title": "Public documents",
+      "title": "Public information",
       "subtitle": "Access official documentation related to mining activity in the province.",
       "plan": {
-        "title": "Five-year plan 2026–2030",
-        "description": "Strategic document outlining the guidelines for mining development in the province.",
+        "title": "Five-Year Plan 2026-2030",
+        "description": "Strategic document that defines the guidelines for mining development in the province.",
         "cta": "Download",
         "badge": "PDF"
       },
       "catastro": {
-        "title": "Mining cadastre",
+        "title": "Mining Cadastre",
         "description": "Geographic information on concessions, boundaries, and mining availability.",
         "cta": "Download",
         "badge": "DWG"
@@ -85,14 +85,57 @@
     }
   },
   "seo": {
-    "documentTitleHome": "Minería La Rioja - Web Institucional",
-    "metaDescriptionHome": "Institutional mining website for La Rioja: transparency, procedures, open data, and public information."
+    "documentTitleHome": "Mining La Rioja - Institutional Website",
+    "metaDescriptionHome": "Institutional mining website for La Rioja: transparency, procedures, and information for citizens."
   },
   "common": {
     "loading": "Loading…",
-    "pagePlaceholder": "This section is under construction. Official content will be published here soon.",
+    "pagePlaceholder": "This section is under preparation. Official content will be published here soon.",
     "notFoundTitle": "Page not found",
-    "notFoundBody": "The requested URL does not exist or has been moved.",
-    "notFoundHome": "Back to home"
+    "notFoundBody": "The requested address does not exist or has been moved.",
+    "notFoundHome": "Back to home",
+    "pageHeroEyebrow": "{{number}} {{label}}",
+    "breadcrumbAria": "Breadcrumb navigation"
+  },
+  "institucional": {
+    "page": {
+      "eyebrow": "About the Secretariat",
+      "title": "Institutional",
+      "description": "Welcome to the institutional portal of the Secretariat of Mining of the Government of La Rioja.",
+      "sectionNavAria": "Sections of the institutional page"
+    },
+    "quienesSomos": {
+      "title": "Who We Are",
+      "body": "We are the competent authority responsible for planning, regulating, promoting, and overseeing mining activity throughout the provincial territory. Our purpose is to foster the development of modern, inclusive mining with a strong Riojan identity, strategically combining economic growth with social well-being and environmental care. We work under a participatory model that coordinates efforts with the scientific and academic sector, the Secretariat of Environment, public companies such as EMSE, innovation platforms such as Kallpa I+D, and, fundamentally, with the local community as the central focus of our policies.",
+      "imageAlt": "Mining landscape of La Rioja"
+    },
+    "autoridades": {
+      "title": "Authorities",
+      "intro": "The management team of the Secretariat of Mining leads the implementation and technical-institutional oversight of provincial mining policy, ensuring compliance with the strategic goals of sustainability, transparency, and local development defined for the well-being of the province.",
+      "labels": {
+        "name": "Name",
+        "role": "Position"
+      },
+      "secretaria": {
+        "heading": "SECRETARIAT OF MINING",
+        "role": "Secretary of Mining"
+      },
+      "unidades": {
+        "dgMineria": "General Directorate of Mining",
+        "dEscribaniaMinas": "Directorate of Mining Notary Services",
+        "dCatastroMinero": "Directorate of Mining Cadastre",
+        "dGeologiaMinera": "Directorate of Mining Geology",
+        "dEconomiaMinera": "Directorate of Mining Economy",
+        "dPoliciaMinera": "Directorate of Mining Police",
+        "dgAsuntosLegales": "General Directorate of Legal Affairs",
+        "dgDesarrolloProductivo": "General Directorate of Productive Mining Development",
+        "dServicioMinero": "Mining Service Directorate",
+        "dgAdministracion": "General Directorate of Administration",
+        "cRendicionesCuentasPresupuestoPatrimonio": "Coordination of Account Settlements, Budget, and Assets",
+        "cTesoreria": "Treasury Coordination",
+        "cPersonal": "Personnel Coordination",
+        "dgDespacho": "General Directorate of Dispatch"
+      }
+    }
   }
 }

@@ -93,7 +93,9 @@
     "pagePlaceholder": "Esta sección está en preparación. Pronto habrá contenido oficial aquí.",
     "notFoundTitle": "Página no encontrada",
     "notFoundBody": "La dirección solicitada no existe o fue movida.",
-    "notFoundHome": "Volver al inicio"
+    "notFoundHome": "Volver al inicio",
+    "pageHeroEyebrow": "{{number}} {{label}}",
+    "breadcrumbAria": "Navegación de migas de pan"
   },
   "institucional": {
     "page": {
