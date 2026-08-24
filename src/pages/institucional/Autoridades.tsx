@@ -53,7 +53,7 @@ function DireccionGeneralPanel({
     <div className={styles.panel}>
       {directorName ? (
         <p className={styles.directorName}>
-          {t(labels.directorPrefixKey)} {directorName}
+          {directorName}
         </p>
       ) : null}
 

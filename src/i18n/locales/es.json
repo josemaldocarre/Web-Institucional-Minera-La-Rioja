@@ -112,8 +112,7 @@
       "intro": "El equipo de gestión de la Secretaría de Minería lidera la ejecución y el control técnico-institucional de la política minera provincial, velando por el cumplimiento de las metas estratégicas de sostenibilidad, transparencia y desarrollo local definidas para el bienestar de la provincia.",
       "labels": {
         "name": "Nombre",
-        "role": "Cargo",
-        "directorPrefix": "Dir."
+        "role": "Cargo"
       },
       "secretaria": {
         "heading": "SECRETARÍA DE MINERÍA",

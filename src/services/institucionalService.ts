@@ -28,7 +28,6 @@ export const INSTITUCIONAL_AUTHORITY_VACANT = 'VACANTE' as const
 export interface AuthorityLabels {
   readonly nameKey: string
   readonly roleKey: string
-  readonly directorPrefixKey: string
 }
 
 export interface AuthoritySecretaria {
@@ -91,11 +90,10 @@ const institucionalData: InstitucionalPageData = {
     labels: {
       nameKey: 'institucional.autoridades.labels.name',
       roleKey: 'institucional.autoridades.labels.role',
-      directorPrefixKey: 'institucional.autoridades.labels.directorPrefix',
     },
     secretaria: {
       headingKey: 'institucional.autoridades.secretaria.heading',
-      name: 'Abogada Ivanna María Guardia',
+      name: 'Abg. Ivanna María Guardia',
       roleKey: 'institucional.autoridades.secretaria.role',
     },
     direccionesGenerales: [
@@ -107,7 +105,7 @@ const institucionalData: InstitucionalPageData = {
           {
             id: 'd-escribania-minas',
             cargoKey: 'institucional.autoridades.unidades.dEscribaniaMinas',
-            responsable: 'Agustina Delgado',
+            responsable: 'Escr. Agustina Delgado',
           },
           {
             id: 'd-catastro-minero',
@@ -117,35 +115,35 @@ const institucionalData: InstitucionalPageData = {
           {
             id: 'd-geologia-minera',
             cargoKey: 'institucional.autoridades.unidades.dGeologiaMinera',
-            responsable: 'Nicolás Fernando Pereyra',
+            responsable: 'Geol. Nicolás Fernando Pereyra',
           },
           {
             id: 'd-economia-minera',
             cargoKey: 'institucional.autoridades.unidades.dEconomiaMinera',
-            responsable: 'Fabiola Rivera',
+            responsable: 'Ing. Fabiola Rivera',
           },
           {
             id: 'd-policia-minera',
             cargoKey: 'institucional.autoridades.unidades.dPoliciaMinera',
-            responsable: 'Julián Emmanuel López',
+            responsable: 'Lic. Julián Emmanuel López',
           },
         ],
       },
       {
         id: 'dg-asuntos-legales',
         nombreKey: 'institucional.autoridades.unidades.dgAsuntosLegales',
-        director: 'Clotilde Mabel Páez',
+        director: 'Abg. Clotilde Mabel Páez',
         dependencias: [],
       },
       {
         id: 'dg-desarrollo-productivo',
         nombreKey: 'institucional.autoridades.unidades.dgDesarrolloProductivo',
-        director: 'Carlos Nicolás Molina',
+        director: 'Ing. Carlos Nicolás Molina',
         dependencias: [
           {
             id: 'd-servicio-minero',
             cargoKey: 'institucional.autoridades.unidades.dServicioMinero',
-            responsable: 'Hilda Valladares',
+            responsable: 'Geol. Hilda Valladares',
           },
         ],
       },
