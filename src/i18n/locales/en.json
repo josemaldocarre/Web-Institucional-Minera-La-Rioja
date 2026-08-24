@@ -7,6 +7,8 @@
     "langMobileHint": "LANGUAGE: {{lang}}",
     "menuOpen": "Open navigation menu",
     "menuClose": "Close navigation menu",
+    "ministerioLogoAlt": "Ministry of Labor, Employment, Industry and Mining - La Rioja",
+    "gobiernoLogoAlt": "La Rioja Government",
     "footerAriaLabel": "Institutional footer"
   },
   "nav": {
@@ -136,6 +138,112 @@
         "cPersonal": "Personnel Coordination",
         "dgDespacho": "General Directorate of Dispatch"
       }
+    }
+  },
+  "gestionMinera": {
+    "page": {
+      "description": "Access the services, procedures, and resources of the Secretariat of Mining for the management of mining activity in La Rioja.",
+      "sectionNavAria": "Sections of the mining management page"
+    },
+    "tramites": {
+      "title": "Procedures",
+      "intro": "In order to streamline and make more transparent the administrative management of the province’s mineral resources, we make our digital services and procedures platform available to users and professionals. From this technical space, the Secretariat administers the producers’ registry, manages the Provincial Mining Cadastre in accordance with the National Mining Code, processes claim applications, issues transit permits, and handles mandatory notifications and affidavits, ensuring legal certainty and strict oversight of the activity.",
+      "catastro": {
+        "viewerTitle": "Interactive viewer of {{title}}",
+        "viewerUnavailable": "The Mining Cadastre viewer is currently unavailable.",
+        "downloadDwg": "Download DWG",
+        "downloadPdf": "Download PDF"
+      }
+    },
+    "proveedores": {
+      "title": "Suppliers",
+      "body": "Mining growth acquires real value when it strengthens the local socio-productive fabric. In coordination with the Secretariat of Industry, we prioritize and promote the contracting of Riojan industries, SMEs, and ventures within the mining value chain. Access the Official Registry of Mining Suppliers of La Rioja to register your company, apply for sector demand, and become part of the regional services ecosystem that drives the economy of our departments.",
+      "imageAlt": "Mining suppliers of La Rioja",
+      "cta": "Go to the Suppliers Registry"
+    }
+  },
+  "informacionPublica": {
+    "page": {
+      "description": "Documentation, transparency, and public information portal of the Secretariat of Mining of La Rioja.",
+      "sectionAria": "Public information inquiry center"
+    },
+    "categoriesLabel": "Categories",
+    "categories": {
+      "normativas": {
+        "title": "Regulations",
+        "intro": "Legal certainty, economic predictability, and the strict protection of natural heritage rest on a robust and transparent legal framework. In this section you may access the national and provincial regulations that govern mining activity. Our regulatory framework ensures that every phase of prospecting, exploration, and exploitation is carried out under the most rigorous environmental standards, safeguarding water resources as a priority in coordination with the Ministry of Water and Energy, and guaranteeing the full force of the laws that protect our territory.",
+        "resources": {
+          "constitucionNacional": "National Constitution",
+          "codigoProcedimientoMinero": "Mining Procedure Code",
+          "constitucionProvincial": "Provincial Constitution",
+          "codigoMineroNacional": "National Mining Code",
+          "leyAmbientalNacional": "National Environmental Law",
+          "normativaProveedores": "Supplier Regulations"
+        }
+      },
+      "transparencia": {
+        "title": "Transparency",
+        "intro": "Transparency and free access to public information are the fundamental pillars of mining’s legitimacy as a State policy. We believe in a model of management that is open to citizens, in which oversight and statistical data reflect the technical and economic reality of the sector.",
+        "resources": {
+          "empresasProvincia": "Companies operating in the province",
+          "datosEstadisticos": "Statistical Data",
+          "capacitaciones": "Training"
+        }
+      },
+      "planQuinquenal": {
+        "title": "Five-Year Plan",
+        "intro": "The Five-Year Plan for Mining Development in La Rioja 2026-2030 is our strategic roadmap to transform the province’s geological and human potential into real well-being for the people of La Rioja. This document is the result of extensive technical and territorial dialogue, consolidating a model that contributes competitively to the global energy transition through critical minerals such as copper and lithium, promoting formal employment and investment with a clear social and climate responsibility. We invite you to download and review the complete plan that guides the productive future of our region."
+      }
+    }
+  },
+  "programas": {
+    "page": {
+      "description": "Learn about the Secretariat of Mining programs aimed at local development and the enhancement of artisan work in La Rioja."
+    },
+    "tallerArtesanias": {
+      "title": "Handicrafts Workshop",
+      "intro": "Mining with a Riojan identity includes, in a special way, the promotion and visibility of small-scale activity and artisan work.",
+      "body": "Through the Stone Workshop, the Secretariat actively promotes adding value at origin to the dimension stone and industrial minerals characteristic of our land, such as granite, slate, and travertine.",
+      "imageAlt": "Handicrafts Workshop",
+      "gallery": {
+        "itemAlt": "Stone craft {{n}}",
+        "expandAria": "View enlarged image: {{alt}}",
+        "closeAria": "Close image",
+        "dialogAria": "Enlarged image view"
+      }
+    }
+  },
+  "contacto": {
+    "page": {
+      "description": "Official communication channels of the Secretariat of Mining of the Government of La Rioja."
+    },
+    "contact": {
+      "title": "Service channels",
+      "intro": "We are available to resolve technical inquiries, receive administrative complaints, process transport permits, or provide institutional assistance to producers and citizens.",
+      "body": "Find here our telephone communication channels, official email, public office hours, and the geographic location of our central offices in the city of La Rioja."
+    },
+    "hours": {
+      "title": "Hours",
+      "days": "Monday to Friday",
+      "time": "08:00 to 13:00"
+    },
+    "primaryContact": {
+      "title": "Institutional contact",
+      "label": "Main email"
+    },
+    "emails": {
+      "title": "Email addresses",
+      "areas": {
+        "secretaria": "Secretariat of Mining"
+      }
+    },
+    "social": {
+      "title": "Social media",
+      "facebookLabel": "Secretariat of Mining La Rioja"
+    },
+    "location": {
+      "title": "Address",
+      "mapTitle": "Location of the central offices of the Secretariat of Mining"
     }
   }
 }
