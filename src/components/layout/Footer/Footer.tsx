@@ -124,7 +124,7 @@ export function Footer() {
             <section className={styles.institutional}>
               <img
                 src="/images/logos/ministerio.svg"
-                alt="Ministerio de Trabajo, Empleo, Industria y Minería - La Rioja"
+                alt={t('layout.ministerioLogoAlt')}
                 className={styles.logo}
                 height={80}
               />
@@ -133,7 +133,7 @@ export function Footer() {
             <section className={styles.institutional}>
               <img
                 src="/images/logos/lrgobierno.svg"
-                alt="La Rioja Gobierno"
+                alt={t('layout.gobiernoLogoAlt')}
                 className={styles.logo}
                 height={80}
               />
