@@ -49,6 +49,29 @@
       }
     ]
   },
+  "externalPortals": {
+    "eyebrowKey": "home.externalPortals.eyebrow",
+    "titleKey": "home.externalPortals.title",
+    "subtitleKey": "home.externalPortals.subtitle",
+    "items": [
+      {
+        "href": "https://proveedoresmineros.larioja.gob.ar/",
+        "image": "/images/gestion-minera/proveedores-mineros.png",
+        "titleKey": "home.externalPortals.proveedores.title",
+        "descriptionKey": "home.externalPortals.proveedores.description",
+        "ctaKey": "home.externalPortals.proveedores.cta",
+        "accent": "orange"
+      },
+      {
+        "href": "https://emse.ar/",
+        "image": "/images/gestion-minera/emse.png",
+        "titleKey": "home.externalPortals.emse.title",
+        "descriptionKey": "home.externalPortals.emse.description",
+        "ctaKey": "home.externalPortals.emse.cta",
+        "accent": "green"
+      }
+    ]
+  },
   "contactPreview": {
     "titleKey": "home.contactCard.title",
     "descriptionKey": "home.contactCard.description",

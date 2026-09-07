@@ -84,6 +84,21 @@
         "cta": "Descargar",
         "badge": "DWG"
       }
+    },
+    "externalPortals": {
+      "eyebrow": "Accesos",
+      "title": "Portales institucionales",
+      "subtitle": "Ingresá a los sitios oficiales vinculados a proveedores mineros y a la empresa pública provincial.",
+      "proveedores": {
+        "title": "Registro de Proveedores Mineros",
+        "description": "Inscribí tu empresa en el registro oficial de proveedores mineros de La Rioja y postulate a las demandas del sector.",
+        "cta": "Ir al registro"
+      },
+      "emse": {
+        "title": "EMSE",
+        "description": "Accedé al sitio de Energía y Minerales Sociedad del Estado, empresa pública de la provincia de La Rioja.",
+        "cta": "Visitar sitio"
+      }
     }
   },
   "seo": {
@@ -117,6 +132,14 @@
       "labels": {
         "name": "Nombre",
         "role": "Cargo"
+      },
+      "gobernador": {
+        "heading": "GOBIERNO DE LA PROVINCIA DE LA RIOJA",
+        "role": "Gobernador de La Provincia de La Rioja"
+      },
+      "ministro": {
+        "heading": "MINISTERIO DE TRABAJO, EMPLEO, INDUSTRIA Y MINERÍA",
+        "role": "Ministro de Trabajo, Empleo, Industria y Minería"
       },
       "secretaria": {
         "heading": "SECRETARÍA DE MINERÍA",
@@ -154,12 +177,6 @@
         "downloadDwg": "Descargar DWG",
         "downloadPdf": "Descargar PDF"
       }
-    },
-    "proveedores": {
-      "title": "Proveedores",
-      "body": "El crecimiento minero adquiere valor real cuando impulsa el entramado socioproductivo local. A través de la articulación con la Secretaría de Industria, priorizamos y potenciamos la contratación de industrias, pymes y emprendimientos riojanos dentro de la cadena de valor minera. Acceda al Registro Oficial de Proveedores Mineros de La Rioja para inscribir su empresa, postularse a demandas del sector y formar parte del ecosistema de servicios regionales que dinamizan la economía de nuestros departamentos.",
-      "imageAlt": "Proveedores mineros de La Rioja",
-      "cta": "Ir al Registro de Proveedores"
     }
   },
   "informacionPublica": {

@@ -84,6 +84,21 @@
         "cta": "Download",
         "badge": "DWG"
       }
+    },
+    "externalPortals": {
+      "eyebrow": "Access",
+      "title": "Institutional portals",
+      "subtitle": "Go to the official sites for mining suppliers and the provincial public mining company.",
+      "proveedores": {
+        "title": "Mining Suppliers Registry",
+        "description": "Register your company in the official mining suppliers registry of La Rioja and apply for sector demand.",
+        "cta": "Go to the registry"
+      },
+      "emse": {
+        "title": "EMSE",
+        "description": "Visit the website of Energía y Minerales Sociedad del Estado, the public company of the Province of La Rioja.",
+        "cta": "Visit site"
+      }
     }
   },
   "seo": {
@@ -117,6 +132,14 @@
       "labels": {
         "name": "Name",
         "role": "Position"
+      },
+      "gobernador": {
+        "heading": "GOVERNMENT OF THE PROVINCE OF LA RIOJA",
+        "role": "Governor of the Province of La Rioja"
+      },
+      "ministro": {
+        "heading": "MINISTRY OF LABOR, EMPLOYMENT, INDUSTRY AND MINING",
+        "role": "Minister of Labor, Employment, Industry and Mining"
       },
       "secretaria": {
         "heading": "SECRETARIAT OF MINING",
@@ -154,12 +177,6 @@
         "downloadDwg": "Download DWG",
         "downloadPdf": "Download PDF"
       }
-    },
-    "proveedores": {
-      "title": "Suppliers",
-      "body": "Mining growth acquires real value when it strengthens the local socio-productive fabric. In coordination with the Secretariat of Industry, we prioritize and promote the contracting of Riojan industries, SMEs, and ventures within the mining value chain. Access the Official Registry of Mining Suppliers of La Rioja to register your company, apply for sector demand, and become part of the regional services ecosystem that drives the economy of our departments.",
-      "imageAlt": "Mining suppliers of La Rioja",
-      "cta": "Go to the Suppliers Registry"
     }
   },
   "informacionPublica": {

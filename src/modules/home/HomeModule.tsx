@@ -1,4 +1,5 @@
 import { ContactCard } from '../../features/home/components/ContactCard/ContactCard'
+import { ExternalPortalsSection } from '../../features/home/components/ExternalPortalsSection/ExternalPortalsSection'
 import { FeatureDocumentsSection } from '../../features/home/components/FeatureDocumentsSection/FeatureDocumentsSection'
 import { FeaturesSection } from '../../features/home/components/FeaturesSection/FeaturesSection'
 import { Hero } from '../../features/home/components/Hero/Hero'
@@ -18,6 +19,7 @@ export function HomeModule({ data }: HomeModuleProps) {
       <IntroSection preview={data.institutionalPreview} />
       <FeaturesSection features={data.features} />
       <FeatureDocumentsSection documents={data.documents} />
+      <ExternalPortalsSection portals={data.externalPortals} />
       <ContactCard contact={data.contactPreview} />
     </div>
   )

@@ -49,11 +49,28 @@ export interface HomeContactPreview {
   readonly emailLabelKey: string
 }
 
+export interface HomeExternalPortalItem {
+  readonly href: string
+  readonly image: string
+  readonly titleKey: string
+  readonly descriptionKey: string
+  readonly ctaKey: string
+  readonly accent: 'orange' | 'green'
+}
+
+export interface HomeExternalPortalsBlock {
+  readonly eyebrowKey: string
+  readonly titleKey: string
+  readonly subtitleKey: string
+  readonly items: readonly HomeExternalPortalItem[]
+}
+
 export interface HomePageData {
   readonly hero: HomeHeroBlock
   readonly institutionalPreview: HomeInstitutionalPreview
   readonly features: HomeFeaturesBlock
   readonly documents: HomeDocumentsBlock
+  readonly externalPortals: HomeExternalPortalsBlock
   readonly contactPreview: HomeContactPreview
 }
 
