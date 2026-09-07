@@ -37,10 +37,6 @@ export const GESTION_MINERA_PAGE: SectionPageConfig = {
       id: 'catastro-minero',
       labelKey: 'nav.catastroMinero',
     },
-    {
-      id: 'proveedores',
-      labelKey: 'nav.proveedores',
-    },
   ],
 }
 

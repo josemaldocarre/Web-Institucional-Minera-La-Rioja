@@ -1,21 +1,12 @@
 import { useTranslation } from 'react-i18next'
-import { Container } from '../../components/ui/Container/Container'
 import { PageHero } from '../../components/ui/PageHero/PageHero'
-import { SectionNavTabs } from '../../components/ui/SectionNavTabs/SectionNavTabs'
 import { gestionMineraService } from '../../services/gestionMineraService'
-import Proveedores from './Proveedores'
 import Tramites from './Tramites'
-import styles from './GestionMinera.module.scss'
 
-const { page, tramites, proveedores } = gestionMineraService
+const { page } = gestionMineraService
 
 export default function GestionMinera() {
   const { t } = useTranslation()
-
-  const sectionNavItems = [
-    { id: 'tramites', label: t(tramites.titleKey) },
-    { id: 'proveedores', label: t(proveedores.titleKey) },
-  ] as const
 
   return (
     <>
@@ -32,17 +23,7 @@ export default function GestionMinera() {
         }}
       />
 
-      <div className={styles.navBar}>
-        <Container>
-          <SectionNavTabs
-            items={sectionNavItems}
-            ariaLabel={t('gestionMinera.page.sectionNavAria')}
-          />
-        </Container>
-      </div>
-
       <Tramites />
-      <Proveedores />
     </>
   )
 }

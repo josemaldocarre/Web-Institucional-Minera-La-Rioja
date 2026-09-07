@@ -11,11 +11,6 @@ export interface GestionMineraPageHero {
   readonly descriptionKey: string
 }
 
-export interface GestionMineraImage {
-  readonly src: string
-  readonly altKey: string
-}
-
 export interface CatastroMineroData {
   readonly pdf: string
   readonly dwg: string
@@ -46,21 +41,9 @@ export interface GestionMineraTramites {
   readonly services: readonly GestionMineraServiceItem[]
 }
 
-export interface GestionMineraProveedores {
-  readonly titleKey: string
-  readonly introKey?: string
-  readonly bodyKey: string
-  readonly image: GestionMineraImage
-  readonly cta: {
-    readonly labelKey: string
-    readonly href: string
-  }
-}
-
 export interface GestionMineraPageData {
   readonly page: GestionMineraPageHero
   readonly tramites: GestionMineraTramites
-  readonly proveedores: GestionMineraProveedores
 }
 
 const gestionMineraData: GestionMineraPageData = {
@@ -95,18 +78,6 @@ const gestionMineraData: GestionMineraPageData = {
         },
       },
     ],
-  },
-  proveedores: {
-    titleKey: 'gestionMinera.proveedores.title',
-    bodyKey: 'gestionMinera.proveedores.body',
-    image: {
-      src: '/images/gestion-minera/proveedores.jpg',
-      altKey: 'gestionMinera.proveedores.imageAlt',
-    },
-    cta: {
-      labelKey: 'gestionMinera.proveedores.cta',
-      href: '#',
-    },
   },
 }
 
