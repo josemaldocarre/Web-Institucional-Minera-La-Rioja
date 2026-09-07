@@ -20,6 +20,13 @@
     0 4px 12px color-mix(in srgb, v.$color-dark-green 20%, transparent);
 }
 
+.secretariaCardOrange {
+  background: linear-gradient(135deg, color-mix(in srgb, #e59103 45%, #df6319) 0%, #db5506 100%);
+  box-shadow:
+    0 16px 40px color-mix(in srgb, v.$color-dark-gray 14%, transparent),
+    0 4px 12px color-mix(in srgb, var(--color-orange) 20%, transparent);
+}
+
 .secretariaHeading {
   margin: 0;
   font-family: var(--font-family-display);

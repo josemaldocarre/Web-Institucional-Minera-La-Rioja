@@ -9,7 +9,7 @@ import {
 } from '../../services/institucionalService'
 import styles from './Autoridades.module.scss'
 
-const { titleKey, introKey, labels, secretaria, direccionesGenerales } =
+const { titleKey, introKey, labels, superiores, direccionesGenerales } =
   institucionalService.autoridades
 
 function hasResponsible(
@@ -81,21 +81,32 @@ export default function Autoridades() {
       description={introKey ? t(introKey) : undefined}
     >
       <div className={styles.layout}>
-        <article className={styles.secretariaCard} aria-label={t(secretaria.headingKey)}>
-          <p className={styles.secretariaHeading}>{t(secretaria.headingKey)}</p>
+        {superiores.map((autoridad) => (
+          <article
+            key={autoridad.id}
+            className={[
+              styles.secretariaCard,
+              autoridad.accent === 'orange' ? styles.secretariaCardOrange : '',
+            ]
+              .filter(Boolean)
+              .join(' ')}
+            aria-label={t(autoridad.headingKey)}
+          >
+            <p className={styles.secretariaHeading}>{t(autoridad.headingKey)}</p>
 
-          <div className={styles.secretariaFields}>
-            <div className={styles.fieldBlock}>
-              <p className={styles.fieldLabel}>{t(labels.nameKey)}</p>
-              <p className={styles.secretariaName}>{secretaria.name}</p>
-            </div>
+            <div className={styles.secretariaFields}>
+              <div className={styles.fieldBlock}>
+                <p className={styles.fieldLabel}>{t(labels.nameKey)}</p>
+                <p className={styles.secretariaName}>{autoridad.name}</p>
+              </div>
 
-            <div className={styles.fieldBlock}>
-              <p className={styles.fieldLabel}>{t(labels.roleKey)}</p>
-              <p className={styles.secretariaRole}>{t(secretaria.roleKey)}</p>
+              <div className={styles.fieldBlock}>
+                <p className={styles.fieldLabel}>{t(labels.roleKey)}</p>
+                <p className={styles.secretariaRole}>{t(autoridad.roleKey)}</p>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        ))}
 
         <Accordion
           items={direccionesGenerales.map((direccion) => ({

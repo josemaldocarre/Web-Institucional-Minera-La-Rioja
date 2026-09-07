@@ -30,10 +30,12 @@ export interface AuthorityLabels {
   readonly roleKey: string
 }
 
-export interface AuthoritySecretaria {
+export interface AuthoritySuperior {
+  readonly id: string
   readonly headingKey: string
   readonly name: string
   readonly roleKey: string
+  readonly accent?: 'green' | 'orange'
 }
 
 export interface AuthorityDependencia {
@@ -53,7 +55,7 @@ export interface InstitucionalAuthorities {
   readonly titleKey: string
   readonly introKey?: string
   readonly labels: AuthorityLabels
-  readonly secretaria: AuthoritySecretaria
+  readonly superiores: readonly AuthoritySuperior[]
   readonly direccionesGenerales: readonly AuthorityDireccionGeneral[]
 }
 
@@ -91,11 +93,29 @@ const institucionalData: InstitucionalPageData = {
       nameKey: 'institucional.autoridades.labels.name',
       roleKey: 'institucional.autoridades.labels.role',
     },
-    secretaria: {
-      headingKey: 'institucional.autoridades.secretaria.heading',
-      name: 'Abg. Ivanna María Guardia',
-      roleKey: 'institucional.autoridades.secretaria.role',
-    },
+    superiores: [
+      {
+        id: 'gobernador',
+        headingKey: 'institucional.autoridades.gobernador.heading',
+        name: 'Ricardo Quintela',
+        roleKey: 'institucional.autoridades.gobernador.role',
+        accent: 'orange',
+      },
+      {
+        id: 'ministro',
+        headingKey: 'institucional.autoridades.ministro.heading',
+        name: 'Federico Bazan',
+        roleKey: 'institucional.autoridades.ministro.role',
+        accent: 'orange',
+      },
+      {
+        id: 'secretaria',
+        headingKey: 'institucional.autoridades.secretaria.heading',
+        name: 'Abg. Ivanna María Guardia',
+        roleKey: 'institucional.autoridades.secretaria.role',
+        accent: 'green',
+      },
+    ],
     direccionesGenerales: [
       {
         id: 'dg-mineria',
