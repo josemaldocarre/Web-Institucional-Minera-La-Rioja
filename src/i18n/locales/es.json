@@ -173,9 +173,41 @@
       "intro": "Con el objetivo de agilizar y transparentar la gestión administrativa de los recursos minerales de la provincia, ponemos a disposición de los usuarios y profesionales nuestra plataforma de servicios y trámites digitales. Desde este espacio técnico, la Secretaría administra el registro de productores, gestiona el Catastro Minero Provincial conforme al Código Nacional de Minería, tramita pedimentos, emite guías de tránsito y procesa las notificaciones y declaraciones juradas obligatorias, garantizando la seguridad jurídica y el estricto control de la actividad.",
       "catastro": {
         "viewerTitle": "Visor interactivo de {{title}}",
-        "viewerUnavailable": "El visor del Catastro Minero no se encuentra disponible actualmente.",
         "downloadDwg": "Descargar DWG",
-        "downloadPdf": "Descargar PDF"
+        "downloadPdf": "Descargar PDF",
+        "errorMapInit": "No fue posible inicializar el visor catastral. Intentá de nuevo más tarde.",
+        "errorGeojsonLoad": "No fue posible cargar la información geográfica del catastro.",
+        "errorGeojsonInvalid": "La información geográfica del catastro tiene un formato inválido.",
+        "errorNoGeometries": "La información geográfica no contiene geometrías válidas para mostrar.",
+        "emptyProperties": "No hay información disponible para esta parcela.",
+        "identifyTitle": "Parcelas en esta ubicación",
+        "noParcelAssociated": "No se encontró una parcela asociada.",
+        "legendTitle": "Categorías",
+        "fields": {
+          "type": "Tipo",
+          "expediente": "Expediente",
+          "titular": "Titular",
+          "departamento": "Departamento",
+          "superficie": "Superficie"
+        },
+        "type": {
+          "cateos": "Cateo",
+          "manifestaciones": "Manifestación",
+          "canteras": "Cantera",
+          "minas": "Mina",
+          "pasma-minas": "Pasma Minas",
+          "aluviones": "Aluviones",
+          "areas-especiales": "Áreas especiales"
+        },
+        "layers": {
+          "cateos": "Cateos",
+          "manifestaciones": "Manifestaciones",
+          "canteras": "Canteras",
+          "minas": "Minas",
+          "pasma-minas": "Pasma Minas",
+          "aluviones": "Aluviones",
+          "areas-especiales": "Áreas especiales"
+        }
       }
     }
   },

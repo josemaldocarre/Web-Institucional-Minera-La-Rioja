@@ -173,9 +173,41 @@
       "intro": "In order to streamline and make more transparent the administrative management of the province’s mineral resources, we make our digital services and procedures platform available to users and professionals. From this technical space, the Secretariat administers the producers’ registry, manages the Provincial Mining Cadastre in accordance with the National Mining Code, processes claim applications, issues transit permits, and handles mandatory notifications and affidavits, ensuring legal certainty and strict oversight of the activity.",
       "catastro": {
         "viewerTitle": "Interactive viewer of {{title}}",
-        "viewerUnavailable": "The Mining Cadastre viewer is currently unavailable.",
         "downloadDwg": "Download DWG",
-        "downloadPdf": "Download PDF"
+        "downloadPdf": "Download PDF",
+        "errorMapInit": "The cadastre viewer could not be initialized. Please try again later.",
+        "errorGeojsonLoad": "The cadastre geographic data could not be loaded.",
+        "errorGeojsonInvalid": "The cadastre geographic data has an invalid format.",
+        "errorNoGeometries": "The geographic data does not contain valid geometries to display.",
+        "emptyProperties": "There is no information available for this parcel.",
+        "identifyTitle": "Parcels at this location",
+        "noParcelAssociated": "No associated parcel was found.",
+        "legendTitle": "Categories",
+        "fields": {
+          "type": "Type",
+          "expediente": "File number",
+          "titular": "Holder",
+          "departamento": "Department",
+          "superficie": "Area"
+        },
+        "type": {
+          "cateos": "Cateo",
+          "manifestaciones": "Manifestation",
+          "canteras": "Quarry",
+          "minas": "Mine",
+          "pasma-minas": "Pasma mines",
+          "aluviones": "Alluvial claims",
+          "areas-especiales": "Special areas"
+        },
+        "layers": {
+          "cateos": "Cateos",
+          "manifestaciones": "Manifestations",
+          "canteras": "Quarries",
+          "minas": "Mines",
+          "pasma-minas": "Pasma mines",
+          "aluviones": "Alluvial claims",
+          "areas-especiales": "Special areas"
+        }
       }
     }
   },

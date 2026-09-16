@@ -11,9 +11,13 @@ export interface GestionMineraPageHero {
   readonly descriptionKey: string
 }
 
+
+const CATASTRO_UNIFIED_GEOJSON_URLS = ['/docs/catastro-minero.geojson'] as const
+
 export interface CatastroMineroData {
   readonly pdf: string
   readonly dwg: string
+  readonly geojsonUrls: readonly string[]
 }
 
 export type GestionMineraServiceIcon =
@@ -75,6 +79,7 @@ const gestionMineraData: GestionMineraPageData = {
         catastroData: {
           pdf: '/docs/catastro-minero.pdf',
           dwg: '/docs/catastro-minero.dwg',
+          geojsonUrls: CATASTRO_UNIFIED_GEOJSON_URLS,
         },
       },
     ],

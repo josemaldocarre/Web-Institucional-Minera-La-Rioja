@@ -40,30 +40,6 @@
   overflow-x: hidden;
 }
 
-.viewer {
-  display: block;
-  width: 100%;
-  height: min(70vh, 40rem);
-  min-height: 22rem;
-  border: 1px solid var(--color-header-border);
-  border-radius: 1rem;
-  background-color: var(--color-surface-muted);
-  box-shadow: var(--shadow-header);
-}
-
-.viewerUnavailable {
-  margin: 0;
-  padding: var(--space-10) var(--space-6);
-  border: 1px solid var(--color-header-border);
-  border-radius: 1rem;
-  background-color: var(--color-surface-muted);
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-base);
-  color: var(--color-text-muted);
-  text-align: center;
-  line-height: var(--line-height-relaxed);
-}
-
 .downloadActions {
   display: flex;
   gap: var(--space-4);

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { CatastroViewer } from '../../features/catastro/CatastroViewer'
 import { ContentSection } from '../../components/ui/ContentSection/ContentSection'
 import { FeatureDocumentCards } from '../../features/home/components/FeatureDocumentsSection/FeatureDocumentsSection'
 import { gestionMineraService } from '../../services/gestionMineraService'
@@ -17,11 +18,6 @@ function IconDownload() {
   )
 }
 
-function buildShareCadUrl(dwgPath: string): string {
-  const absoluteDwgUrl = new URL(dwgPath, window.location.origin).href
-  return `https://iframe.sharecad.org/cadframe/load?url=${encodeURIComponent(absoluteDwgUrl)}`
-}
-
 export default function Tramites() {
   const { t } = useTranslation()
   const catastroSvc = services.find((s) => s.id === 'catastro-minero')
@@ -30,7 +26,6 @@ export default function Tramites() {
 
   const hasDwg = Boolean(catastroData?.dwg?.trim())
   const hasPdf = Boolean(catastroData?.pdf?.trim())
-  const shareCadUrl = hasDwg && catastroData ? buildShareCadUrl(catastroData.dwg) : null
   const catastroTitle = catastroSvc ? t(catastroSvc.titleKey) : ''
 
   return (
@@ -61,21 +56,12 @@ export default function Tramites() {
           </header>
 
           <div className={styles.viewerContainer}>
-            {shareCadUrl ? (
-              <iframe
-                className={styles.viewer}
-                src={shareCadUrl}
-                title={t('gestionMinera.tramites.catastro.viewerTitle', {
-                  title: catastroTitle,
-                })}
-                loading="lazy"
-                allowFullScreen
-              />
-            ) : (
-              <p className={styles.viewerUnavailable}>
-                {t('gestionMinera.tramites.catastro.viewerUnavailable')}
-              </p>
-            )}
+            <CatastroViewer
+              geojsonUrls={catastroData.geojsonUrls}
+              title={t('gestionMinera.tramites.catastro.viewerTitle', {
+                title: catastroTitle,
+              })}
+            />
 
             <div className={styles.downloadActions}>
               {hasDwg && (
