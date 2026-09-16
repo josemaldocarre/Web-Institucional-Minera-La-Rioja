@@ -91,10 +91,10 @@ export function formatCandidateLabel(identity: ParcelIdentity): string {
   const title = identity.visibleName || identity.name || ''
   const isMinaLike = identity.tipo === 'MINA' || identity.tipo === 'PASMA MINA'
   if (isMinaLike && identity.tipo && identity.expediente && identity.expediente !== title) {
-    return `${title} — ${identity.tipo} · ${identity.expediente}`
+    return `${title} - ${identity.tipo} · ${identity.expediente}`
   }
   if (identity.tipo && title) {
-    return `${title} — ${identity.tipo}`
+    return `${title} - ${identity.tipo}`
   }
   return title
 }

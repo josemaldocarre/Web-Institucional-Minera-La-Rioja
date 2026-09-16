@@ -50,7 +50,7 @@
   color: var(--color-text-primary);
 }
 
-@media (width >= v.$breakpoint-header-desktop) {
+@media (width >= 75rem) {
   .editorial {
     gap: 0;
   }
@@ -59,7 +59,7 @@
     position: absolute;
     bottom: var(--space-10);
     left: var(--space-10);
-    width: clamp(18rem, 40%, 32rem);
+    width: clamp(18rem, 48%, 32rem);
     padding: var(--space-10);
     background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(10px);
