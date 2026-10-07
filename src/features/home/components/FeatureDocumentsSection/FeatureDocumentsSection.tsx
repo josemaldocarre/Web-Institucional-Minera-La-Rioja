@@ -203,7 +203,7 @@ export function FeatureDocumentsSection({
   const headingId = useId()
 
   return (
-    <Section aria-labelledby={headingId}>
+    <Section  className={styles.surface} aria-labelledby={headingId}>
       <Container>
         <MotionReveal>
           <header className={styles.header}>

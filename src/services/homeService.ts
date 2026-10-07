@@ -65,9 +65,44 @@ export interface HomeExternalPortalsBlock {
   readonly items: readonly HomeExternalPortalItem[]
 }
 
+export interface HomeTextBlock {
+  readonly titleKey: string
+  readonly descriptionKey: string
+}
+
+export interface HomeSpecificObjectiveItem {
+  readonly number: string
+  readonly textKey: string
+}
+
+export interface HomeMissionObjectivesBlock {
+  readonly titleKey: string
+  readonly mission: HomeTextBlock
+  readonly generalObjective: HomeTextBlock
+  readonly specificObjectives: {
+    readonly titleKey: string
+    readonly items: readonly HomeSpecificObjectiveItem[]
+  }
+}
+
+export interface HomePolicyAxis {
+  readonly id: string
+  readonly titleKey: string
+  readonly descriptionKey: string
+}
+
+export interface HomePublicPoliciesBlock {
+  readonly titleKey: string
+  readonly introKey: string
+  readonly bodyKey: string
+  readonly axes: readonly HomePolicyAxis[]
+}
+
 export interface HomePageData {
   readonly hero: HomeHeroBlock
   readonly institutionalPreview: HomeInstitutionalPreview
+  readonly missionObjectives: HomeMissionObjectivesBlock
+  readonly publicPolicies: HomePublicPoliciesBlock
   readonly features: HomeFeaturesBlock
   readonly documents: HomeDocumentsBlock
   readonly externalPortals: HomeExternalPortalsBlock

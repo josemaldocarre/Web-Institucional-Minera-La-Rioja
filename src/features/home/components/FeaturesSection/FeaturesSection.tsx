@@ -59,7 +59,7 @@ export function FeaturesSection({ features }: FeaturesSectionProps) {
   const headingId = useId()
 
   return (
-    <Section className={styles.surface} aria-labelledby={headingId}>
+    <Section aria-labelledby={headingId}>
       <Container>
         <MotionReveal>
           <div className={styles.inner}>

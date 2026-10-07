@@ -8,6 +8,74 @@
     "titleKey": "home.intro.title",
     "bodyKey": "home.intro.body"
   },
+  "missionObjectives": {
+    "titleKey": "home.missionObjectives.title",
+    "mission": {
+      "titleKey": "home.mission.title",
+      "descriptionKey": "home.mission.description"
+    },
+    "generalObjective": {
+      "titleKey": "home.objectives.general.title",
+      "descriptionKey": "home.objectives.general.description"
+    },
+    "specificObjectives": {
+      "titleKey": "home.objectives.specific.title",
+      "items": [
+        {
+          "number": "1.",
+          "textKey": "home.objectives.specific.items.one"
+        },
+        {
+          "number": "2.",
+          "textKey": "home.objectives.specific.items.two"
+        },
+        {
+          "number": "3.",
+          "textKey": "home.objectives.specific.items.three"
+        },
+        {
+          "number": "4.",
+          "textKey": "home.objectives.specific.items.four"
+        },
+        {
+          "number": "5.",
+          "textKey": "home.objectives.specific.items.five"
+        }
+      ]
+    }
+  },
+  "publicPolicies": {
+    "titleKey": "home.publicPolicies.title",
+    "introKey": "home.publicPolicies.intro",
+    "bodyKey": "home.publicPolicies.body",
+    "axes": [
+      {
+        "id": "modernization",
+        "titleKey": "home.publicPolicies.axes.modernization.title",
+        "descriptionKey": "home.publicPolicies.axes.modernization.description"
+      },
+      {
+        "id": "investment",
+        "titleKey": "home.publicPolicies.axes.investment.title",
+        "descriptionKey": "home.publicPolicies.axes.investment.description"
+      },
+      {
+        "id": "environment",
+        "titleKey": "home.publicPolicies.axes.environment.title",
+        "descriptionKey": "home.publicPolicies.axes.environment.description"
+      },
+      {
+        "id": "education",
+        "titleKey": "home.publicPolicies.axes.education.title",
+        "descriptionKey": "home.publicPolicies.axes.education.description"
+      },
+      {
+        "id": "communication",
+        "titleKey": "home.publicPolicies.axes.communication.title",
+        "descriptionKey": "home.publicPolicies.axes.communication.description"
+      }
+    ]
+  },
     "features": {
       "eyebrowKey": "home.features.eyebrow",
       "titleKey": "home.features.title",

@@ -99,6 +99,56 @@
         "description": "Accedé al sitio de Energía y Minerales Sociedad del Estado, empresa pública de la provincia de La Rioja.",
         "cta": "Visitar sitio"
       }
+    },
+    "missionObjectives": {
+      "title": "Misión y objetivos"
+    },
+    "mission": {
+      "title": "Misión",
+      "description": "Promover, regular y controlar la actividad minera en La Rioja para que se desarrolle de manera responsable, sostenible y transparente, y que se traduzca en empleo, oportunidades y bienestar para las y los riojanos. Lo hacemos en articulación con las comunidades, los municipios, el sector productivo y el sistema educativo y científico, fortaleciendo una minería integrada al desarrollo territorial y productivo de la provincia."
+    },
+    "objectives": {
+      "general": {
+        "title": "Objetivo general",
+        "description": "Transformar el potencial geológico y humano de La Rioja en desarrollo real, con una minería moderna, inclusiva y con identidad riojana, que crezca de manera ordenada, equitativa y sostenible, genere valor y oportunidades en el territorio y se integre estratégicamente a la matriz productiva provincial."
+      },
+      "specific": {
+        "title": "Objetivos específicos",
+        "items": {
+          "one": "Modernizar y fortalecer el marco normativo e institucional minero, promoviendo un sistema unificado, claro y actualizado que brinde seguridad jurídica, agilice los trámites y mejore la coordinación entre la Provincia, los municipios y la Nación.",
+          "two": "Generar condiciones de previsibilidad y competitividad para el desarrollo de la actividad minera, promoviendo inversiones responsables, fortaleciendo a los proveedores riojanos, impulsando el agregado de valor y mejorando el acceso y uso de información geológica, minera y ambiental actualizada.",
+          "three": "Fortalecer los sistemas de control, fiscalización y monitoreo de la actividad minera, asegurando el cumplimiento de la normativa vigente, el seguimiento continuo de los proyectos y la articulación con las autoridades ambientales y demás organismos competentes.",
+          "four": "Vincular el sistema educativo, científico y tecnológico con el desarrollo minero provincial, ampliando las oportunidades de formación, capacitación, investigación e inserción laboral, en especial jóvenes y mujeres.",
+          "five": "Fortalecer la transparencia y el acceso a la información minera, garantizando información clara, accesible y oportuna sobre los proyectos, procedimientos, controles y resultados, como base para el diálogo y la participación de las comunidades."
+        }
+      }
+    },
+    "publicPolicies": {
+      "title": "Políticas públicas",
+      "intro": "La Secretaría de Minería de La Rioja impulsa una política minera orientada a promover el desarrollo de la actividad de manera responsable, sostenible y articulada con las necesidades de la provincia y sus comunidades.",
+      "body": "En el marco del Plan Quinquenal para el Desarrollo Minero 2026–2030, sus líneas de acción se organizan en cinco ejes estratégicos. Buscan generar inversión, fortalecer las capacidades locales, promover el empleo y los proveedores riojanos, proteger el ambiente y fortalecer la participación y el acceso a la información.",
+      "axes": {
+        "modernization": {
+          "title": "Modernización institucional y normativa",
+          "description": "Actualización de normas y procedimientos, simplificación y digitalización de trámites, generación de información minera y fortalecimiento de las capacidades técnicas del Estado para promover, regular y controlar la actividad."
+        },
+        "investment": {
+          "title": "Inversión y economía local",
+          "description": "Promoción y acompañamiento de proyectos mineros, generación de condiciones para la inversión y fortalecimiento de la actividad como parte de la estrategia de desarrollo productivo provincial. Incluye el desarrollo de un registro provincial para proveedores y mano de obra riojana, con capacitación, asistencia y articulación con las empresas mineras, para que puedan participar de las oportunidades que genera la actividad."
+        },
+        "environment": {
+          "title": "Ambiente y comunidad",
+          "description": "Fortalecimiento de mecanismos de evaluación, control y monitoreo ambiental, junto con instancias de información y participación de comunidades. Se promueve monitoreo ambiental participativo y articulación con organismos públicos, municipios e instituciones locales."
+        },
+        "education": {
+          "title": "Educación, empleo y territorio",
+          "description": "Generación de oportunidades de capacitación y formación vinculadas a actividad minera, en articulación con universidades, instituciones educativas y gobiernos locales. Especial atención al empleo local y formación de jóvenes y mujeres, para que trabajadores riojanos accedan a oportunidades del sector."
+        },
+        "communication": {
+          "title": "Comunicación minera",
+          "description": "Desarrollo de herramientas para facilitar acceso a información sobre actividad minera, proyectos, controles, oportunidades y resultados, fortaleciendo comunicación institucional, transparencia y diálogo con comunidades."
+        }
+      }
     }
   },
   "seo": {

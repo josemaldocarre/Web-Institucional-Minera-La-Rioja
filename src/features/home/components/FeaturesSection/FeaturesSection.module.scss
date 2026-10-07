@@ -1,14 +1,6 @@
 @use '../../../../styles/variables' as v;
 @use '../../../../styles/mixins' as m;
 
-.surface {
-  background-color: color-mix(
-    in srgb,
-    var(--color-surface-muted) 65%,
-    var(--color-white)
-  );
-}
-
 .inner {
   display: flex;
   flex-direction: column;

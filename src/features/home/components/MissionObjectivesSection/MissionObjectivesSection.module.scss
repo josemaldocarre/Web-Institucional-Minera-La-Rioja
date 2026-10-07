@@ -1,0 +1,125 @@
+@use '../../../../styles/variables' as v;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.mission,
+.general,
+.specifics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.general {
+  padding: var(--space-6);
+  border: 1px solid var(--color-header-border);
+  border-left: 3px solid var(--color-orange);
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-header);
+}
+
+.specifics {
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border: 1px solid var(--color-header-border);
+  border-radius: 1.25rem;
+  background-color: color-mix(
+    in srgb,
+    var(--color-surface-muted) 72%,
+    var(--color-white)
+  );
+}
+
+.subheading {
+  margin: 0;
+  font-size: var(--font-size-xl);
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  overflow-wrap: break-word;
+}
+
+.objectives {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+}
+
+.objective {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  min-width: 0;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-header-border);
+
+  &:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.objectiveNumber {
+  flex: 0 0 2rem;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: var(--color-orange);
+  white-space: nowrap;
+}
+
+@media (width >= v.$breakpoint-header-desktop) {
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    column-gap: var(--space-12);
+    row-gap: var(--space-8);
+    align-items: start;
+  }
+
+  .header {
+    grid-column: 1 / -1;
+  }
+
+  .mission {
+    grid-column: 1;
+  }
+
+  .general {
+    grid-column: 2;
+    align-self: start;
+    padding: var(--space-8);
+  }
+
+  .specifics {
+    grid-column: 1 / -1;
+    padding: var(--space-8) var(--space-10);
+  }
+
+  .objectives {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: var(--space-10);
+    row-gap: var(--space-6);
+  }
+
+  .objective {
+    padding-top: 0;
+    border-top: none;
+  }
+}
