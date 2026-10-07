@@ -4,10 +4,12 @@ import { PageHero } from '../../components/ui/PageHero/PageHero'
 import { SectionNavTabs } from '../../components/ui/SectionNavTabs/SectionNavTabs'
 import { institucionalService } from '../../services/institucionalService'
 import Autoridades from './Autoridades'
+import FuncionesCompetencias from './FuncionesCompetencias'
 import QuienesSomos from './QuienesSomos'
+import './anchorOffset.scss'
 import styles from './Institucional.module.scss'
 
-const { page, quienesSomos, autoridades } = institucionalService
+const { page, quienesSomos, autoridades, funciones } = institucionalService
 
 export default function Institucional() {
   const { t } = useTranslation()
@@ -15,6 +17,7 @@ export default function Institucional() {
   const sectionNavItems = [
     { id: 'quienes-somos', label: t(quienesSomos.titleKey) },
     { id: 'autoridades', label: t(autoridades.titleKey) },
+    { id: 'funciones-competencias', label: t(funciones.titleKey) },
   ] as const
 
   return (
@@ -43,6 +46,7 @@ export default function Institucional() {
 
       <QuienesSomos />
       <Autoridades />
+      <FuncionesCompetencias />
     </>
   )
 }

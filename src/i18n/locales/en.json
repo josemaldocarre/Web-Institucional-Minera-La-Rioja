@@ -161,6 +161,291 @@
         "cPersonal": "Personnel Coordination",
         "dgDespacho": "General Directorate of Dispatch"
       }
+    },
+    "funciones": {
+      "title": "Functions and powers",
+      "unidades": {
+        "secretaria": {
+          "title": "Secretariat of Mining and Non-Renewable Resources",
+          "items": {
+            "asistirPoderEjecutivo": "Assist the Executive Branch and the Ministry of Production and Environment in matters related to sustainable mining activity in the province.",
+            "definirObjetivos": "Define the objectives, policies, and strategic actions for mining development.",
+            "ejecutarPlanes": "Carry out the plans, programs, and projects within its competence.",
+            "proponerPolitica": "Propose and implement sustainable mining policy.",
+            "representarEstado": "Represent the provincial State before national, regional, and international bodies.",
+            "participarCredito": "Take part in policies for access to mining credit and develop financing programs.",
+            "coordinarAsistencia": "Coordinate technical assistance actions with public and private bodies and civil society organizations.",
+            "fortalecerVinculacion": "Strengthen links with municipalities and with social, professional, and academic organizations."
+          }
+        },
+        "dgMineria": {
+          "title": "General Directorate of Mining",
+          "items": {
+            "planificarDesarrollo": "Plan the development of the mining sector with short-, medium-, and long-term objectives.",
+            "promoverAprovechamiento": "Promote the rational use of geological and mining resources for provincial socioeconomic development.",
+            "coordinarPoliticaNacional": "Coordinate the application of national mining policy in the province through participation in OFEMI and COFEMIN.",
+            "proponerEjecutarControlar": "Propose, implement, and oversee provincial mining policy.",
+            "articularPoliticas": "Align provincial policies with municipal and national policies.",
+            "promoverRiesgos": "Promote knowledge of geological risks and baseline environmental conditions.",
+            "coordinarCooperacion": "Coordinate cooperation programs and encourage sound industrial, environmental, and social practices."
+          }
+        },
+        "escribaniaMinas": {
+          "title": "Directorate of Mining Notary Services",
+          "dependsOn": "Reports to the General Directorate of Mining.",
+          "items": {
+            "llevarRegistros": "Keep the registers of mining rights in the province.",
+            "llevarPadronCanon": "Keep the register of the mining canon roll.",
+            "realizarNotificaciones": "Issue the notices and formal demands that fall within its competence.",
+            "asistirDireccionGeneral": "Assist the General Directorate in matters related to mining registers, the roll, and notifications.",
+            "informarRegistros": "Report periodically on the registers of mining rights.",
+            "cumplirCodigo": "Perform the duties assigned by the Mining Code and supplementary legislation.",
+            "dejarConstancia": "Record the filing of briefs and applications, indicating the date, time, name of the filer, and accompanying documents.",
+            "extenderCertificados": "Issue certificates of title and other certifications.",
+            "informarRequisitos": "Report on compliance with legal requirements in case files and applications.",
+            "certificarPlazos": "Certify the expiration of the legal time limits of each case file.",
+            "otrasTareas": "Carry out other tasks required by the General Directorate of Mining."
+          }
+        },
+        "mesaEntradas": {
+          "title": "Filing and Dispatch Desk Promoter",
+          "dependsOn": "Reports to the Directorate of Mining Notary Services.",
+          "items": {
+            "registrarPresentacion": "Record the entry stamp, date, and time of each brief, application, form, or note submitted.",
+            "llevarUbicacion": "Keep the register of the location of each case file, note, or application."
+          }
+        },
+        "catastroMinero": {
+          "title": "Directorate of Mining Cadastre",
+          "dependsOn": "Reports to the General Directorate of Mining.",
+          "items": {
+            "asignarMatriculas": "Assign cadastral registration numbers and organize their register in chronological order.",
+            "ordenarCatastro": "Organize and update the Provincial Mining Cadastre.",
+            "registrarDerechos": "Register requested mining rights and those in process using the coordinate system indicated in the document.",
+            "informarDerechos": "Report on registered mining rights, their location, boundaries, area, and coordinates.",
+            "participarMensuras": "Take part in surveys, boundary demarcations, and monumenting of mines, exploration permits, quarries, and other mining rights, as well as easements and mining tracks.",
+            "aprobarMensuras": "Approve and register surveys, plans, descriptive reports, ties, and other technical tasks within its competence."
+          }
+        },
+        "topografia": {
+          "title": "Surveying Promoter",
+          "dependsOn": "Reports to the Directorate of Mining Cadastre.",
+          "items": {
+            "controlarTareas": "Oversee and carry out the topographic and geodetic work for mining claims in the province.",
+            "mantenerRed": "Maintain a network of geodetic reference points to support field measurements.",
+            "asegurarUbicacion": "Ensure the correct location of mining rights."
+          }
+        },
+        "graficoCatastral": {
+          "title": "Cadastral Graphic Works Promoter",
+          "dependsOn": "Reports to the Directorate of Mining Cadastre.",
+          "items": {
+            "controlarRegistro": "Systematically oversee and update the cadastral register of mining claims.",
+            "aplicarCodigo": "Apply the provisions of the Mining Code on cadastral matters.",
+            "contribuirSeguridad": "Contribute to the legal certainty of mining rights and favor conditions for investment."
+          }
+        },
+        "geologiaMinera": {
+          "title": "Directorate of Mining Geology",
+          "dependsOn": "Reports to the General Directorate of Mining.",
+          "items": {
+            "asesorar": "Advise the relevant areas on matters within its specialty.",
+            "evaluarCanteras": "Evaluate quarry development projects.",
+            "evaluarMuestras": "Evaluate mineral samples submitted with manifestations of discovery.",
+            "organizarMuestras": "Organize the storage and archive of legal samples.",
+            "analizarProgramas": "Analyze and evaluate minimum work programs and the elements and equipment intended for exploration.",
+            "evaluarLabores": "Evaluate and issue opinions on the statutory workings submitted.",
+            "realizarAnalisis": "Carry out, directly or through third parties, chemical, metallometric, and other necessary studies.",
+            "analizarDeclaraciones": "Analyze sworn statements for the settlement of royalties.",
+            "estudiosGeologicos": "Conduct geological studies for the exploitation of mines and quarries.",
+            "estudiarAcceso": "Study problems of access to deposits and plan the works needed to build access tracks.",
+            "registroConsultores": "Keep a register of consultants authorized to sign geological projects or deposit-development projects."
+          }
+        },
+        "trabajosGeologicos": {
+          "title": "Geological Works Promoter",
+          "dependsOn": "Reports to the Directorate of Mining Geology.",
+          "items": {
+            "seleccionarPuntos": "Select geographic points or areas in order to determine the geological and mining resources of the province.",
+            "promoverUso": "Promote the responsible use of those resources, for the benefit of the population and within a sustainable environmental framework."
+          }
+        },
+        "economiaMinera": {
+          "title": "Directorate of Mining Economy",
+          "dependsOn": "Reports to the General Directorate of Mining.",
+          "items": {
+            "estudiarInversiones": "Study and evaluate the investments planned for exploration and prospecting permits.",
+            "analizarProyectos": "Analyze capital investment projects and projects to activate or reactivate mines.",
+            "determinarRegalias": "Determine the amounts of mining royalties and quarry exploitation fees.",
+            "venderGuias": "Sell transit permits for minerals, rocks, and aggregates."
+          }
+        },
+        "registroProductores": {
+          "title": "Producers and Miners Registry Promoter",
+          "dependsOn": "Reports to the Directorate of Mining Economy.",
+          "items": {
+            "relevarProductores": "Survey producers who carry out mining-related activities in the provincial territory.",
+            "mantenerRegistro": "Maintain the register of producers.",
+            "coordinarSuim": "Coordinate with the national government the administration of information in the Unified Mining Information System —SUIM—.",
+            "articularInformacion": "Bring together statistical, geological, cadastral, and project information from the national, provincial, and municipal levels."
+          }
+        },
+        "policiaMinera": {
+          "title": "Directorate of Mining Police",
+          "dependsOn": "Reports to the General Directorate of Mining.",
+          "items": {
+            "controlarTrabajos": "Oversee and inspect exploration, exploitation, and the treatment or processing of minerals and rocks.",
+            "protegerSeguridad": "Protect safety, the preservation of workings and mining holdings, workers' health, and the natural and social environment.",
+            "inspeccionar": "Inspect deposits, operations, plants, and other mining facilities or activities.",
+            "constatarInfracciones": "Verify breaches of legal, safety, and hygiene rules and draw up the corresponding reports.",
+            "controlarTransito": "Control the transit of minerals, rocks, and aggregates throughout the province.",
+            "verificarGuias": "Verify the existence and proper documentation of transit permits."
+          }
+        },
+        "fiscalizacion": {
+          "title": "Promoter of Oversight of Exploration, Exploitation, and Facility Works",
+          "dependsOn": "Reports to the Directorate of Mining Police.",
+          "items": {
+            "evaluarSistemas": "Evaluate the systems and procedures used in mining activity.",
+            "fiscalizarRacionalidad": "Inspect their soundness and compliance with criteria of good management.",
+            "comprobarNormas": "Verify compliance with provincial and national rules.",
+            "verificarBuenasPracticas": "Verify the application of sound industrial, environmental, and social practices."
+          }
+        },
+        "dgRecursos": {
+          "title": "General Directorate of Non-Renewable Resources",
+          "items": {
+            "ejecutarPolitica": "Implement the province's mining, geological, and non-renewable resources policy.",
+            "velarNormas": "Ensure compliance with national and provincial rules, acting as the enforcement authority in the matter.",
+            "relevarRecursos": "Survey the non-renewable resources of the province.",
+            "mantenerBud": "Keep its graphic registers up to date in the Single Data Bank —BUD—.",
+            "intervenirExplotacion": "Take part in the preparation and exploitation of provincial non-renewable resources."
+          }
+        },
+        "gestionProyectos": {
+          "title": "Directorate of Project Management and Evaluation",
+          "dependsOn": "Reports to the General Directorate of Non-Renewable Resources.",
+          "items": {
+            "asistirSecretaria": "Assist the Secretariat in the design and implementation of mining policies.",
+            "intervenirInversores": "Take part in relations with investors and companies in the sector.",
+            "participarDesarrollo": "Participate in actions aimed at promoting the development of provincial mining."
+          }
+        },
+        "dgDesarrollo": {
+          "title": "General Directorate of Productive Mining Development",
+          "items": {
+            "promoverActividad": "Promote mining activity, taking its social aspects into account.",
+            "evaluarProyectos": "Evaluate and manage mining development projects.",
+            "fomentarServicios": "Encourage mining services and productive and educational units.",
+            "impulsarLaboratorios": "Promote laboratories for sample analysis and geochemical analysis.",
+            "crearMuseo": "Create and coordinate the Riojan Mining–Petrological Museum.",
+            "mantenerRelaciones": "Maintain relations with the community on matters within its competence.",
+            "brindarAsistencia": "Provide technical assistance to mining producers.",
+            "intervenirRegimenes": "Take part in the preparation of regimes for the promotion and protection of productive activities.",
+            "coordinarProyectos": "Coordinate mining promotion and development projects with international, national, provincial, and municipal bodies."
+          }
+        },
+        "valleBermejo": {
+          "title": "Coordination of Valle del Bermejo and Llanos Sur",
+          "dependsOn": "Reports to the General Directorate of Productive Mining Development.",
+          "items": {
+            "contribuirPlanificacion": "Contribute to the strategic planning of mining development in the area.",
+            "considerarRecursos": "Take into account existing mineral resources and projected demand in local, provincial, national, and international markets."
+          }
+        },
+        "servicioMinero": {
+          "title": "Mining Service Directorate",
+          "dependsOn": "Reports to the General Directorate of Productive Mining Development.",
+          "items": {
+            "colaborarPoliticas": "Collaborate in the design and implementation of medium- and long-term mining development actions and policies.",
+            "promoverInversiones": "Promote investment at every stage of mining activity.",
+            "interactuarInversores": "Engage with potential investors and help investments come to fruition.",
+            "proporcionarInformacion": "Provide legal, geological, and cadastral information, as well as information on mining projects and industry stakeholders."
+          }
+        },
+        "dgAdministracion": {
+          "title": "General Directorate of Administration",
+          "items": {
+            "administrarRecursos": "Administer human, economic, and financial resources according to criteria of effectiveness, efficiency, and transparency.",
+            "dirigirContabilidad": "Direct the activities of the accounting information system.",
+            "dirigirProcesos": "Direct the processes of administrative recording and control, accounting, budget, and treasury.",
+            "supervisarCompras": "Supervise purchases and procurement.",
+            "administrarPatrimonio": "Administer and control the inventory and the patrimonial register of assets.",
+            "coordinarPersonal": "Coordinate personnel matters and keep staff updates current.",
+            "definirIndicadores": "Define indicators to evaluate budget execution.",
+            "registrarRecursos": "Record and audit economic and financial resources.",
+            "ejecutarAcciones": "Carry out and supervise administrative actions in accordance with current regulations.",
+            "supervisarRendiciones": "Supervise or prepare the accountability reports for the resources and assets under its responsibility."
+          }
+        },
+        "rendicionCuentas": {
+          "title": "Coordination of Account Settlement, Budget, and Assets",
+          "dependsOn": "Reports to the General Directorate of Administration.",
+          "items": {
+            "asistirPresupuesto": "Assist in the formulation, execution, and evaluation of the annual budget.",
+            "prepararAnteproyecto": "Prepare and process the preliminary draft budget of expenditures and the estimate of resources.",
+            "registrarEjecucion": "Record budget execution on a monthly basis.",
+            "tramitarModificaciones": "Process modifications to budget appropriations.",
+            "registrarCuotas": "Record the monthly quotas of commitments and accruals and report available balances.",
+            "mantenerBienes": "Keep a centralized and up-to-date register of the Secretariat's assets.",
+            "intervenirMovimientos": "Take part in additions, removals, and transfers of assets.",
+            "organizarArchivo": "Organize the archive of payment orders approved by the fiscal delegation."
+          }
+        },
+        "tesoreria": {
+          "title": "Treasury Coordination",
+          "dependsOn": "Reports to the General Directorate of Administration.",
+          "items": {
+            "asistirFondos": "Assist in the management and custody of the Secretariat's funds and securities.",
+            "registrarMovimientos": "Record income and expenditure in the accounts and keep the corresponding books up to date.",
+            "elaborarParte": "Prepare the daily treasury report, bank reconciliations, and the monthly and cumulative financial statements.",
+            "administrarValores": "Administer and safeguard revolving funds, surety bonds, guarantee funds, and other financial securities.",
+            "efectuarPagos": "Make payments for purchases, contracts, and salaries.",
+            "tramitesBancarios": "Carry out the banking procedures proper to its function."
+          }
+        },
+        "personal": {
+          "title": "Personnel Coordination",
+          "dependsOn": "Reports to the General Directorate of Administration.",
+          "items": {
+            "planificarRecursos": "Plan and manage human resources comprehensively.",
+            "determinarNecesidades": "Determine current and future staffing needs.",
+            "elevarPropuestas": "Submit proposals related to entry, promotion, appointment, succession, and departure of personnel.",
+            "mantenerHistorial": "Keep the register of personnel history.",
+            "promoverCapacitacion": "Promote ongoing training and the development of competencies.",
+            "evaluarRiesgos": "Evaluate and control risk and safety factors in the work environment.",
+            "procurarBienestar": "Seek the well-being of staff members.",
+            "asistirRecursosHumanos": "Assist the General Directorate of Administration in human resources matters."
+          }
+        },
+        "asuntosLegales": {
+          "title": "General Directorate of Legal Affairs",
+          "items": {
+            "contribuirNormas": "Contribute to the drafting of proposed legal rules.",
+            "asesorarDependencias": "Advise the Secretariat's departments.",
+            "intervenirDocumentacion": "Take part in documentation related to official letters and notifications.",
+            "supervisarProyectos": "Supervise the study, analysis, and drafting of regulatory proposals.",
+            "asesorarNormativa": "Advise on applicable regulations and issue legal opinions.",
+            "dictaminarRecursos": "Issue opinions on administrative appeals against acts of the Secretariat and its dependent areas.",
+            "intervenirConvenios": "Take part in the preparation, conclusion, execution, and application of agreements related to its competencies.",
+            "intervenirContratos": "Take part in draft contracts and other legal instruments linked to provincial mining activity."
+          }
+        },
+        "despacho": {
+          "title": "General Directorate of Dispatch",
+          "items": {
+            "elaborarProyectos": "Draft bills, decrees, and resolutions within the competence of the Secretariat.",
+            "disponerNotificacion": "Arrange notification of administrative acts.",
+            "intervenirAsesoramiento": "Take part in the legal study of and advice on matters within its competence.",
+            "participarRecursos": "Participate in the processing of administrative appeals.",
+            "registrarDocumentacion": "Record the intake, follow-up, and release of documents and correspondence.",
+            "ordenarTramitacion": "Arrange their processing, distribution, and filing.",
+            "protocolizarActos": "Protocolize, reproduce, authenticate, and safeguard administrative acts.",
+            "analizarNormativa": "Analyze and organize the regulations in force.",
+            "detectarVacios": "Identify regulatory gaps or overlapping rules and propose the corresponding corrections."
+          }
+        }
+      }
     }
   },
   "gestionMinera": {

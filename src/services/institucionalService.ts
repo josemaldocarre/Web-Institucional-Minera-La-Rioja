@@ -59,11 +59,383 @@ export interface InstitucionalAuthorities {
   readonly direccionesGenerales: readonly AuthorityDireccionGeneral[]
 }
 
+export interface InstitucionalFuncionNode {
+  readonly id: string
+  readonly number: string
+  readonly titleKey: string
+  readonly dependsOnKey?: string
+  readonly functionKeys: readonly string[]
+  readonly children?: readonly InstitucionalFuncionNode[]
+}
+
+export interface InstitucionalFunciones {
+  readonly titleKey: string
+  readonly units: readonly InstitucionalFuncionNode[]
+}
+
 export interface InstitucionalPageData {
   readonly page: InstitucionalPageHero
   readonly quienesSomos: InstitucionalSection
   readonly autoridades: InstitucionalAuthorities
+  readonly funciones: InstitucionalFunciones
 }
+
+const FUNCION_UNIT_BASE = 'institucional.funciones.unidades'
+
+function funcionNode(
+  id: string,
+  number: string,
+  unitKey: string,
+  itemIds: readonly string[],
+  options?: {
+    readonly dependsOn?: boolean
+    readonly children?: readonly InstitucionalFuncionNode[]
+  },
+): InstitucionalFuncionNode {
+  return {
+    id,
+    number,
+    titleKey: `${FUNCION_UNIT_BASE}.${unitKey}.title`,
+    dependsOnKey: options?.dependsOn
+      ? `${FUNCION_UNIT_BASE}.${unitKey}.dependsOn`
+      : undefined,
+    functionKeys: itemIds.map(
+      (itemId) => `${FUNCION_UNIT_BASE}.${unitKey}.items.${itemId}`,
+    ),
+    children: options?.children,
+  }
+}
+
+const funcionesUnits: readonly InstitucionalFuncionNode[] = [
+  funcionNode('funcion-secretaria', '1.', 'secretaria', [
+    'asistirPoderEjecutivo',
+    'definirObjetivos',
+    'ejecutarPlanes',
+    'proponerPolitica',
+    'representarEstado',
+    'participarCredito',
+    'coordinarAsistencia',
+    'fortalecerVinculacion',
+  ]),
+  funcionNode(
+    'funcion-dg-mineria',
+    '2.',
+    'dgMineria',
+    [
+      'planificarDesarrollo',
+      'promoverAprovechamiento',
+      'coordinarPoliticaNacional',
+      'proponerEjecutarControlar',
+      'articularPoliticas',
+      'promoverRiesgos',
+      'coordinarCooperacion',
+    ],
+    {
+      children: [
+        funcionNode(
+          'funcion-d-escribania-minas',
+          '2.1.',
+          'escribaniaMinas',
+          [
+            'llevarRegistros',
+            'llevarPadronCanon',
+            'realizarNotificaciones',
+            'asistirDireccionGeneral',
+            'informarRegistros',
+            'cumplirCodigo',
+            'dejarConstancia',
+            'extenderCertificados',
+            'informarRequisitos',
+            'certificarPlazos',
+            'otrasTareas',
+          ],
+          {
+            dependsOn: true,
+            children: [
+              funcionNode(
+                'funcion-promotor-mesa-entradas',
+                '2.1.1.',
+                'mesaEntradas',
+                ['registrarPresentacion', 'llevarUbicacion'],
+                { dependsOn: true },
+              ),
+            ],
+          },
+        ),
+        funcionNode(
+          'funcion-d-catastro-minero',
+          '2.2.',
+          'catastroMinero',
+          [
+            'asignarMatriculas',
+            'ordenarCatastro',
+            'registrarDerechos',
+            'informarDerechos',
+            'participarMensuras',
+            'aprobarMensuras',
+          ],
+          {
+            dependsOn: true,
+            children: [
+              funcionNode(
+                'funcion-promotor-topografia',
+                '2.2.1.',
+                'topografia',
+                ['controlarTareas', 'mantenerRed', 'asegurarUbicacion'],
+                { dependsOn: true },
+              ),
+              funcionNode(
+                'funcion-promotor-grafico-catastral',
+                '2.2.2.',
+                'graficoCatastral',
+                ['controlarRegistro', 'aplicarCodigo', 'contribuirSeguridad'],
+                { dependsOn: true },
+              ),
+            ],
+          },
+        ),
+        funcionNode(
+          'funcion-d-geologia-minera',
+          '2.3.',
+          'geologiaMinera',
+          [
+            'asesorar',
+            'evaluarCanteras',
+            'evaluarMuestras',
+            'organizarMuestras',
+            'analizarProgramas',
+            'evaluarLabores',
+            'realizarAnalisis',
+            'analizarDeclaraciones',
+            'estudiosGeologicos',
+            'estudiarAcceso',
+            'registroConsultores',
+          ],
+          {
+            dependsOn: true,
+            children: [
+              funcionNode(
+                'funcion-promotor-trabajos-geologicos',
+                '2.3.1.',
+                'trabajosGeologicos',
+                ['seleccionarPuntos', 'promoverUso'],
+                { dependsOn: true },
+              ),
+            ],
+          },
+        ),
+        funcionNode(
+          'funcion-d-economia-minera',
+          '2.4.',
+          'economiaMinera',
+          [
+            'estudiarInversiones',
+            'analizarProyectos',
+            'determinarRegalias',
+            'venderGuias',
+          ],
+          {
+            dependsOn: true,
+            children: [
+              funcionNode(
+                'funcion-promotor-registro-productores',
+                '2.4.1.',
+                'registroProductores',
+                [
+                  'relevarProductores',
+                  'mantenerRegistro',
+                  'coordinarSuim',
+                  'articularInformacion',
+                ],
+                { dependsOn: true },
+              ),
+            ],
+          },
+        ),
+        funcionNode(
+          'funcion-d-policia-minera',
+          '2.5.',
+          'policiaMinera',
+          [
+            'controlarTrabajos',
+            'protegerSeguridad',
+            'inspeccionar',
+            'constatarInfracciones',
+            'controlarTransito',
+            'verificarGuias',
+          ],
+          {
+            dependsOn: true,
+            children: [
+              funcionNode(
+                'funcion-promotor-fiscalizacion',
+                '2.5.1.',
+                'fiscalizacion',
+                [
+                  'evaluarSistemas',
+                  'fiscalizarRacionalidad',
+                  'comprobarNormas',
+                  'verificarBuenasPracticas',
+                ],
+                { dependsOn: true },
+              ),
+            ],
+          },
+        ),
+      ],
+    },
+  ),
+  funcionNode(
+    'funcion-dg-recursos-no-renovables',
+    '3.',
+    'dgRecursos',
+    [
+      'ejecutarPolitica',
+      'velarNormas',
+      'relevarRecursos',
+      'mantenerBud',
+      'intervenirExplotacion',
+    ],
+    {
+      children: [
+        funcionNode(
+          'funcion-d-gestion-proyectos',
+          '3.1.',
+          'gestionProyectos',
+          ['asistirSecretaria', 'intervenirInversores', 'participarDesarrollo'],
+          { dependsOn: true },
+        ),
+      ],
+    },
+  ),
+  funcionNode(
+    'funcion-dg-desarrollo-productivo',
+    '4.',
+    'dgDesarrollo',
+    [
+      'promoverActividad',
+      'evaluarProyectos',
+      'fomentarServicios',
+      'impulsarLaboratorios',
+      'crearMuseo',
+      'mantenerRelaciones',
+      'brindarAsistencia',
+      'intervenirRegimenes',
+      'coordinarProyectos',
+    ],
+    {
+      children: [
+        funcionNode(
+          'funcion-coord-valle-bermejo',
+          '4.1.',
+          'valleBermejo',
+          ['contribuirPlanificacion', 'considerarRecursos'],
+          { dependsOn: true },
+        ),
+        funcionNode(
+          'funcion-d-servicio-minero',
+          '4.2.',
+          'servicioMinero',
+          [
+            'colaborarPoliticas',
+            'promoverInversiones',
+            'interactuarInversores',
+            'proporcionarInformacion',
+          ],
+          { dependsOn: true },
+        ),
+      ],
+    },
+  ),
+  funcionNode(
+    'funcion-dg-administracion',
+    '5.',
+    'dgAdministracion',
+    [
+      'administrarRecursos',
+      'dirigirContabilidad',
+      'dirigirProcesos',
+      'supervisarCompras',
+      'administrarPatrimonio',
+      'coordinarPersonal',
+      'definirIndicadores',
+      'registrarRecursos',
+      'ejecutarAcciones',
+      'supervisarRendiciones',
+    ],
+    {
+      children: [
+        funcionNode(
+          'funcion-coord-rendicion-cuentas',
+          '5.1.',
+          'rendicionCuentas',
+          [
+            'asistirPresupuesto',
+            'prepararAnteproyecto',
+            'registrarEjecucion',
+            'tramitarModificaciones',
+            'registrarCuotas',
+            'mantenerBienes',
+            'intervenirMovimientos',
+            'organizarArchivo',
+          ],
+          { dependsOn: true },
+        ),
+        funcionNode(
+          'funcion-coord-tesoreria',
+          '5.2.',
+          'tesoreria',
+          [
+            'asistirFondos',
+            'registrarMovimientos',
+            'elaborarParte',
+            'administrarValores',
+            'efectuarPagos',
+            'tramitesBancarios',
+          ],
+          { dependsOn: true },
+        ),
+        funcionNode(
+          'funcion-coord-personal',
+          '5.3.',
+          'personal',
+          [
+            'planificarRecursos',
+            'determinarNecesidades',
+            'elevarPropuestas',
+            'mantenerHistorial',
+            'promoverCapacitacion',
+            'evaluarRiesgos',
+            'procurarBienestar',
+            'asistirRecursosHumanos',
+          ],
+          { dependsOn: true },
+        ),
+      ],
+    },
+  ),
+  funcionNode('funcion-dg-asuntos-legales', '6.', 'asuntosLegales', [
+    'contribuirNormas',
+    'asesorarDependencias',
+    'intervenirDocumentacion',
+    'supervisarProyectos',
+    'asesorarNormativa',
+    'dictaminarRecursos',
+    'intervenirConvenios',
+    'intervenirContratos',
+  ]),
+  funcionNode('funcion-dg-despacho', '7.', 'despacho', [
+    'elaborarProyectos',
+    'disponerNotificacion',
+    'intervenirAsesoramiento',
+    'participarRecursos',
+    'registrarDocumentacion',
+    'ordenarTramitacion',
+    'protocolizarActos',
+    'analizarNormativa',
+    'detectarVacios',
+  ]),
+]
 
 const institucionalData: InstitucionalPageData = {
   page: {
@@ -180,6 +552,10 @@ const institucionalData: InstitucionalPageData = {
         dependencias: [],
       },
     ],
+  },
+  funciones: {
+    titleKey: 'institucional.funciones.title',
+    units: funcionesUnits,
   },
 }
 
