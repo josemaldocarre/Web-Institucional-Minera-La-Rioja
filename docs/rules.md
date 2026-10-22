@@ -1,5 +1,7 @@
 # Reglas de Desarrollo
 
+Criterios de trabajo para quien modifica el repositorio. El alcance del sitio está en [context.md](context.md). Seguir una regla de este archivo no afirma que todo el código actual ya la cumpla.
+
 ## Uso de Cursor
 
 - SIEMPRE leer los archivos en /docs antes de hacer cambios
@@ -30,20 +32,16 @@
 
 - No hardcodear textos
 - Preparar contenido para ES/EN desde el inicio
-
-## Escalabilidad
-
-- Pensar siempre en backend futuro
-- Evitar soluciones rápidas que rompan arquitectura
+- Mantener los textos de interfaz en `src/i18n/locales/`
 
 ## SEO
 
-- Sigue las directrices definidas en /docs/seo.md
+- Sigue las directrices definidas en [seo.md](seo.md)
 - Asegúrate de que el HTML sea semántico
 - Mantén la jerarquía de los encabezados
 
 ## Accessibility
 
-- Sigue las directrices definidas en /docs/accessibility.md
+- Sigue las directrices definidas en [accessibility.md](accessibility.md)
 - Utiliza elementos semánticos
 - Asegúrate de que la página sea accesible mediante el teclado

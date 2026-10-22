@@ -1,8 +1,10 @@
 # SEO Guidelines
 
+Criterios para quien desarrolla. Cumplir una recomendación de esta guía no significa que el sitio ya la cumpla en todas las páginas. El comportamiento actual de títulos, idioma del documento y rutas está en [architecture.md](architecture.md).
+
 ## Objetivo
 
-Garantizar que la web institucional sea indexable, clara y bien posicionada.
+Favorecer que la web institucional sea indexable, clara y bien descrita.
 
 ## Reglas generales
 
@@ -21,7 +23,7 @@ Garantizar que la web institucional sea indexable, clara y bien posicionada.
 
 - Textos claros y legibles
 - Evitar contenido vacío o genérico
-- URLs limpias (cuando se implementen rutas)
+- URLs limpias. Las rutas actuales están registradas en `src/App.tsx`
 
 ## Imágenes
 
@@ -33,8 +35,10 @@ Garantizar que la web institucional sea indexable, clara y bien posicionada.
 - Evitar imágenes pesadas
 - Minimizar carga innecesaria
 
-## Consideraciones futuras
+## Elementos que el repositorio no incluye
 
-- Sitemap
-- robots.txt
-- SSR (posible migración a Next.js)
+- `sitemap.xml`
+- `robots.txt`
+- Renderizado en servidor
+
+Esta guía no los da por implementados.

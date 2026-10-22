@@ -1,52 +1,33 @@
-# Proyecto Web - Secretaría de Minería La Rioja
+# Contexto del sitio
 
-## Objetivo
+Sitio institucional de la Secretaría de Minería de La Rioja. Informa sobre la secretaría, sus documentos y sus programas, y ofrece un visor del catastro minero.
 
-Construir una plataforma web institucional moderna que combine:
+La organización del código está en [architecture.md](architecture.md). La forma de ejecutarlo está en el [README](../README.md).
 
-- Transparencia
-- Gestión de trámites
-- Educación para la ciudadanía
+## Alcance actual
 
-La web NO debe parecer un portal de noticias.
-Debe sentirse como una plataforma tecnológica institucional.
+El sitio es una aplicación frontend estática. Los textos están en español e inglés. El inicio toma su estructura de un JSON local. El resto de las secciones toma el contenido de constantes incluidas en el código. Los documentos, las imágenes y el video se sirven desde `public/`.
 
-## Concepto
+Secciones del sitio:
 
-"La Rioja, presente y futuro minero"
+- **Inicio:** presentación, misión, objetivos, políticas públicas, descargas y accesos a portales externos.
+- **Institucional:** quiénes somos, autoridades y funciones o competencias.
+- **Gestión minera:** visor del catastro y descarga de los archivos DWG y PDF.
+- **Documentos públicos:** normas con enlace externo y el plan quinquenal en PDF. Cuatro recursos de esta sección todavía apuntan a `#` y no abren un documento.
+- **Programas:** taller de artesanías, con texto y galería.
+- **Contacto:** dirección, horario, correos, redes sociales y mapa embebido.
 
-## Identidad
+## Visor catastral
 
-Sensaciones a transmitir:
-- Innovación
-- Transparencia
-- Confianza institucional
-- Cercanía con la comunidad
+En Gestión minera, Leaflet muestra el GeoJSON local `public/docs/catastro-minero.geojson` sobre teselas de OpenStreetMap. La persona puede identificar una parcela y ver su ficha. El DWG y el PDF se ofrecen como descargas aparte. El detalle técnico está en [architecture.md](architecture.md).
 
-## Estado actual
+## Qué queda fuera
 
-- Solo frontend (React + TypeScript)
-- Datos mock (JSON)
-- Sin backend
-- Sin autenticación
+El repositorio no incluye:
 
-## Alcance actual (MVP)
+- un backend propio;
+- autenticación;
+- persistencia de usuarios;
+- tramitación en línea o envío de formularios.
 
-- Header (navegación)
-- Footer
-- Home:
-  - Hero con video
-  - Sección Plan Quinquenal
-
-## Futuro (no implementar aún)
-
-- Backend
-- Usuarios y autenticación
-- APIs
-- Mapa interactivo real
-- Dashboard de datos
-
-## Reglas
-
-- Priorizar escalabilidad
-- Evitar soluciones temporales que rompan arquitectura futura
+Contacto ofrece correos `mailto:` y un mapa. No envía un formulario al sitio.

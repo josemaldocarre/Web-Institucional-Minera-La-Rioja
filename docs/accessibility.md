@@ -1,8 +1,10 @@
 # Accessibility Guidelines
 
+Criterios para quien desarrolla. Esta guía no certifica el cumplimiento del sitio. El comportamiento implementado está descrito en [architecture.md](architecture.md) y en [context.md](context.md).
+
 ## Objetivo
 
-Cumplir estándares básicos de accesibilidad para una web institucional pública.
+Orientar la interfaz hacia estándares básicos de accesibilidad de una web institucional pública.
 
 ## Estructura
 
@@ -36,10 +38,9 @@ Cumplir estándares básicos de accesibilidad para una web institucional públic
 
 - Elementos interactivos deben tener estados de focus visibles
 
-## Formularios (futuro)
+## Formularios
 
-- Labels asociados
-- Validaciones accesibles
+El sitio actual no incluye un formulario de envío. Si se agrega uno, cada campo debe tener su etiqueta asociada y las validaciones deben poder entenderse sin depender solo del color.
 
 ## Buenas prácticas
 
