@@ -36,9 +36,7 @@ La tabla completa, con rangos declarados y herramientas de desarrollo, está en 
 
 ## Instalación
 
-El lockfile vigente es `package-lock.json`. La integración continua también instala con npm. `package.json` declara `packageManager` con pnpm 9.15.0, pero no hay un `pnpm-lock.yaml`. Esta documentación no modifica esa diferencia.
-
-Para reproducir las dependencias del lockfile:
+npm es el gestor oficial del proyecto. El lockfile utilizado es `package-lock.json`. El comando recomendado para instalar las dependencias de forma reproducible es:
 
 ```bash
 npm ci

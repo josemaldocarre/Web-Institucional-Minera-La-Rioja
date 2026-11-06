@@ -38,7 +38,7 @@ No hay un script ni una dependencia de tests en `package.json`.
 
 Una versión compatible con ambas es Node 20.19 o superior de la línea 20, Node 22.13 o superior, o Node 24 o superior.
 
-El lockfile del repositorio es `package-lock.json`. El campo `packageManager` de `package.json` indica pnpm 9.15.0 y no existe `pnpm-lock.yaml`. La instalación reproducible con los archivos actuales es `npm ci`, documentada en el [README](../README.md).
+npm es el gestor oficial del proyecto. El lockfile utilizado es `package-lock.json`. La instalación reproducible es `npm ci`, documentada en el [README](../README.md).
 
 ## Qué no forma parte del stack
 
